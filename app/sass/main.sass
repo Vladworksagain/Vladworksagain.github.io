@@ -1,0 +1,58 @@
+@import reset
+@import fonts
+@import variables
+
+// $Helvetica: 'Helvetica', 'sans-serif' (700, 400 font-weight)
+
+// $Montserrat: 'Montserrat', 'sans-serif' (700, 800, 500 font-weight)
+
+// $Ubuntu: 'Ubuntu', 'sans-serif'(700, 500 ,400 font-weight)
+
+// $Brand-color: #FFC32A 
+
+// $top-black-color: #181C1D
+
+// $color-text: #686868
+
+// $color-white: #FFFFFF
+
+.header
+    padding: 40px 0
+
+.container
+    max-width: 1210px
+    width: 100%
+    padding: 0 20px
+    margin: 0 auto
+
+.top_header-wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 23px
+
+.top_header-right
+    display: flex
+
+.top_header-tel
+    color: $top-black-color
+    text-decoration: none
+    font-size: 16px
+    line-height: 19px
+    font-family: $Helvetica
+    font-weight: 700
+    position: relative
+    &::after
+        content: "|"
+        margin: 0 5px
+    &:last-of-type
+        &::after
+            content: ""
+            margin: 0 
+        
+
+.currency_selection
+    margin-left: 25px
+
+.language_selection
+    margin-left: 17px
