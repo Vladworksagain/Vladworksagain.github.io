@@ -16,6 +16,18 @@
 
 // $color-white: #FFFFFF
 
+%top_btn
+    width: 239px
+    height: 60px
+    background-color: $brand-color
+    border-radius: 8px
+    box-shadow: 0px 4px 20px rgba(255, 146, 46, 0.4)
+    font-size: 16px
+    line-height: 18px
+    border: none
+
+
+
 .header
     padding: 40px 0
 
@@ -48,11 +60,131 @@
     &:last-of-type
         &::after
             content: ""
-            margin: 0 
-        
+            margin: 0
 
 .currency_selection
     margin-left: 25px
 
 .language_selection
     margin-left: 17px
+
+.bottom_header-wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.bottom_header-list,
+.bottom_header-social
+    display: flex
+
+.bottom_header-link
+    margin-left: 38px
+    transition: .3s ease all
+    border-bottom: 2px solid transparent
+    &:hover
+         border-bottom: 2px solid #FFC32A
+    &:first-child
+        margin: 0
+            
+.header_list-link
+    font-size: 16px
+    line-height: 19px
+    color: $top-black-color
+    text-decoration: none
+    font-family: $Helvetica 
+    text-transform: uppercase
+
+.bottom_header-social
+    li
+        margin-left: 13px
+
+.header_popup
+    position: fixed
+    width: 100%
+    height: 100%
+    background-color: rgba(0, 0, 0, .7)
+    top: 0
+    left: 0
+    opacity: 0
+    visibility: hidden
+    &:target
+        opacity: 1
+        visibility: visible
+
+.popup_wrapper
+    height: 100vh
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 10px 30px
+
+.popup_close-btn
+    position: absolute
+    top: 14px
+    right: 14px
+
+.popup_short-title
+    margin: 27px 0 10px 0
+    text-align: center
+    color: #000
+    font-family: $Montserrat
+    font-weight: 600
+    font-size: 11px
+    line-height: 14px
+
+.popup_content
+    color: black
+    background-color: #fff  
+    border-radius: 3px
+    width: 253px
+    height: 309px
+    padding: 10px
+    position: relative
+
+.popup_input-wrapper
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+.popup_input-form
+    width: 177px
+    height: 22px
+    padding: 8px 0 8px 10px
+    margin-bottom: 9px
+    background-color: #EFEFEF
+    border-radius: 3px
+    border: none
+    font-family: $Montserrat
+    font-weight: 400
+    color: #646768
+    font-size: 10px
+    line-height: 9px
+    opacity: .7
+
+.pupup_textarea-form
+    width: 176px
+    height: 96px
+    padding: 0
+    margin-bottom: 13px
+    resize: none
+    font-family: $Montserrat
+    font-weight: 400
+    color: #646768
+    font-size: 10px
+    line-height: 9px
+    padding: 8px 0 8px 10px
+    opacity: .7
+
+.popup_form-btn
+    @extend %top_btn
+    max-width: 176px
+    height: 26px
+    border-radius: 3px
+    color: $color-white
+    font-weight: 700
+    font-family: $Ubuntu
+    font-size: 10px
+    line-height: 8px
+
+    
