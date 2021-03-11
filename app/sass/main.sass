@@ -28,7 +28,6 @@
     border: none
     transition: .3s ease all
 
-
 .header
     padding:
         top: 40px
@@ -85,25 +84,25 @@
     transition: .3s ease all
     border-bottom: 2px solid transparent
     &:hover
-         border-bottom: 2px solid #FFC32A
+        border-bottom: 2px solid #FFC32A
     &:last-child
         border-bottom: none
     &:first-child
         margin: 0
-            
+
 .header_list-link
     font-size: 16px
     line-height: 19px
     color: $top-black-color
     text-decoration: none
-    font-family: $Helvetica 
+    font-family: $Helvetica
     text-transform: uppercase
 
 .bottom_header-social
     li
         margin-left: 13px
-        
-.popup
+
+.popup_btn
     color: $brand-color
 
 .header_popup
@@ -116,16 +115,15 @@
     opacity: 0
     visibility: hidden
     transition: .3s ease all
-    &:target
-        opacity: 1
-        visibility: visible
-
-.popup_wrapper
-    height: 100vh
+    z-index: 100
     display: flex
     justify-content: center
     align-items: center
-    padding: 10px 30px
+
+.popup
+    &.open
+        opacity: 1
+        visibility: visible
 
 .popup_close-btn
     position: absolute
@@ -143,13 +141,12 @@
 
 .popup_content
     color: black
-    background-color: #fff  
+    background-color: #fff
     border-radius: 3px
     width: 253px
     height: 309px
     padding: 10px
     position: relative
-    z-index: 100
 
 .popup_input-wrapper
     display: flex
@@ -202,8 +199,8 @@
         color: #000000
         border: 2px solid #000000
         border-radius: 5px
-        background-color: transparent
-    
+        background-color: #E5E5E5
+
 .car_rental-main
     width: 526px
 
@@ -235,42 +232,85 @@
     display: inline-block
     margin-bottom: 20px
 
+.car_rental-box
+    max-width: 666px
+    height: 264px
+    background-color: $brand-color
+    padding-top: 28px
+    box-shadow: 0px 2.68363px 13.4182px rgba(0, 0, 0, 0.1)
+    border-radius: 5px
+    border-top-left-radius: 0
+    border-bottom-left-radius: 0
+    position: relative
+    &::before
+        content: ""
+        width: 100vw
+        height: 100%
+        position: absolute
+        background: $brand-color
+        top: 0
+        right: 100%
+        display: block
+
 .rental_box-wrapper
     width: 497px
     height: 206px
-    border: 1px solid black
+    box-shadow: 0px 2.68363px 13.4182px rgba(0, 0, 0, 0.1)
+    border-radius: 5px
+    background-color: #ffffff
 
 .top_select-box
+    padding-top: 36px
     display: flex
-    justify-content: space-around
-    // align-items: center
-    margin-top: 36px
+    justify-content: space-evenly
 
 .select2-container
-    width: 197px !important
+    width: 207px !important
     position: relative
     z-index: 20
-.select2-container 
-    .select2-selection--single 
+
+.select2-search--dropdown
+    display: none
+
+.select2-container--default
+    .select2-selection--single
+        .select2-selection__rendered
+            font-size: 10px
+            font-family: $Ubuntu
+            font-family: 400
+            color: #717171
+
+.select2-container--open
+    .select2-dropdown--below
+        border-top: 1px solid rgba(0, 0, 0, .3)
+
+.select2-container
+    .select2-selection--single
         .select2-selection__rendered
             padding: 0
 
-.select2-container--default 
+.select2-container--default
     .select2-selection--single
         border: none
         border-bottom: 1px solid rgba(0, 0, 0, .5)
         border-radius: 0
+        margin-bottom: 19px
+        padding-bottom: 10px
 
-.select2-container--default 
-    .select2-selection--single 
+.select2-container--default
+    .select2-selection--single
+        padding-bottom: 10px
+
+.select2-container--default
+    .select2-selection--single
         .select2-selection__arrow
             background: url(../images/icon-arrow-select.svg) no-repeat center center
             background-size: contain
             position: absolute
-            top: 0
-        
+            top: -4px
+
 .select2-container--default
-    .select2-selection--single 
+    .select2-selection--single
         .select2-selection__arrow b
             display: none
             visibility: hidden
@@ -282,10 +322,67 @@
     line-height: 12px
     color: #717171
 
-.select2-container--default 
-    .select2-selection--single 
+.select2-container--default
+    .select2-selection--single
         .select2-selection__clear
-            margin-right: 30px
-            margin-top: 2px
-                
-            
+            display: none
+
+.select2-container
+    .select2-selection--single
+        .select2-selection__rendered
+            padding-left: 5px
+
+.select2-container--default
+    .select2-selection--single
+        .select2-selection__placeholder
+            color: #717171
+
+.select2-results__options
+    font-size: 10px
+    font-family: $Ubuntu
+    font-weight: 400
+    color: #717171
+
+.select2-container--default
+    .select2-results__option--highlighted.select2-results__option--selectable
+        background-color: $brand-color
+
+.bottom_info
+    display: flex
+    justify-content: space-evenly
+
+.bottom_input-info
+    width: 90px
+    border: none
+    font-family: $Ubuntu
+    font-weight: 400
+    color: #717171
+    font-size: 10px
+    line-height: 12px
+    padding:
+        left: 5px
+        bottom: 5px
+    border-bottom: 1px solid rgba(0, 0, 0, .5)
+    margin-bottom: 30px
+
+.show_result
+    text-transform: uppercase
+    padding: 9px 0
+    display: block
+    margin: 0 auto
+    width: 443px
+    font-size: 10px
+    line-height: 12px
+    color: $color-white
+    font-family: $Ubuntu
+    font-weight: 700
+    background-color: $brand-color
+    border-radius: 5px
+    border: none
+    box-shadow: 0px 2.68363px 13.4182px rgba(255, 146, 46, 0.4)
+    border: 2px solid transparent
+    transition: .3s ease all
+    &:hover
+        border: 2px solid #000000
+        background-color: #E5E5E5
+        color: #000000

@@ -56,7 +56,8 @@
                             <a class="header_list-link" href="#">КОНТАКТЫ</a>
                         </li>
                         <li class="bottom_header-link">
-                            <a class="header_list-link popup" href="#header_popup">СВЯЗАТЬСЯ С НАМИ</a>
+                            <a class="header_list-link poput_btn modal_btn" href="#" data-button="feedback">СВЯЗАТЬСЯ С
+                                НАМИ</a>
                         </li>
                     </ul>
                 </nav>
@@ -120,25 +121,23 @@
                     </li>
                 </ul>
             </div>
-            <div id="header_popup" class="header_popup">
-                <div class="popup_wrapper">
-                    <div class="popup_content">
-                        <a href="#" class="popup_close-btn">
-                            <img src="images/back-icon-popup.svg" alt="#">
-                        </a>
-                        <h2 class="popup_short-title">
-                            Форма обратной связи
-                        </h2>
-                        <form class="popup_input-wrapper">
-                            <input class="popup_input-form" type="text" placeholder="Ваше имя*">
-                            <input class="popup_input-form" type="tel" placeholder="Номер телефона*">
-                            <input class="popup_input-form" type="email" placeholder="Ваш Email*">
-                            <textarea class="pupup_textarea-form" placeholder="Что вас интересует?*"></textarea>
-                            <button class="popup_form-btn">
-                                Отправить запрос
-                            </button>
-                        </form>
-                    </div>
+            <div class="header_popup popup" data-modal="feedback">
+                <div class="popup_content">
+                    <a href="#" class="popup_close-btn">
+                        <img src="images/back-icon-popup.svg" alt="#">
+                    </a>
+                    <h2 class="popup_short-title">
+                        Форма обратной связи
+                    </h2>
+                    <form class="popup_input-wrapper">
+                        <input class="popup_input-form" type="text" placeholder="Ваше имя*">
+                        <input class="popup_input-form" type="tel" placeholder="Номер телефона*">
+                        <input class="popup_input-form" type="email" placeholder="Ваш Email*">
+                        <textarea class="pupup_textarea-form" placeholder="Что вас интересует?*"></textarea>
+                        <button class="popup_form-btn">
+                            Отправить запрос
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -173,6 +172,15 @@
                                 <option>Почта 253</option>
                             </select>
                         </div>
+                        <form class="bottom_info">
+                            <input type="date" class="bottom_input-info" placeholder="Дата получения">
+                            <input type="time" class="bottom_input-info" placeholder="Время получения">
+                            <input type="date" class="bottom_input-info" placeholder="Дата возврата">
+                            <input type="time" class="bottom_input-info" placeholder="Время возврата">
+                        </form>
+                        <button class="show_result">
+                            ПОКАЗАТЬ РЕЗУЛЬТАТЫ
+                        </button>
                     </div>
                 </div>
             </div>
@@ -188,7 +196,7 @@
             </div>
         </div>
     </section>
-    
+
     <script src="js/main.min.js"></script>
 </body>
 
