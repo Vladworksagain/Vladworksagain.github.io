@@ -40,6 +40,8 @@ function cleanDist() {
 
 function scripts() {
     return src([
+        'node_modules/jquery/dist/jquery.min.js',
+        'node_modules/select2/dist/js/select2.min.js',
         'app/js/main.js'
     ])
     .pipe(concat('main.min.js'))

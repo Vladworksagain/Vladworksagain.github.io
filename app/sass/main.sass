@@ -1,6 +1,7 @@
 @import reset
 @import fonts
 @import variables
+@import 'node_modules/select2/dist/css/select2'
 
 // $Helvetica: 'Helvetica', 'sans-serif' (700, 400 font-weight)
 
@@ -25,11 +26,13 @@
     font-size: 16px
     line-height: 18px
     border: none
-
+    transition: .3s ease all
 
 
 .header
-    padding: 40px 0
+    padding:
+        top: 40px
+    margin-bottom: 109px
 
 .container
     max-width: 1210px
@@ -83,6 +86,8 @@
     border-bottom: 2px solid transparent
     &:hover
          border-bottom: 2px solid #FFC32A
+    &:last-child
+        border-bottom: none
     &:first-child
         margin: 0
             
@@ -97,6 +102,9 @@
 .bottom_header-social
     li
         margin-left: 13px
+        
+.popup
+    color: $brand-color
 
 .header_popup
     position: fixed
@@ -107,6 +115,7 @@
     left: 0
     opacity: 0
     visibility: hidden
+    transition: .3s ease all
     &:target
         opacity: 1
         visibility: visible
@@ -140,6 +149,7 @@
     height: 309px
     padding: 10px
     position: relative
+    z-index: 100
 
 .popup_input-wrapper
     display: flex
@@ -186,5 +196,96 @@
     font-family: $Ubuntu
     font-size: 10px
     line-height: 8px
-
+    transition: .3s ease all
+    border: 2px solid transparent
+    &:hover
+        color: #000000
+        border: 2px solid #000000
+        border-radius: 5px
+        background-color: transparent
     
+.car_rental-main
+    width: 526px
+
+.car_rental-wrapper
+    display: flex
+    justify-content: flex-end
+
+.car_rental-top
+    width: 50%
+
+.car_rental-title
+    color: $top-black-color
+    font-family: $Montserrat
+    font-weight: 800
+    font-size: 53px
+    line-height: 65px
+    text-align: center
+    text-transform: uppercase
+    margin-bottom: 5px
+
+.car_rental-text
+    color: $color-text
+    font-family: $Ubuntu
+    font-weight: 400
+    font-size: 15px
+    line-height: 18px
+    text-align: center
+    max-width: 497px
+    display: inline-block
+    margin-bottom: 20px
+
+.rental_box-wrapper
+    width: 497px
+    height: 206px
+    border: 1px solid black
+
+.top_select-box
+    display: flex
+    justify-content: space-around
+    // align-items: center
+    margin-top: 36px
+
+.select2-container
+    width: 197px !important
+    position: relative
+    z-index: 20
+.select2-container 
+    .select2-selection--single 
+        .select2-selection__rendered
+            padding: 0
+
+.select2-container--default 
+    .select2-selection--single
+        border: none
+        border-bottom: 1px solid rgba(0, 0, 0, .5)
+        border-radius: 0
+
+.select2-container--default 
+    .select2-selection--single 
+        .select2-selection__arrow
+            background: url(../images/icon-arrow-select.svg) no-repeat center center
+            background-size: contain
+            position: absolute
+            top: 0
+        
+.select2-container--default
+    .select2-selection--single 
+        .select2-selection__arrow b
+            display: none
+            visibility: hidden
+
+.select2-selection__placeholder
+    font-family: $Ubuntu
+    font-weight: 400
+    font-size: 10px
+    line-height: 12px
+    color: #717171
+
+.select2-container--default 
+    .select2-selection--single 
+        .select2-selection__clear
+            margin-right: 30px
+            margin-top: 2px
+                
+            
