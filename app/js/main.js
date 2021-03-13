@@ -7,6 +7,12 @@ $(".select_location.second").select2({
     allowClear: true
 });
 
+$(document).ready(function() {
+    $('.currency_selection-point').select2({
+        selectionCssClass: '.header_left-point'
+    })
+});
+
 const buttons = document.querySelectorAll('.modal_btn')
 
 const modals = document.querySelectorAll('.popup')

@@ -30,10 +30,19 @@
                     <div class="currency_selection">
                         <img src="images/icon-currency.svg" alt="#">
                         <span>usd</span>
+                        <select class="currency_selection-point">
+                            <option value=""></option>
+                            <option value="">asd</option>
+                            <option value="">asd</option>
+                        </select>
                     </div>
                     <div class="language_selection">
                         <img src="images/header-language.svg" alt="#">
                         <span>ru</span>
+                        <select class="language_selection-point">
+                            <option value="">asd</option>
+                            <option value="">asd</option>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -56,7 +65,8 @@
                             <a class="header_list-link" href="#">КОНТАКТЫ</a>
                         </li>
                         <li class="bottom_header-link">
-                            <a class="header_list-link poput_btn modal_btn" href="#" data-button="feedback">СВЯЗАТЬСЯ С
+                            <a class="header_list-link active poput_btn modal_btn" href="#"
+                                data-button="feedback">СВЯЗАТЬСЯ С
                                 НАМИ</a>
                         </li>
                     </ul>
@@ -145,57 +155,56 @@
 
     <section class="car_rental">
         <div class="container">
-            <div class="car_rental-main">
-                <h1 class="car_rental-title">
-                    ПРОКАТ АВТО
-                </h1>
-                <p class="car_rental-text">
-                    Прокат новых автомобилей в Киеве
-                    2016-2019 года выпуска с коробкой автомат в средних
-                    и топовых комплектациях <br> по лучшим ценам
-                </p>
-                <div class="car_rental-box">
-                    <div class="rental_box-wrapper">
-                        <div class="top_select-box">
-                            <select class="select_location first" name="">
-                                <option></option>
-                                <option>Киев</option>
-                                <option>Вишневое</option>
-                                <option>Шпола</option>
-                                <option>Бровары</option>
-                            </select>
-                            <select class="select_location second" name="">
-                                <option></option>
-                                <option>Почта №1</option>
-                                <option>Почта №172</option>
-                                <option>ОССТ 3</option>
-                                <option>Почта 253</option>
-                            </select>
+            <div class="car_rental-inner">
+                <div class="car_rental-main">
+                    <h1 class="car_rental-title">
+                        ПРОКАТ АВТО
+                    </h1>
+                    <p class="car_rental-text">
+                        Прокат новых автомобилей в Киеве
+                        2016-2019 года выпуска с коробкой автомат в средних
+                        и топовых комплектациях <br> по лучшим ценам
+                    </p>
+                    <div class="car_rental-box">
+                        <div class="rental_box-wrapper">
+                            <div class="top_select-box">
+                                <select class="select_location first" name="">
+                                    <option></option>
+                                    <option>Киев</option>
+                                    <option>Вишневое</option>
+                                    <option>Шпола</option>
+                                    <option>Бровары</option>
+                                </select>
+                                <select class="select_location second" name="">
+                                    <option></option>
+                                    <option>Почта №1</option>
+                                    <option>Почта №172</option>
+                                    <option>ОССТ 3</option>
+                                    <option>Почта 253</option>
+                                </select>
+                            </div>
+                            <form class="bottom_info">
+                                <input type="date" class="bottom_input-info">
+                                <input type="time" class="bottom_input-info">
+                                <input type="date" class="bottom_input-info">
+                                <input type="time" class="bottom_input-info">
+                            </form>
+                            <button class="show_result">
+                                ПОКАЗАТЬ РЕЗУЛЬТАТЫ
+                            </button>
                         </div>
-                        <form class="bottom_info">
-                            <input type="date" class="bottom_input-info" placeholder="Дата получения">
-                            <input type="time" class="bottom_input-info" placeholder="Время получения">
-                            <input type="date" class="bottom_input-info" placeholder="Дата возврата">
-                            <input type="time" class="bottom_input-info" placeholder="Время возврата">
-                        </form>
-                        <button class="show_result">
-                            ПОКАЗАТЬ РЕЗУЛЬТАТЫ
-                        </button>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="car_rental-wrapper">
-            <div class="car_rental-top">
-                <div class="top_big-circle">
-                    asd
-                </div>
-                <div class="top_samall-circle">
-                    asd
+                <div class="car_rental-top">
+                    <span class="big_circle"></span>
+                    <span class="small_circle"></span>
+                    <img src="images/car-rental-main.svg" alt="#" class="car_rental-vehicle">
+                    <img src="images/p-mountains.jpg" alt="#" class="car_rental-mountains">
                 </div>
             </div>
         </div>
     </section>
+
 
     <script src="js/main.min.js"></script>
 </body>

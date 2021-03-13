@@ -29,8 +29,9 @@
     transition: .3s ease all
 
 .header
-    padding:
-        top: 40px
+    padding-top: 40px
+    position: relative
+    z-index: 2
     margin-bottom: 109px
 
 .container
@@ -67,6 +68,11 @@
 .currency_selection
     margin-left: 25px
 
+.select2-selection 
+    .select2-selection--single 
+        .header_left-point
+            border: 5px dashed blue
+
 .language_selection
     margin-left: 17px
 
@@ -101,6 +107,9 @@
 .bottom_header-social
     li
         margin-left: 13px
+
+.active
+    color: $brand-color
 
 .popup_btn
     color: $brand-color
@@ -201,15 +210,52 @@
         border-radius: 5px
         background-color: #E5E5E5
 
+.car_rental
+    padding-bottom: 74px
+    
+.car_rental-inner
+    display: flex
+
 .car_rental-main
     width: 526px
-
-.car_rental-wrapper
-    display: flex
-    justify-content: flex-end
+    z-index: 4
 
 .car_rental-top
     width: 50%
+
+.big_circle
+    display: block
+    width: 300px
+    height: 300px
+    border: 44px solid $brand-color
+    box-shadow: 0px 2px 20px rgba(255, 195, 42, 0.6)
+    border-radius: 50%
+    margin-left: 175px
+    position: relative
+    z-index: 2
+
+.small_circle
+    width: 109px
+    height: 109px
+    border: 23px solid $brand-color
+    border-radius: 50%
+    box-shadow: 0px 2px 20px rgba(255, 195, 42, 0.6)
+    margin-left: 519px
+    margin-top: 74px
+    display: block
+    z-index: 10
+    position: relative
+
+.car_rental-vehicle
+    position: absolute
+    top: 239px
+    right: 68px
+    z-index: 3
+
+.car_rental-mountains
+    position: absolute
+    top: 0
+    right: 68px
 
 .car_rental-title
     color: $top-black-color
@@ -253,6 +299,7 @@
         display: block
 
 .rental_box-wrapper
+    padding: 36px 27px
     width: 497px
     height: 206px
     box-shadow: 0px 2.68363px 13.4182px rgba(0, 0, 0, 0.1)
@@ -260,14 +307,14 @@
     background-color: #ffffff
 
 .top_select-box
-    padding-top: 36px
     display: flex
-    justify-content: space-evenly
+    justify-content: space-between
 
 .select2-container
     width: 207px !important
     position: relative
     z-index: 20
+    // margin-right: 23px
 
 .select2-search--dropdown
     display: none
@@ -349,21 +396,25 @@
 
 .bottom_info
     display: flex
-    justify-content: space-evenly
+    justify-content: space-between
 
 .bottom_input-info
-    width: 90px
+    width: 98px
     border: none
     font-family: $Ubuntu
     font-weight: 400
     color: #717171
     font-size: 10px
     line-height: 12px
-    padding:
-        left: 5px
-        bottom: 5px
+    padding-bottom: 5px
     border-bottom: 1px solid rgba(0, 0, 0, .5)
     margin-bottom: 30px
+    cursor: pointer
+    &:nth-child(2n+1)
+        margin-right: 11px
+    &:nth-child(2)
+        margin-right: 23px
+        
 
 .show_result
     text-transform: uppercase
