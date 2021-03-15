@@ -2,6 +2,7 @@
 @import fonts
 @import variables
 @import 'node_modules/select2/dist/css/select2'
+@import 'node_modules/swiper/swiper-bundle.min'
 
 // $Helvetica: 'Helvetica', 'sans-serif' (700, 400 font-weight)
 
@@ -474,9 +475,56 @@
     margin-bottom: 33px
     position: relative
 
+.slider_btn-wrapper
+    position: relative
+    .swiper-button-next
+        right: -20px
+
+    .swiper-button-prev
+        left: -25px
+
+    .swiper-button-next,
+    .swiper-button-prev
+        &::after
+            content: ""
+            width: 74px
+            height: 74px
+            position: absolute
+            color: $color-white
+            box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.15)
+            border-radius: 50%
+
+    .swiper-button-next,
+    .swiper-button-prev
+        z-index: 0
+
+    .swiper-button-next
+        background: url(../images/right-icon-swiper.svg) no-repeat center right
+        &::after
+            right: 30%
+            bottom: 50%
+            transform: translate(30%, 50%)
+
+    .swiper-button-prev
+        background: url(../images/left-icon-swiper.svg) no-repeat center left
+        &::after
+            top: 50%
+            left: 30%
+            transform: translate(-30%, -50%)
+
+.car_rental-slider
+    width: 100%
+    height: 100%
+    overflow: hidden
+
 .slider_wrapper
     display: flex
-    justify-content: space-between
+    width: 100%
+    height: 100%
+
+.slider_items
+    display: flex
+    flex-shrink: 0
     
 .slider_item
     width: 378px
@@ -486,6 +534,7 @@
     position: relative
     background-color: $brand-color
     padding-left: 25px
+    border-radius: 5px
 
 .slider_item-descr
     margin: 35px 0 9px 0

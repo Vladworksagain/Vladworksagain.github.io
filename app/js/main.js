@@ -48,6 +48,19 @@ function closeModal(event) {
     this.closest('.popup').classList.remove('open')
 }
 
+let swiper = new Swiper('.car_rental-slider', {
+    containerModifierClass: 'car_rental-slider',
+    wrapperClass: 'slider_wrapper',
+    slideClass: 'slider_items',
+    spaceBetween: 10,
+    slidesPerView: 3,
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
 
 
 
