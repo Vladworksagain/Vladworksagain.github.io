@@ -1,15 +1,23 @@
 $(".select_location.first").select2({
     placeholder: "Выберите город",
-    allowClear: true
+    allowClear: true,
+    minimumResultsForSearch: Infinity
 });
 $(".select_location.second").select2({
     placeholder: "Выберите место получения",
-    allowClear: true
+    allowClear: true,
+    minimumResultsForSearch: Infinity
 });
 
 $(document).ready(function() {
     $('.currency_selection-point').select2({
-        selectionCssClass: '.header_left-point'
+        minimumResultsForSearch: Infinity,
+    })
+});
+
+$(document).ready(function() {
+    $('.language_selection-point').select2({
+        minimumResultsForSearch: Infinity
     })
 });
 
