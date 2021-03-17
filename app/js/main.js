@@ -9,13 +9,13 @@ $(".select_location.second").select2({
     minimumResultsForSearch: Infinity
 });
 
-$(document).ready(function() {
+$(document).ready(function () {
     $('.currency_selection-point').select2({
         minimumResultsForSearch: Infinity,
     })
 });
 
-$(document).ready(function() {
+$(document).ready(function () {
     $('.language_selection-point').select2({
         minimumResultsForSearch: Infinity
     })
@@ -48,7 +48,7 @@ function closeModal(event) {
     this.closest('.popup').classList.remove('open')
 }
 
-let swiper = new Swiper('.car_rental-slider', {
+let swiperRental = new Swiper('.car_rental-slider', {
     containerModifierClass: 'car_rental-slider',
     wrapperClass: 'slider_wrapper',
     slideClass: 'slider_items',
@@ -56,10 +56,25 @@ let swiper = new Swiper('.car_rental-slider', {
     slidesPerView: 3,
 
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
-  });
+});
+
+var swiperOffers = new Swiper('.offers_main-slider', {
+    containerModifierClass: 'offers_main-slider',
+    wrapperClass: 'offers_slider-wrapper',
+    slideClass: 'offers_slider-items',
+    speed: 800,
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,    
+    },
+});
 
 
 
