@@ -20,7 +20,7 @@
 
 %top_btn
     background: $color-white
-    padding: 12px
+    padding: px
     text-decoration: none
     font-family: $Ubuntu
     font-weight: 500px
@@ -32,6 +32,7 @@
     text-align: center
     border: 2px solid transparent
     transition: .3s ease all
+    text-transform: uppercase
     &:hover
         border: 2px solid #000000
         background-color: #E5E5E5
@@ -469,7 +470,7 @@
     background-color: $brand-color
     border-radius: 5px
     border: none
-    box-shadow: 0px 2.68363px 13.4182px rgba(255, 146, 46, 0.4)
+    box-shadow: 0px 2px 13px rgba(255, 146, 46, 0.4)
     border: 2px solid transparent
     transition: .3s ease all
     &:hover
@@ -751,3 +752,117 @@
     display: flex
     flex-shrink: 0
 
+.services_heading
+    font-family: $Montserrat
+    font-weight: 700
+    font-size: 33px
+    line-height: 41px
+    color: $top-black-color
+    text-align: center
+    margin-bottom: 81px
+
+.services_wrapper
+    display: grid
+    grid-template-rows: repeat(auto-fill, minmax(304px, 1fr))
+    grid-template-columns: repeat(3, 373px)
+    grid-gap: 28px
+    margin-bottom: 67px
+
+.services_item
+    z-index: 1
+    position: relative
+    grid-row-start: 1
+    display: flex
+    flex-direction: column
+    align-items: center
+    background-color: $color-white
+    box-shadow: 0px 2px 13px rgba(0, 0, 0, 0.1)
+    border-radius: 5px
+    // border: 1px solid transparent
+    cursor: pointer
+    transition: .3s ease all
+    &:hover
+        background: url(../images/back-item-servisec.png) no-repeat center center
+        transform: translateY(-20px)
+        color: orange
+        .item_short-title
+            color: $color-white
+        .item_main-text
+            color: #E3E3E3
+        .item_btn-more
+            border: 1px solid #FFFFFF
+            color: $color-white
+        
+
+.item_top-img, .car
+    &::before  
+        content: ""
+        width: 103px
+        height: 103px
+        position: absolute
+        border-radius: 50%
+        top: -15%
+        left: 50%
+        transform: translate(-50%)
+        background: url(../images/icon-car-services.svg) no-repeat center #FFC32A
+
+.logo
+    &::before  
+        content: ""
+        width: 103px
+        height: 103px
+        position: absolute
+        border-radius: 50%
+        top: -15%
+        left: 50%
+        transform: translate(-50%)
+        background: url(../images/icon-logo-services.svg) no-repeat center #FFC32A
+
+.money
+    &::before  
+        content: ""
+        width: 103px
+        height: 103px
+        position: absolute
+        border-radius: 50%
+        top: -15%
+        left: 50%
+        transform: translate(-50%)
+        background: url(../images/icon-money-services.svg) no-repeat center #FFC32A
+        
+
+.item_short-title
+    font-family: $Ubuntu
+    font-weight: 500
+    font-size: 17px
+    line-height: 20px
+    color: #000
+    margin: 73px 0 13px 0
+
+.item_main-text
+    font-family: $Ubuntu
+    text-align: center
+    font-weight: 400
+    font-size: 12px
+    line-height: 14px
+    color: #686868
+    margin-bottom: 20px
+    min-height: 100px
+    padding: 0 29px 0 29px
+
+.item_btn-more
+    font-family: $Ubuntu
+    font-weight: 400
+    font-size: 16px
+    line-height: 18px
+    color: #000
+    border: 1px solid #000
+    background-color: transparent
+    border-radius: 5px
+    width: 213px
+    height: 41px
+    padding: 5px
+    text-decoration: none
+    text-align: center
+    transition: .3s ease all
+        
