@@ -752,6 +752,18 @@
     display: flex
     flex-shrink: 0
 
+.services
+    position: relative
+
+    .big_circle
+        position: absolute
+        left: -17px
+        width: 201px
+        height: 201px
+        margin: 0
+        top: 365px
+        border: 39px solid #FFC32A
+
 .services_heading
     font-family: $Montserrat
     font-weight: 700
@@ -762,38 +774,47 @@
     margin-bottom: 81px
 
 .services_wrapper
-    display: grid
-    grid-template-rows: repeat(auto-fill, minmax(304px, 1fr))
-    grid-template-columns: repeat(3, 373px)
-    grid-gap: 28px
-    margin-bottom: 67px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin: -10px
 
 .services_item
-    z-index: 1
     position: relative
-    grid-row-start: 1
+    width: 373px
+    height: 304px
     display: flex
     flex-direction: column
     align-items: center
-    background-color: $color-white
     box-shadow: 0px 2px 13px rgba(0, 0, 0, 0.1)
     border-radius: 5px
-    // border: 1px solid transparent
     cursor: pointer
     transition: .3s ease all
+    margin: 10px
+
     &:hover
-        background: url(../images/back-item-servisec.png) no-repeat center center
+        &::before
+            content: ""
+            background: var(--image)
+            position: absolute
+            width: 421px
+            height: 332px
+            background-size: cover
         transform: translateY(-20px)
-        color: orange
-        .item_short-title
+        .item_short-title   
             color: $color-white
         .item_main-text
             color: #E3E3E3
         .item_btn-more
             border: 1px solid #FFFFFF
             color: $color-white
-        
 
+    &:nth-child(4)
+        margin: 0 25px 0 auto
+
+    &:nth-child(5)
+        margin: 0 auto 0 25px
+        
 .item_top-img, .car
     &::before  
         content: ""
@@ -801,7 +822,7 @@
         height: 103px
         position: absolute
         border-radius: 50%
-        top: -15%
+        top: -51px
         left: 50%
         transform: translate(-50%)
         background: url(../images/icon-car-services.svg) no-repeat center #FFC32A
@@ -813,7 +834,7 @@
         height: 103px
         position: absolute
         border-radius: 50%
-        top: -15%
+        top: -51px
         left: 50%
         transform: translate(-50%)
         background: url(../images/icon-logo-services.svg) no-repeat center #FFC32A
@@ -825,7 +846,7 @@
         height: 103px
         position: absolute
         border-radius: 50%
-        top: -15%
+        top: -51px
         left: 50%
         transform: translate(-50%)
         background: url(../images/icon-money-services.svg) no-repeat center #FFC32A
@@ -838,6 +859,7 @@
     line-height: 20px
     color: #000
     margin: 73px 0 13px 0
+    z-index: 1
 
 .item_main-text
     font-family: $Ubuntu
@@ -849,6 +871,7 @@
     margin-bottom: 20px
     min-height: 100px
     padding: 0 29px 0 29px
+    z-index: 2
 
 .item_btn-more
     font-family: $Ubuntu
@@ -865,4 +888,82 @@
     text-decoration: none
     text-align: center
     transition: .3s ease all
+    z-index: 3
         
+.rental_procedure-desc
+    margin: 67px 0 33px 0
+    text-align: center
+    font-family: $Montserrat
+    font-weight: 700
+    font-size: 35px
+    line-height: 41px
+    color: $top-black-color
+    text-transform: uppercase
+
+.rental_procedure_items
+    display: flex
+    justify-content: space-between
+    margin-bottom: 60px
+
+.rental_procedure_item
+    max-width: 264px
+    min-height: 222px
+    padding: 44px 21px
+    background-color: $color-white
+    border-radius: 5px
+    box-shadow: 0px 2.68363px 13.4182px rgba(0, 0, 0, 0.1)
+
+.rental_procedure-number
+    font-family: $Montserrat
+    font-weight: 800
+    font-size: 53px
+    line-height: 65px
+    color: $brand-color
+
+.rental_procedure-subtitle
+    font-family: $Ubuntu
+    font-weight: 500
+    font-size: 17px
+    line-height: 20px
+    color: #000
+    margin-bottom: 12px
+
+.rental_procedure-text
+    font-family: $Ubuntu
+    font-weight: 400
+    font-size: 12px
+    line-height: 14px
+    color: #686868
+
+.aside
+    background-color: $brand-color
+    margin-bottom: 53px
+
+.aside_short-title
+    margin-bottom: 12px
+    font-family: $Montserrat
+    font-weight: 700
+    font-size: 33px
+    line-height: 40px
+    color: $color-white
+    padding-top: 50px
+
+.aside_main-text
+    font-family: $Ubuntu
+    font-weight: 400
+    font-size: 15px
+    line-height: 17px
+    color: $color-white
+
+.aside_inner
+    display: flex
+    align-items: center
+    padding-bottom: 58px
+
+.aside_main-social
+    display: flex
+
+.main_social-items
+    margin-left: 17px
+    &:first-of-type
+        margin-left: 30px
