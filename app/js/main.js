@@ -91,6 +91,21 @@ function initMap() {
     });
   }
 
+  let showMore = document.querySelector('.main_info-about');
+
+function show() {
+  let moreText = document.querySelector('.show_more-text');
+  if (moreText.classList.contains('active')) {
+     moreText.classList.remove('active');
+     }
+  else {
+    moreText.classList.add('active');
+  }
+} 
+showMore.addEventListener('click', show);
+  
+
+
 
 
 

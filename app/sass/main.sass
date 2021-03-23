@@ -18,24 +18,25 @@
 
 // $color-white: #FFFFFF
 
-%top_btn
-    background: $color-white
-    padding: 12px
-    text-decoration: none
+%top_btn-form
+    border: none
+    box-shadow:  0px 1px 8px rgba(255, 146, 46, 0.4)
+    padding: 0
     font-family: $Ubuntu
-    font-weight: 500px
+    font-weight: 500
     font-size: 10px
     line-height: 12px
-    color: $top-black-color
+    background-color: $brand-color
+    color: $color-white
+    background: #fff
     border-radius: 5px
-    max-width: 160px
-    text-align: center
-    border: 2px solid transparent
+    width: 160px
+    height: 40px
     transition: .3s ease all
     &:hover
-        color: $color-white
-        border: 2px solid #FFFFFF
-        background-color: transparent
+        background: #fff
+        transition: .3s ease all
+        color: $top-black-color
 
 .header
     padding-top: 40px
@@ -237,26 +238,22 @@
     opacity: .7
 
 .popup_form-btn
-    @extend %top_btn
-    display: flex
-    align-items: center
-    width: 100%
-    justify-content: center
-    background-color: $brand-color
-    height: 26px
+    @extend %top_btn-form
+    border: none
+    box-shadow:  0px 1px 8px rgba(255, 146, 46, 0.4)
     border-radius: 3px
+    background-color: $brand-color
+    width: 176px
+    height: 26px
+    padding: 0
     color: $color-white
-    font-weight: 700
-    font-family: $Ubuntu
-    font-size: 10px
+    font-family: 700
+    font-size: 8px
     line-height: 8px
-    transition: .3s ease all
-    border: 2px solid transparent
     &:hover
-        color: #000000
-        border: 2px solid #000000
-        border-radius: 5px
-        background-color: #E5E5E5
+        background: #fff
+        transition: .3s ease all
+        color: $top-black-color
 
 .car_rental
     margin-bottom: 60px
@@ -456,26 +453,12 @@
         margin-right: 23px
 
 .show_result
-    text-transform: uppercase
-    padding: 9px 0
-    display: block
-    margin: 0 auto
-    width: 443px
-    font-size: 10px
-    line-height: 12px
-    color: $color-white
-    font-family: $Ubuntu
-    font-weight: 700
+    @extend %top_btn-form
     background-color: $brand-color
-    border-radius: 5px
-    border: none
+    font-weight: 700
     box-shadow: 0px 2px 13px rgba(255, 146, 46, 0.4)
-    border: 2px solid transparent
-    transition: .3s ease all
-    &:hover
-        border: 2px solid #000000
-        background-color: #E5E5E5
-        color: #000000
+    width: 443px
+    height: 40px
 
 .car_rental-bottom
     font-family: $Montserrat
@@ -564,8 +547,7 @@
     font-size: 12px
     line-height: 14px
     color: $color-white
-    display: inline-block
-    width: 193px
+    max-width: 193px
 
 .slider_item-info
     margin-bottom: 15px
@@ -820,7 +802,7 @@
     &:nth-child(5)
         margin: 0 auto 0 25px
         
-.item_top-img, .car
+.item_top-img
     &::before  
         content: ""
         width: 103px
@@ -831,31 +813,7 @@
         left: 50%
         transform: translate(-50%)
         background: url(../images/icon-car-services.svg) no-repeat center #FFC32A
-
-.logo
-    &::before  
-        content: ""
-        width: 103px
-        height: 103px
-        position: absolute
-        border-radius: 50%
-        top: -51px
-        left: 50%
-        transform: translate(-50%)
-        background: url(../images/icon-logo-services.svg) no-repeat center #FFC32A
-
-.money
-    &::before  
-        content: ""
-        width: 103px
-        height: 103px
-        position: absolute
-        border-radius: 50%
-        top: -51px
-        left: 50%
-        transform: translate(-50%)
-        background: url(../images/icon-money-services.svg) no-repeat center #FFC32A
-        
+        background: var(--icon)
 
 .item_short-title
     font-family: $Ubuntu
@@ -980,10 +938,11 @@
     display: flex
 
 .main_info
-    width: 50%
+    max-width: 466px
     display: flex
     flex-direction: column
-    margin-top: 125px
+    margin-right: 55px
+    padding-top: 125px
 
 .main_info-title
     font-family: $Montserrat
@@ -992,6 +951,12 @@
     line-height: 40px
     color: #000000
     margin-bottom: 20px
+
+.show_more-text
+    display: none
+
+.active
+    display: block
 
 .main_info-text
     margin-bottom: 20px
@@ -1010,7 +975,8 @@
     line-height: 15px
     color: $top-black-color
     position: relative
-    display: inline-block
+    max-width: 150px
+    cursor: pointer
     &::after
         content: "▼"
         position: absolute
@@ -1018,7 +984,7 @@
         left: 130px
 
 .main_info-btn
-    @extend %top_btn
+    
     width: 160px
     height: 40px
     background-color: $brand-color
@@ -1034,6 +1000,7 @@
     width: 649px
     height: 485px
     z-index: 2
+    border-radius: 5px
 
 .about_company-cricle
     position: relative
@@ -1052,8 +1019,9 @@
         position: absolute
         width: 91px
         height: 91px
-        top: -50px
+        top: 20px
         right: -50px
+        margin: 0
 
 .footer
     background-color: #282828
