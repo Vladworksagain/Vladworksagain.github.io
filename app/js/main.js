@@ -61,7 +61,7 @@ let swiperRental = new Swiper('.car_rental-slider', {
     },
 });
 
-var swiperOffers = new Swiper('.offers_main-slider', {
+let swiperOffers = new Swiper('.offers_main-slider', {
     containerModifierClass: 'offers_main-slider',
     wrapperClass: 'offers_slider-wrapper',
     slideClass: 'offers_slider-items',
@@ -72,7 +72,7 @@ var swiperOffers = new Swiper('.offers_main-slider', {
     },
     pagination: {
         el: '.swiper-pagination',
-        clickable: true,    
+        clickable: true,
     },
 });
 
@@ -81,29 +81,44 @@ function initMap() {
     const uluru = { lat: -25.344, lng: 131.036 };
     // The map, centered at Uluru
     const map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 5,
-      center: uluru,
+        zoom: 5,
+        center: uluru,
     });
     // The marker, positioned at Uluru
     const marker = new google.maps.Marker({
-      position: uluru,
-      map: map,
+        position: uluru,
+        map: map,
     });
-  }
+}
 
-  let showMore = document.querySelector('.main_info-about');
+
+document.querySelector('.main_info-about').addEventListener('click', show);
+
 
 function show() {
-  let moreText = document.querySelector('.show_more-text');
-  if (moreText.classList.contains('active')) {
-     moreText.classList.remove('active');
-     }
-  else {
-    moreText.classList.add('active');
-  }
-} 
-showMore.addEventListener('click', show);
-  
+    let modal = document.querySelector('.show_more');
+    modal.classList.toggle('active');
+}
+
+// let popupButton = document.querySelector('.popup_form-btn');
+
+// popupButton.addEventListener('click', () => {
+//     document.querySelector('.popup_content').classList.add('hiden-content');
+// })
+
+
+// popupButton.addEventListener('click', () => {
+//     document.querySelector('.header_popup-letter').classList.remove('popup_letter');
+// })
+
+
+// popupButton.addEventListener('click', showLetter);
+
+// function showLetter() {
+//     let popupLetter = document.querySelector('.header_popup-letter');
+//     popupLetter.classList.remove('popup_letter');
+// }
+
 
 
 

@@ -1,6 +1,7 @@
 @import reset
 @import fonts
 @import variables
+@import buttons
 @import 'node_modules/select2/dist/css/select2'
 @import 'node_modules/swiper/swiper-bundle.min'
 
@@ -18,25 +19,7 @@
 
 // $color-white: #FFFFFF
 
-%top_btn-form
-    border: none
-    box-shadow:  0px 1px 8px rgba(255, 146, 46, 0.4)
-    padding: 0
-    font-family: $Ubuntu
-    font-weight: 500
-    font-size: 10px
-    line-height: 12px
-    background-color: $brand-color
-    color: $color-white
-    background: #fff
-    border-radius: 5px
-    width: 160px
-    height: 40px
-    transition: .3s ease all
-    &:hover
-        background: #fff
-        transition: .3s ease all
-        color: $top-black-color
+// %        top_btn-form 
 
 .header
     padding-top: 40px
@@ -84,6 +67,7 @@
     margin-left: 17px
 
 .header_select
+
     .select2-container
         width: 49px !important
 
@@ -113,6 +97,21 @@
         .select2-selection--single
             .select2-selection__arrow b
                 border-color: $top-black-color transparent transparent transparent
+
+.select2-results__options
+    font-family: $Helvetica
+    font-size: 12px
+    line-height: 14px
+    font-weight: 600
+    text-align: center
+
+.select2-container--default
+    .select2-results__option--selected
+        background-color: $color-white
+
+.select2-container--default
+    .select2-results__option--highlighted.select2-results__option--selectable
+        background-color: $brand-color
 
 .language_selection
     .select2-container--default
@@ -154,10 +153,6 @@
 
 #active
     color: $brand-color
-    
-
-.popup_btn
-    color: $brand-color
 
 .header_popup
     position: fixed
@@ -178,6 +173,55 @@
     &.open
         opacity: 1
         visibility: visible
+
+.header_popup-letter
+    max-width: 197px
+    height: 149px
+    border-radius: 3px
+    background-color: $color-white
+    padding: 21px 41px
+    position: relative
+    text-align: center
+
+.popup_letter
+    display: none
+
+.header_letter-images
+    margin-bottom: 6px
+
+.popup_letter-desc
+    font-family: $Montserrat
+    font-weight: 600
+    font-size: 11px
+    line-height: 14px
+    color: #000
+    margin-bottom: 3px
+
+.popup_letter-text
+    font-family: $Montserrat
+    font-weight: 400
+    font-size: 7px
+    line-height: 10px
+    color: #3D4143
+    margin-bottom: 18px
+
+.popup_letter-btn
+    @extend %top_btn-form
+    width: 105px
+    height: 26px
+    background-color: $brand-color
+    font-weight: 700
+    font-size: 7px
+    line-height: 8px
+    text-align: center
+    padding: 7px 0
+    display: block
+    margin: auto
+
+.popup_letter-close
+    position: absolute
+    top: 14px
+    right: 14px
 
 .popup_close-btn
     position: absolute
@@ -202,6 +246,9 @@
     padding: 10px
     position: relative
 
+.hiden-content
+    display: none
+
 .popup_input-wrapper
     display: flex
     flex-direction: column
@@ -219,7 +266,7 @@
     font-family: $Montserrat
     font-weight: 400
     color: #646768
-    font-size: 10px
+    font-size: 7px
     line-height: 9px
     opacity: .7
 
@@ -232,28 +279,24 @@
     font-family: $Montserrat
     font-weight: 400
     color: #646768
-    font-size: 10px
+    font-size: 7px
     line-height: 9px
     padding: 8px 0 8px 10px
     opacity: .7
 
 .popup_form-btn
     @extend %top_btn-form
-    border: none
-    box-shadow:  0px 1px 8px rgba(255, 146, 46, 0.4)
+    border: 2px solid transparent
+    box-shadow: 0px 1px 8px rgba(255, 146, 46, 0.4)
     border-radius: 3px
     background-color: $brand-color
     width: 176px
     height: 26px
     padding: 0
     color: $color-white
-    font-family: 700
+    font-weight: 700
     font-size: 8px
     line-height: 8px
-    &:hover
-        background: #fff
-        transition: .3s ease all
-        color: $top-black-color
 
 .car_rental
     margin-bottom: 60px
@@ -369,7 +412,7 @@
             .select2-selection__rendered
                 font-size: 10px
                 font-family: $Ubuntu
-                font-family: 400
+                font-weight: 400
                 color: #717171
 
     .select2-container--open
@@ -521,7 +564,7 @@
 .slider_items
     display: flex
     flex-shrink: 0
-    
+
 .slider_item
     width: 378px
     height: 250px
@@ -558,24 +601,10 @@
     color: $color-white
 
 .slider_item-btn
-    background: $color-white
-    padding: 12px
+    @extend %top_btn-main
     text-decoration: none
-    font-family: $Ubuntu
-    font-weight: 500px
-    font-size: 10px
-    line-height: 12px
-    color: $top-black-color
-    border-radius: 5px
-    max-width: 160px
+    padding: 12px 0
     text-align: center
-    border: 2px solid transparent
-    transition: .3s ease all
-    &:hover
-        color: $color-white
-        border: 2px solid #FFFFFF
-        background-color: transparent
-        
 
 .slider_img
     position: absolute
@@ -597,7 +626,7 @@
     z-index: 1
 
 .offers
-    background: url(../images/offers-bgc.png) no-repeat center top 
+    background: url(../images/offers-bgc.png) no-repeat center top
     background-size: cover
     width: 100%
     height: auto
@@ -607,7 +636,7 @@
     position: relative
 
     .big_circle
-        position: absolute    
+        position: absolute
         top: 49px
         left: 291px
         width: 295px
@@ -641,6 +670,7 @@
 
 .offers_slider-img
     max-width: 735px
+    height: 397px
     padding-top: 100px
     pointer-events: none
     user-select: none
@@ -689,23 +719,26 @@
     line-height: 65px
     color: $brand-color
     margin-left: 18px
-        
+
 .slider_content-btn
-    padding: 12px
-    text-decoration: none
-    font-size: 10px
-    line-height: 12px
-    border-radius: 5px
-    max-width: 160px
-    text-align: center
-    border: 2px solid transparent
+    @extend %top_btn-form
     display: block
-    margin: 26px auto
-    font-family: $Ubuntu
-    font-weight: 700
-    color: $color-white
-    text-transform: uppercase
+    padding: 14px 0
+    margin:
+        top: 26px
+        left: auto
+        right: auto
+    text-align: center
     background-color: $brand-color
+    text-decoration: none
+    font-weight: 700
+    font-size: 11px
+    box-shadow: 0px 2px 13px rgba(255, 146, 46, 0.4)
+    border: none
+    &:hover
+        background-color: $brand-color
+        border: none
+        color: $color-white
 
 .offers_main-slider
     width: 100%
@@ -787,8 +820,8 @@
             width: 421px
             height: 332px
             background-size: cover
-        transform: translateY(-20px)
-        .item_short-title   
+            transform: translateY(-20px)
+        .item_short-title
             color: $color-white
         .item_main-text
             color: #E3E3E3
@@ -801,9 +834,9 @@
 
     &:nth-child(5)
         margin: 0 auto 0 25px
-        
+
 .item_top-img
-    &::before  
+    &::before
         content: ""
         width: 103px
         height: 103px
@@ -852,7 +885,7 @@
     text-align: center
     transition: .3s ease all
     z-index: 3
-        
+
 .rental_procedure-desc
     margin: 67px 0 33px 0
     text-align: center
@@ -952,11 +985,8 @@
     color: #000000
     margin-bottom: 20px
 
-.show_more-text
-    display: none
-
 .active
-    display: block
+    display: none
 
 .main_info-text
     margin-bottom: 20px
@@ -981,20 +1011,13 @@
         content: "▼"
         position: absolute
         top: 0
-        left: 130px
+        right: 10px
 
 .main_info-btn
-    
-    width: 160px
-    height: 40px
+    @extend %top_btn-form
     background-color: $brand-color
-    color: $color-white
     font-weight: 700
     font-size: 11px
-    line-height: 12px
-    &:hover
-        color: #000000
-        border: 2px solid #000000
 
 #map
     width: 649px
@@ -1035,7 +1058,7 @@
     padding-bottom: 15px
     margin-bottom: 44px
 
-.footer_top-wrapper 
+.footer_top-wrapper
     display: flex
 
 .footer_top-list
@@ -1048,19 +1071,18 @@
     font-size: 13px
     line-height: 15px
     font-family: $Ubuntu
-    font-family: 400px
+    font-weight: 400
     color: $color-white
     text-decoration: none
     transition: .3s ease all
     border-bottom: 2px solid transparent
     &:hover
         border-bottom: 2px solid #FFC32A
-        
 
 .footer_social
     display: flex
     margin-left: 63px
-    
+
     li
         margin-left: 13px
 
@@ -1071,10 +1093,10 @@
 
 .working_hours
     font-family: $Ubuntu
-    font-family: 500px
+    font-weight: 500
     font-size: 12px
     line-height: 14px
-    color: $color-white 
+    color: $color-white
 
 .working_hours-img
     margin-right: 8px
