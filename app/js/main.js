@@ -1,24 +1,33 @@
-$(".select_location.first").select2({
-    placeholder: "Выберите город",
-    allowClear: true,
-    minimumResultsForSearch: Infinity
+$(document).ready(function () {
+    $('.first.select_location').select2({
+        placeholder: 'Выберите город',
+        allowClear: true,
+        dropdownCssClass: 'select_location-list',
+        minimumResultsForSearch: Infinity,
+        theme: 'custom-select'
+    });
 });
-$(".select_location.second").select2({
-    placeholder: "Выберите место получения",
-    allowClear: true,
-    minimumResultsForSearch: Infinity
+$(document).ready(function () {
+    $('.second.select_location').select2({
+        placeholder: 'Выберите место получения',
+        allowClear: true,
+        dropdownCssClass: 'select_location-list',
+        minimumResultsForSearch: Infinity,
+    });
 });
-
 $(document).ready(function () {
     $('.currency_selection-point').select2({
+        dropdownCssClass: 'header_select-list',
         minimumResultsForSearch: Infinity,
-    })
+        theme: "curency_selection",
+    });
 });
-
 $(document).ready(function () {
     $('.language_selection-point').select2({
-        minimumResultsForSearch: Infinity
-    })
+        dropdownCssClass: 'header_select-list',
+        minimumResultsForSearch: Infinity,
+        theme: "language_selection",
+    });
 });
 
 const buttons = document.querySelectorAll('.modal_btn')
@@ -92,34 +101,68 @@ function initMap() {
 }
 
 
-document.querySelector('.main_info-about').addEventListener('click', show);
+// document.querySelector('.main_info-about').addEventListener('click', show);
 
 
-function show() {
-    let modal = document.querySelector('.show_more');
-    modal.classList.toggle('active');
-}
-
-// let popupButton = document.querySelector('.popup_form-btn');
-
-// popupButton.addEventListener('click', () => {
-//     document.querySelector('.popup_content').classList.add('hiden-content');
-// })
-
-
-// popupButton.addEventListener('click', () => {
-//     document.querySelector('.header_popup-letter').classList.remove('popup_letter');
-// })
-
-
-// popupButton.addEventListener('click', showLetter);
-
-// function showLetter() {
-//     let popupLetter = document.querySelector('.header_popup-letter');
-//     popupLetter.classList.remove('popup_letter');
+// function show() {
+//     let modal = document.querySelector('.show_more');
+//     modal.classList.toggle('active');
 // }
 
+$(document).ready(function () {
+    $('.bottom_header-burger').click(function (event) {
+        $('.bottom_header-burger,.bottom_header-list').toggleClass('menu-active');
+    });
+});
 
+jQuery.datetimepicker.setLocale('ru');
+
+jQuery('#datetimepicker-main-first').datetimepicker({
+    i18n: {
+        de: {
+            months: [
+                'Januar', 'Februar', 'März', 'April',
+                'Mai', 'Juni', 'Juli', 'August',
+                'September', 'Oktober', 'November', 'Dezember',
+            ],
+            dayOfWeek: [
+                "So.", "Mo", "Di", "Mi",
+                "Do", "Fr", "Sa.",
+            ]
+        }
+    },
+    timepicker: false,
+    format: 'd.m.Y',
+    minDate: '-1970/01/02',
+    maxDate: '+1970/01/02'
+});
+jQuery('#datetimepicker-main-second').datetimepicker({
+    i18n: {
+        de: {
+            months: [
+                'Januar', 'Februar', 'März', 'April',
+                'Mai', 'Juni', 'Juli', 'August',
+                'September', 'Oktober', 'November', 'Dezember',
+            ],
+            dayOfWeek: [
+                "So.", "Mo", "Di", "Mi",
+                "Do", "Fr", "Sa.",
+            ]
+        }
+    },
+    timepicker: false,
+    format: 'd.m.Y',
+    minDate: '-1970/01/02',
+    maxDate: '+1970/01/02'
+});
+jQuery('#datetimepicker-time-first').datetimepicker({
+    datepicker: false,
+    format: 'H:i'
+});
+jQuery('#datetimepicker-time-second').datetimepicker({
+    datepicker: false,
+    format: 'H:i'
+});
 
 
 
