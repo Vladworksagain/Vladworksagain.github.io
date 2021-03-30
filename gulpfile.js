@@ -40,10 +40,9 @@ function cleanDist() {
 
 function scripts() {
     return src([
-        'node_modules/swiper/swiper-bundle.min.js',
         'node_modules/jquery/dist/jquery.min.js',
         'node_modules/select2/dist/js/select2.min.js',
-        'node_modules/jquery-datetimepicker/build/jquery.datetimepicker.full.js',
+        'node_modules/slick-carousel/slick/slick.min.js',
         'app/js/main.js'
     ])
     .pipe(concat('main.min.js'))

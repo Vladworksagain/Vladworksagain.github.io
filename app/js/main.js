@@ -1,3 +1,67 @@
+// $(document).ready(function () {
+//     $('.car_rental-slider').slick({
+//         slidesToShow: 3,
+//         slidesToScroll: 1,
+//         infinite: false,
+//         sliderIsLive: true,
+//         responsive: [
+//             {
+//                 breakpoint: 1024,
+//                 settings: {
+//                     slidesToShow: 2,
+//                     slidesToScroll: 1,
+//                 }
+//             },
+//         ]
+//     });
+//     window.addEventListener("resize", function() {
+//         if (window.innerWidth <= 768) {
+//           $('.car_rental-slider').slick('unslick');
+//           sliderIsLive = false;
+//         }
+//         else {
+//           if (sliderIsLive) {
+//             $('.car_rental-slider').slick();
+//             sliderIsLive = true;
+//           }
+//         }
+//       });
+// });
+$slick_slider = $('.car_rental-slider');
+settings = {
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: false,
+    responsive: [
+        {
+            breakpoint: 1024, 
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            }
+        }
+    ]
+}
+$slick_slider.slick(settings);
+
+// reslick only if it's not slick()
+$(window).on('resize', function () {
+    if ($(window).width() < 768) {
+        if ($slick_slider.hasClass('slick-initialized')) {
+            $slick_slider.slick('unslick');
+        }
+        return
+    }
+
+    if (!$slick_slider.hasClass('slick-initialized')) {
+        return $slick_slider.slick(settings);
+    }
+});
+
+
+
+
+
 $(document).ready(function () {
     $('.first.select_location').select2({
         placeholder: 'Выберите город',
@@ -57,19 +121,6 @@ function closeModal(event) {
     this.closest('.popup').classList.remove('open')
 }
 
-let swiperRental = new Swiper('.car_rental-slider', {
-    containerModifierClass: 'car_rental-slider',
-    wrapperClass: 'slider_wrapper',
-    slideClass: 'slider_items',
-    spaceBetween: 10,
-    slidesPerView: 3,
-
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-});
-
 let swiperOffers = new Swiper('.offers_main-slider', {
     containerModifierClass: 'offers_main-slider',
     wrapperClass: 'offers_slider-wrapper',
@@ -115,54 +166,55 @@ $(document).ready(function () {
     });
 });
 
-jQuery.datetimepicker.setLocale('ru');
+// $.datetimepicker.setLocale('ru');
 
-jQuery('#datetimepicker-main-first').datetimepicker({
-    i18n: {
-        de: {
-            months: [
-                'Januar', 'Februar', 'März', 'April',
-                'Mai', 'Juni', 'Juli', 'August',
-                'September', 'Oktober', 'November', 'Dezember',
-            ],
-            dayOfWeek: [
-                "So.", "Mo", "Di", "Mi",
-                "Do", "Fr", "Sa.",
-            ]
-        }
-    },
-    timepicker: false,
-    format: 'd.m.Y',
-    minDate: '-1970/01/02',
-    maxDate: '+1970/01/02'
-});
-jQuery('#datetimepicker-main-second').datetimepicker({
-    i18n: {
-        de: {
-            months: [
-                'Januar', 'Februar', 'März', 'April',
-                'Mai', 'Juni', 'Juli', 'August',
-                'September', 'Oktober', 'November', 'Dezember',
-            ],
-            dayOfWeek: [
-                "So.", "Mo", "Di", "Mi",
-                "Do", "Fr", "Sa.",
-            ]
-        }
-    },
-    timepicker: false,
-    format: 'd.m.Y',
-    minDate: '-1970/01/02',
-    maxDate: '+1970/01/02'
-});
-jQuery('#datetimepicker-time-first').datetimepicker({
-    datepicker: false,
-    format: 'H:i'
-});
-jQuery('#datetimepicker-time-second').datetimepicker({
-    datepicker: false,
-    format: 'H:i'
-});
+// $('#datetimepicker-main-first').datetimepicker({
+//     i18n: {
+//         de: {
+//             months: [
+//                 'Januar', 'Februar', 'März', 'April',
+//                 'Mai', 'Juni', 'Juli', 'August',
+//                 'September', 'Oktober', 'November', 'Dezember',
+//             ],
+//             dayOfWeek: [
+//                 "So.", "Mo", "Di", "Mi",
+//                 "Do", "Fr", "Sa.",
+//             ]
+//         }
+//     },
+//     timepicker: false,
+//     format: 'd.m.Y',
+//     minDate: '-1970/01/02',
+//     maxDate: '+1970/01/02'
+// });
+// $('#datetimepicker-main-second').datetimepicker({
+//     i18n: {
+//         de: {
+//             months: [
+//                 'Januar', 'Februar', 'März', 'April',
+//                 'Mai', 'Juni', 'Juli', 'August',
+//                 'September', 'Oktober', 'November', 'Dezember',
+//             ],
+//             dayOfWeek: [
+//                 "So.", "Mo", "Di", "Mi",
+//                 "Do", "Fr", "Sa.",
+//             ]
+//         }
+//     },
+//     timepicker: false,
+//     format: 'd.m.Y',
+//     minDate: '-1970/01/02',
+//     maxDate: '+1970/01/02'
+// });
+// $('#datetimepicker-time-first').datetimepicker({
+//     datepicker: false,
+//     format: 'H:i'
+// });
+// $('#datetimepicker-time-second').datetimepicker({
+//     datepicker: false,
+//     format: 'H:i'
+// });
+
 
 
 

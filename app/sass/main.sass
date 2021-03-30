@@ -3,8 +3,7 @@
 @import variables
 @import buttons
 @import 'node_modules/select2/dist/css/select2.min'
-@import 'node_modules/swiper/swiper-bundle.min'
-@import 'node_modules/jquery-datetimepicker/build/jquery.datetimepicker.min'
+@import 'node_modules/slick-carousel/slick/slick.scss'
 
 // $Helvetica: 'Helvetica', 'sans-serif' (700, 400 font-weight)
 
@@ -312,20 +311,6 @@
         opacity: 1
         visibility: visible
 
-.header_popup-letter
-    max-width: 197px
-    height: 149px
-    border-radius: 3px
-    background-color: $color-white
-    padding: 21px 41px
-    text-align: center
-    // transition: .3s ease all
-    // transform: translateY(0)
-    // position: absolute
-
-// .popup_letter
-//     transform: translateY(-500px)
-
 .header_letter-images
     margin-bottom: 6px
 
@@ -477,6 +462,9 @@
     right: 375px
     z-index: 2
 
+    @media screen and ( max-width: 1300px )
+        right: 309px
+
     @media screen and ( max-width: 1192px )
         display: none
 
@@ -491,6 +479,9 @@
     top: 602px
     right: 207px
 
+    @media screen and ( max-width: 1300px )
+        right: 150px
+
     @media screen and ( max-width: 1050px )
         display: none
 
@@ -499,6 +490,9 @@
     top: 239px
     right: 68px
     z-index: 3
+
+    @media screen and ( max-width: 1300px )
+        right: 0
 
     @media screen and ( max-width: 892px )
         right: 0
@@ -510,6 +504,9 @@
     position: absolute
     top: 0
     right: 68px
+
+    @media screen and ( max-width: 1300px )
+        right: 0
 
     @media screen and ( max-width: 892px )
         right: 0
@@ -731,56 +728,46 @@
     margin-bottom: 33px
     position: relative
 
-.slider_btn-wrapper
+.slider_rental-wrapper
     position: relative
-    .swiper-button-next
-        right: -20px
-
-    .swiper-button-prev
-        left: -25px
-
-    .swiper-button-next,
-    .swiper-button-prev
-        &::after
-            content: ""
-            width: 74px
-            height: 74px
-            position: absolute
-            color: $color-white
-            box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.15)
-            border-radius: 50%
-
-    .swiper-button-next,
-    .swiper-button-prev
-        z-index: 0
-
-    .swiper-button-next
-        background: url(../images/right-icon-swiper.svg) no-repeat center right
-        &::after
-            right: 30%
-            bottom: 50%
-            transform: translate(30%, 50%)
-
-    .swiper-button-prev
-        background: url(../images/left-icon-swiper.svg) no-repeat center left
-        &::after
-            top: 50%
-            left: 30%
-            transform: translate(-30%, -50%)
-
 .car_rental-slider
-    width: 100%
-    height: 100%
-    overflow: hidden
+    margin-right: -17px
+    // position: relative
 
-.slider_wrapper
-    display: flex
-    width: 100%
-    height: 100%
+    .slick-slider
+        position: static
 
-.slider_items
-    display: flex
-    flex-shrink: 0
+    .slick-arrow
+        border: none
+        background-color: white
+        box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.15)  
+        border-radius: 50%
+        width: 74px
+        height: 74px      
+        font-size: 0
+        padding: 0
+
+    .slick-prev
+        background: url(../images/left-icon-swiper.svg) no-repeat
+        position: absolute
+        background-position: 30% 50%
+        bottom: 50%
+        left: -17px
+        transform: translate(-17px, 50%)
+        
+        
+    .slick-next
+        background: url(../images/right-icon-swiper.svg) no-repeat
+        background-position: 70% 50%
+        position: absolute
+        bottom: 50%
+        right: -10px
+        transform: translate(10px, 50%)
+        
+
+.slider_item
+    margin-right: 17px
+
 
 .slider_item
     width: 378px
@@ -809,6 +796,9 @@
     color: $color-white
     max-width: 193px
 
+    @media screen and ( max-width: 1050px )
+        font-size: 10px
+
 .slider_item-info
     margin-bottom: 15px
     font-family: $Ubuntu
@@ -816,13 +806,15 @@
     font-size: 24px
     line-height: 28px
     color: $color-white
+    display: inline-block
 
 .slider_item-btn
     @extend %top_btn-main
     text-decoration: none
     padding: 12px 0
     text-align: center
-
+    display: block
+    
 .slider_img
     position: absolute
     right: 0
@@ -841,6 +833,10 @@
     right: 49px
     top: 30px
     z-index: 1
+
+    @media screen and ( max-width: 1050px )
+        display: none
+        
 
 .offers
     background: url(../images/offers-bgc.png) no-repeat center top
