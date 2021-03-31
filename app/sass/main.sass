@@ -41,9 +41,9 @@
     width: 100%
     padding: 0 20px
     margin: 0 auto
-        
-    @media screen and ( max-width: 350px )
-        padding: 0 10px
+
+    @media screen and ( max-width: 580px )
+        padding: 0 30px
 
 .top_header-wrapper
     display: flex
@@ -183,6 +183,7 @@
 
     @media screen and ( max-width: 580px )
         display: block
+        padding-right: 40px
 
         span
             position: absolute
@@ -218,6 +219,14 @@
 
     @media screen and ( max-width: 350px )
         margin-left: auto
+
+.top_header-img
+
+    @media screen and ( max-width: 768px )
+        object-fit: contain
+        width: 100%
+        height: 100%
+        padding: 0 10px
 
 .bottom_header-list.menu-active
 
@@ -444,6 +453,7 @@
 
     @media screen and ( max-width: 580px )
         max-width: 100vw
+        background-color: rgba(255, 255, 255, .7)
 
 .car_rental-top
     width: 50%
@@ -568,7 +578,7 @@
         display: block
 
     @media screen and ( max-width: 580px )
-
+        margin-bottom: 40px
         width: 100vw
 
         &::before
@@ -732,27 +742,29 @@
 
 .slider_rental-wrapper
     position: relative
+
 .car_rental-slider
     margin-right: -17px
-    
-    @media screen and ( max-width: 768px )
+    @media screen and ( max-width: 767px )
         display: grid
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
         grid-template-rows: auto auto
         grid-gap: 10px
         grid-row-gap: 37px
-        
 
     .slick-slider
         position: static
 
+    .slick-list
+        z-index: 1
+
     .slick-arrow
         border: none
         background-color: white
-        box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.15)  
+        box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.15)
         border-radius: 50%
         width: 74px
-        height: 74px      
+        height: 74px
         font-size: 0
         padding: 0
 
@@ -763,8 +775,7 @@
         bottom: 50%
         left: -17px
         transform: translate(-17px, 50%)
-        
-        
+
     .slick-next
         background: url(../images/right-icon-swiper.svg) no-repeat
         background-position: 80% 50%
@@ -785,8 +796,20 @@
     margin-right: 17px
 
     @media screen and ( max-width: 1170px )
-        background: var(--slider)
-        background-color: $brand-color
+        // background: var(--slider)
+        // background-color: $brand-color 
+        &::before
+            content: ""
+            position: absolute
+            top: 0
+            left: 0
+            background: var(--slider)
+            width: 100%
+            height: 100%
+
+        display: flex !important
+        justify-content: flex-end
+        align-items: center
 
     @media screen and ( max-width: 768px )
         width: 100%
@@ -794,15 +817,18 @@
         display: flex
         justify-content: flex-end
         align-items: center
+        padding: 0
+        margin: 0
+        width: 94%
 
-
-.slick-initialized .slick-slide
-    
-    @media screen and ( max-width: 1170px )
-        display: flex
-        justify-content: flex-end
-        align-items: center
-        
+        &::before
+            content: ""
+            position: absolute
+            top: -20px
+            left: 0
+            background: var(--slider)
+            width: 100%
+            height: 100%
 
 .slider_item-descr
     margin: 35px 0 9px 0
@@ -814,7 +840,20 @@
 
     @media screen and ( max-width: 1170px )
         margin: 0
-        
+        display: none
+
+.slider_item-mob
+    margin: 35px 0 9px 0
+    font-family: $Montserrat
+    font-weight: 700
+    color: $color-white
+    font-size: 33px
+    line-height: 41px
+    display: none
+
+    @media screen and ( max-width: 1170px )
+        display: inline-block
+        margin: 0
 
 .slider_item-text
     margin-bottom: 5px
@@ -847,9 +886,9 @@
     text-align: center
     display: block
 
-    @media screen and ( max-width: 1070px )
+    @media screen and ( max-width: 1170px )
         margin-bottom: 15px
-    
+
 .slider_img
     position: absolute
     right: 0
@@ -858,7 +897,7 @@
     z-index: 2
 
     @media screen and ( max-width: 1170px )
-        display: none !important        
+        display: none !important
 
 .slider_circle
     width: 104px
@@ -872,7 +911,7 @@
     top: 30px
     z-index: 1
 
-    @media screen and ( max-width: 1170px )        
+    @media screen and ( max-width: 1170px )
         display: none
 
 .offers
@@ -881,6 +920,12 @@
     width: 100%
     height: auto
     margin-bottom: 81px
+
+    @media screen and ( max-width: 1192px )
+        padding-right: 32px
+
+    @media screen and ( max-width: 524px )
+        padding-left: 32px
 
 .offers_wrapper
     position: relative
@@ -894,12 +939,21 @@
         margin: 0
         z-index: 0
 
+        @media screen and ( max-width: 1192px )
+            display: none
+
     .small_circle
         position: absolute
         left: 103px
-        bottom: 50px
+        top: 71%
         margin: 0
-        z-index: 0
+        z-index: 1
+
+        @media screen and ( max-width: 1300px )
+            display: block
+
+        @media screen and ( max-width: 1192px )
+            display: none
 
     .offers_bottom-circle
         width: 229px
@@ -908,22 +962,66 @@
         position: absolute
         border-radius: 50%
         top: 358px
-        right: 41px
+        right: 0
+        z-index: 0
 
-.slider_shot-title
+        @media screen and ( max-width: 1192px )
+            display: none
+
+.offers_main-slider
+    display: flex
+    justify-content: center
+    align-items: center
+
+    .slick-initialized .slick-slide
+        @media screen and ( max-width: 1170px )
+            display: block !important
+
+.offers_cars
+    width: 100%
+    object-fit: cover
+
+    @media screen and ( max-width: 1092px )
+        width: 100%
+        left: 0
+        top: 13%
+        transform: translate(-13%)
+        position: absolute
+
+    @media screen and ( max-width: 768px )
+        top: 40%
+        transform: translate(-40%)
+
+.offers_slider-items
+    display: flex !important
+
+.slider_short-title
     padding: 80px 0 33px 0
     font-family: $Montserrat
     font-weight: 700
     font-size: 33px
     line-height: 40px
     color: $color-white
+    text-align: center
+
+    @media screen and ( max-width: 524px )
+        font-size: 29px
 
 .offers_slider-img
-    max-width: 735px
-    height: 397px
+    width: 50%
+    min-height: 397px
     padding-top: 100px
     pointer-events: none
     user-select: none
+
+    @media screen and ( max-width: 1192px )
+        width: 100%
+
+    @media screen and ( max-width: 768px )
+        z-index: 1
+
+    @media screen and ( max-width: 524px )
+        display: none
 
 .slider_content-wrapper
     width: auto
@@ -932,12 +1030,56 @@
     align-items: center
     padding-bottom: 100px
 
+    @media screen and ( max-width: 524px )
+        width: 100%
+
+.slider_dots-offers
+    position: absolute
+    bottom: -30px
+    right: 50%
+    transform: translate(50%)
+    display: flex
+    font-size: 0
+
+    li
+        margin-right: 10px
+
+        button
+            width: 37px
+            border: none
+            background-color: rgba(255, 255, 255, .3)
+            border: transparent
+            padding-bottom: 1px
+
+    .slick-active
+        button
+            border: 1px solid $brand-color
+            width: 89px
+            box-shadow: 0px 0px 4px rgba(255, 195, 42, 0.6)
+            background-color: $brand-color
+            padding: 0
+            height: 0
+
 .slider_content-info
     background-color: #2B2B2B
     border-radius: 5px
-    width: 475px
+    min-width: 475px
     height: 276px
     text-align: center
+    position: relative
+
+    @media screen and ( max-width: 1092px )
+        width: 100%
+        min-width: 500px
+
+    @media screen and ( max-width: 768px )
+        text-align: right
+        padding-right: 20px
+        
+    @media screen and ( max-width: 524px )
+        width: 100%
+        text-align: center
+        padding: 10px
 
 .slider-content-descr
     font-family: $Ubuntu
@@ -990,37 +1132,15 @@
         border: none
         color: $color-white
 
-.offers_main-slider
-    width: 100%
-    height: 100%
-    overflow: hidden
-    position: relative
+    @media screen and ( max-width: 768px )
+        margin-right: 0
+        margin-left: auto
 
-    .swiper-pagination
-        bottom: 15%
-        right: 29%
+    @media screen and ( max-width: 524px )
+        margin-left: auto
+        margin-right: auto
 
-    .swiper-pagination-bullet
-        width: 37px
-        height: 0px
-        height: 2px
-        border-radius: 0
-        margin-left: 10px
-        background: rgba(255, 255, 255, .8)
-        &:first-of-type
-            margin: 0
-        &-active
-            border: 1px solid #FFC32A
-            width: 89px
-
-.offers_slider-wrapper
-    width: 100%
-    height: 100%
-    display: flex
-
-.offers_slider-items
-    display: flex
-    flex-shrink: 0
+        
 
 .services
     position: relative

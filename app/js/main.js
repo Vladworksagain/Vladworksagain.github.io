@@ -78,19 +78,15 @@ $(window).on('resize', function () {
     }
 });
 
-let swiperOffers = new Swiper('.offers_main-slider', {
-    containerModifierClass: 'offers_main-slider',
-    wrapperClass: 'offers_slider-wrapper',
-    slideClass: 'offers_slider-items',
-    speed: 800,
-    effect: 'fade',
-    fadeEffect: {
-        crossFade: true
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
+$('.offers_main-slider').slick({
+    arrows: false,
+    dots: true,
+    dotsClass: 'slider_dots-offers',
+    appendDots: $('.slider_content-info'),
+    infinite: false,
+    fade: true,
+    cssEase: 'linear',
+    speed: 600,
 });
 
 function initMap() {
