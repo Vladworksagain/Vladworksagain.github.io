@@ -807,9 +807,9 @@
             width: 100%
             height: 100%
 
-        display: flex !important
-        justify-content: flex-end
-        align-items: center
+            display: flex !important
+            justify-content: flex-end
+            align-items: center
 
     @media screen and ( max-width: 768px )
         width: 100%
@@ -1075,7 +1075,7 @@
     @media screen and ( max-width: 768px )
         text-align: right
         padding-right: 20px
-        
+
     @media screen and ( max-width: 524px )
         width: 100%
         text-align: center
@@ -1140,8 +1140,6 @@
         margin-left: auto
         margin-right: auto
 
-        
-
 .services
     position: relative
 
@@ -1169,6 +1167,9 @@
     justify-content: space-between
     margin: -10px
 
+    @media screen and ( max-width: 768px )
+        justify-content: center
+
 .services_item
     position: relative
     width: 373px
@@ -1190,6 +1191,16 @@
             width: 421px
             height: 332px
             background-size: cover
+
+            @media screen and ( max-width: 1300px )
+                width: 100%
+                height: 100%
+                background-size: 110%
+
+            @media screen and ( max-width: 420px )
+                background-size: 170%
+                height: 100%
+
         .item_short-title
             color: $color-white
         .item_main-text
@@ -1198,11 +1209,34 @@
             border: 1px solid #FFFFFF
             color: $color-white
 
+    @media screen and ( max-width: 1300px )
+        background: rgba(255, 255, 255, 1.1)
+        z-index: 2
+        // margin: 68px 10px 0 10px
+        width: 45%
+        margin-top: 30px
+
+    @media screen and ( max-width: 768px )
+        width: 100%
+        margin-top: 60px
+        max-width: 512px
+
     &:nth-child(4)
         margin: 0 25px 0 auto
 
+        @media screen and ( max-width: 1300px )
+            margin: 30px 10px 0 10px
+
+        @media screen and ( max-width: 768px )
+            margin: 60px 10px 0 10px
     &:nth-child(5)
         margin: 0 auto 0 25px
+
+        @media screen and ( max-width: 1300px )
+            margin: 30px 10px 0 10px
+
+        @media screen and ( max-width: 768px )
+            margin: 60px 10px 0 10px
 
 .item_top-img
     &::before
@@ -1255,6 +1289,13 @@
     transition: .3s ease all
     z-index: 3
 
+    @media screen and ( max-width: 350px )
+        margin-bottom: 25px
+
+    @media screen and ( max-width: 768px )
+        margin-bottom: 25px
+    
+
 .rental_procedure-desc
     margin: 67px 0 33px 0
     text-align: center
@@ -1270,6 +1311,16 @@
     justify-content: space-between
     margin-bottom: 60px
 
+    @media screen and ( max-width: 1300px )
+        flex-wrap: wrap
+        margin-bottom: 45px
+
+    @media screen and ( max-width: 580px )
+        align-items: center
+        justify-content: center
+        margin-bottom: 20px
+
+
 .rental_procedure_item
     max-width: 264px
     min-height: 222px
@@ -1277,6 +1328,13 @@
     background-color: $color-white
     border-radius: 5px
     box-shadow: 0px 2.68363px 13.4182px rgba(0, 0, 0, 0.1)
+
+    @media screen and ( max-width: 1300px )
+        margin-bottom: 15px
+
+    @media screen and ( max-width: 768px )
+        max-width: 240px
+        margin-right: 10px
 
 .rental_procedure-number
     font-family: $Montserrat
@@ -1304,6 +1362,9 @@
     background-color: $brand-color
     margin-bottom: 53px
 
+    @media screen and ( max-width: 450px )
+        padding: 0 40px 0 40px
+
 .aside_short-title
     margin-bottom: 12px
     font-family: $Montserrat
@@ -1313,6 +1374,9 @@
     color: $color-white
     padding-top: 50px
 
+    @media screen and ( max-width: 450px )
+        font-size: 20px
+
 .aside_main-text
     font-family: $Ubuntu
     font-weight: 400
@@ -1320,13 +1384,24 @@
     line-height: 17px
     color: $color-white
 
+    @media screen and ( max-width: 768px )
+        font-size: 18px
+        line-height: 20px
+
 .aside_inner
     display: flex
     align-items: center
     padding-bottom: 58px
 
+    @media screen and ( max-width: 768px )
+        flex-wrap: wrap
+        justify-content: center
+
 .aside_main-social
     display: flex
+
+    @media screen and ( max-width: 768px )
+        margin-top: 10px
 
 .main_social-items
     margin-left: 17px
