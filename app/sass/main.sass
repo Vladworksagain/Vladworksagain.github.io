@@ -23,6 +23,9 @@
 
 // %        top_btn-form 
 
+body
+    overflow-x: hidden
+
 .header
     padding-top: 40px
     position: relative
@@ -982,15 +985,19 @@
     object-fit: cover
 
     @media screen and ( max-width: 1092px )
-        width: 100%
+        width: 65%
         left: 0
-        top: 13%
-        transform: translate(-13%)
+        // top: 13%
+        // transform: translate(-13%)
         position: absolute
+        top: 35%
+        transform: translate(-35%)
+        z-index: 1
 
     @media screen and ( max-width: 768px )
         top: 40%
         transform: translate(-40%)
+        width: 90%
 
 .offers_slider-items
     display: flex !important
@@ -1047,18 +1054,9 @@
         button
             width: 37px
             border: none
-            background-color: rgba(255, 255, 255, .3)
-            border: transparent
-            padding-bottom: 1px
-
-    .slick-active
-        button
-            border: 1px solid $brand-color
-            width: 89px
-            box-shadow: 0px 0px 4px rgba(255, 195, 42, 0.6)
             background-color: $brand-color
-            padding: 0
-            height: 0
+            border: transparent
+            padding-bottom: 1px                    
 
 .slider_content-info
     background-color: #2B2B2B
@@ -1115,7 +1113,7 @@
 .slider_content-btn
     @extend %top_btn-form
     display: block
-    padding: 14px 0
+    padding: 12px 0
     margin:
         top: 26px
         left: auto
@@ -1126,11 +1124,12 @@
     font-weight: 700
     font-size: 11px
     box-shadow: 0px 2px 13px rgba(255, 146, 46, 0.4)
-    border: none
+    border: 2px solid transparent
     &:hover
-        background-color: $brand-color
-        border: none
-        color: $color-white
+        border: 2px solid #000000
+        color: #000
+        background: $color-white
+        transition: .3s ease all
 
     @media screen and ( max-width: 768px )
         margin-right: 0
@@ -1191,7 +1190,7 @@
             width: 421px
             height: 332px
             background-size: cover
-
+            border-radius: 5px
             @media screen and ( max-width: 1300px )
                 width: 100%
                 height: 100%
@@ -1315,6 +1314,9 @@
         flex-wrap: wrap
         margin-bottom: 45px
 
+    @media screen and ( max-width: 868px )
+        justify-content: center
+
     @media screen and ( max-width: 580px )
         align-items: center
         justify-content: center
@@ -1324,7 +1326,9 @@
 .rental_procedure_item
     max-width: 264px
     min-height: 222px
+    max-height: 450px
     padding: 44px 21px
+    margin: 0 10px 0 0
     background-color: $color-white
     border-radius: 5px
     box-shadow: 0px 2.68363px 13.4182px rgba(0, 0, 0, 0.1)
@@ -1436,6 +1440,9 @@
 
     @media screen and ( max-width: 1092px )
         padding-top: 54px
+
+    @media screen and ( max-width: 450px )
+        margin-right: 0
 
 .main_info-title
     font-family: $Montserrat
@@ -1571,11 +1578,15 @@
 .top_footer-link
     margin-left: 22px
 
+    @media screen and ( max-width: 500px )
+        margin-bottom: 7px
+
     &:first-child
         margin-left: 0
         
         @media screen and ( max-width: 500px )
             margin-left: 22px
+            
 
 .footer_list-link
     font-size: 13px

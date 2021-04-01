@@ -82,7 +82,7 @@ $('.offers_main-slider').slick({
     arrows: false,
     dots: true,
     dotsClass: 'slider_dots-offers',
-    appendDots: $('.slider_content-info'),
+    appendDots: $('.slider_content-info'),   
     infinite: false,
     fade: true,
     cssEase: 'linear',
