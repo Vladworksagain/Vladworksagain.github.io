@@ -1433,7 +1433,6 @@
     flex-direction: column
     margin-right: 55px
     padding-top: 125px
-    min-height: 460px
 
     @media screen and ( max-width: 1092px )
         padding-top: 54px
@@ -1528,6 +1527,7 @@
 .footer
     background-color: #282828
     padding: 44px 0 42px 0
+    position: relative
 
 .footer_wrapper
     display: flex
@@ -1536,15 +1536,46 @@
     border-bottom: 1px solid #FFFFFF
     padding-bottom: 15px
     margin-bottom: 44px
+    flex-wrap: wrap
+
+    @media screen and ( max-width: 600px )
+        justify-content: center
+
+.footer_logo
+
+    @media screen and ( max-width: 768px )
+        margin: 0 auto
+
+.footer_logo-img
+
+    @media screen and ( max-width: 890px )
+        margin-bottom: 20px
+        padding-right: 10px
 
 .footer_top-wrapper
-    display: flex
+    display: flex    
+    flex-wrap: wrap
+
+    @media screen and ( max-width: 892px )
+        justify-content: center
 
 .footer_top-list
     display: flex
 
+    @media screen and ( max-width: 600px )
+        flex-wrap: wrap
+        
+    @media screen and ( max-width: 350px )
+        flex-direction: column            
+
 .top_footer-link
     margin-left: 22px
+
+    &:first-child
+        margin-left: 0
+        
+        @media screen and ( max-width: 500px )
+            margin-left: 22px
 
 .footer_list-link
     font-size: 13px
@@ -1562,6 +1593,17 @@
     display: flex
     margin-left: 63px
 
+    @media screen and ( max-width: 768px )
+        margin-left: 0  
+
+    @media screen and ( max-width: 600px )
+        margin-left: 0
+        position: absolute
+        bottom: 0
+        left: 50%
+        transform: translate(-50%)
+        padding-bottom: 15px
+
     li
         margin-left: 13px
 
@@ -1570,6 +1612,12 @@
     justify-content: space-between
     align-items: center
 
+    @media screen and ( max-width: 892px )
+        flex-wrap: wrap
+
+    @media screen and ( max-width: 500px )
+        justify-content: center
+
 .working_hours
     font-family: $Ubuntu
     font-weight: 500
@@ -1577,8 +1625,19 @@
     line-height: 14px
     color: $color-white
 
+    @media screen and ( max-width: 892px )
+        padding: 0 7px 0 7px
+
+    @media screen and ( max-width: 768px )
+        margin-bottom: 8px
+
 .working_hours-img
     margin-right: 8px
+
+.footer_bottom-tel
+
+    @media screen and ( max-width: 768px )
+        margin-bottom: 8px
 
 .footer_feedback
     text-decoration: none
@@ -1588,6 +1647,16 @@
     font-size: 12px
     color: $color-white
     margin-left: 20px
+
+    @media screen and ( max-width: 892px )
+        padding: 0 7px 0 7px
+        margin-left: 10px
+
+    @media screen and ( max-width: 768px )
+        margin-bottom: 8px
+
+        &:last-child
+            padding: 0
 
 .footer_feedback-img
     margin-right: 8px
@@ -1600,6 +1669,12 @@
     line-height: 14px
     color: $color-white
 
+    @media screen and ( max-width: 892px )
+        padding: 0 7px 0 7px
+
+    @media screen and ( max-width: 768px )
+        margin-bottom: 8px
+
 .bottom_email-img
     margin-right: 8px
 
@@ -1610,6 +1685,13 @@
     font-size: 12px
     line-height: 14px
     color: $color-white
+
+    @media screen and ( max-width: 892px )
+        padding: 0 0 0 7px
+
+    @media screen and ( max-width: 768px )
+        margin-bottom: 8px  
+        white-space: nowrap
 
 .bottom_location-img
     margin-right: 8px
