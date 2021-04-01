@@ -62,7 +62,7 @@ settings = {
     slidesToShow: 3,
     slidesToScroll: 1,
     infinite: false,
-}   
+}
 $slick_slider.slick(settings);
 
 $(window).on('resize', function () {
@@ -89,29 +89,12 @@ $('.offers_main-slider').slick({
     speed: 600,
 });
 
-function initMap() {
-    // The location of Uluru
-    const uluru = { lat: -25.344, lng: 131.036 };
-    // The map, centered at Uluru
-    const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 5,
-        center: uluru,
-    });
-    // The marker, positioned at Uluru
-    const marker = new google.maps.Marker({
-        position: uluru,
-        map: map,
-    });
+document.querySelector('.main_info-about').addEventListener('click', show);
+
+function show() {
+    let modal = document.querySelector('.show_more');
+    modal.classList.toggle('active');
 }
-
-
-// document.querySelector('.main_info-about').addEventListener('click', show);
-
-
-// function show() {
-//     let modal = document.querySelector('.show_more');
-//     modal.classList.toggle('active');
-// }
 
 $(document).ready(function () {
     $('.bottom_header-burger').click(function (event) {

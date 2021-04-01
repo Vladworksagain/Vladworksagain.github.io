@@ -787,7 +787,7 @@
 .slider_item
     width: 378px
     height: 250px
-    display: flex
+    display: flex 
     flex-direction: column
     position: relative
     background-color: $brand-color
@@ -807,9 +807,9 @@
             width: 100%
             height: 100%
 
-            display: flex !important
-            justify-content: flex-end
-            align-items: center
+        display: flex !important
+        justify-content: flex-end
+        align-items: center
 
     @media screen and ( max-width: 768px )
         width: 100%
@@ -1362,6 +1362,9 @@
     background-color: $brand-color
     margin-bottom: 53px
 
+    @media screen and ( max-width: 1092px )
+        margin-bottom: 0
+
     @media screen and ( max-width: 450px )
         padding: 0 40px 0 40px
 
@@ -1408,11 +1411,21 @@
     &:first-of-type
         margin-left: 30px
 
+        @media screen and ( max-width: 768px )
+            margin-left: 0
+
 .about_company
     margin-bottom: 74px
+    
+    @media screen and ( max-width: 768px )
+        overflow: hidden
 
 .about_company-wrapper
     display: flex
+
+    @media screen and ( max-width: 1092px )
+        flex-direction: column
+        align-items: center
 
 .main_info
     max-width: 466px
@@ -1420,6 +1433,10 @@
     flex-direction: column
     margin-right: 55px
     padding-top: 125px
+    min-height: 460px
+
+    @media screen and ( max-width: 1092px )
+        padding-top: 54px
 
 .main_info-title
     font-family: $Montserrat
@@ -1428,6 +1445,9 @@
     line-height: 40px
     color: #000000
     margin-bottom: 20px
+
+    @media screen and ( max-width: 350px )
+        white-space: nowrap
 
 .active
     display: none
@@ -1463,14 +1483,21 @@
     font-weight: 700
     font-size: 11px
 
-#map
-    width: 649px
-    height: 485px
-    z-index: 2
-    border-radius: 5px
+    @media screen and ( max-width: 1290px )
+        margin-bottom: 45px
 
-.about_company-cricle
+#map
+    max-width: 650px
+    height: 100%
+
+.about_company-circle
     position: relative
+    width: 650px
+
+    @media screen and ( max-width: 768px )
+        width: 100vw
+        display: flex
+        justify-content: center
 
     .big_circle
         width: 193px
@@ -1480,7 +1507,15 @@
         left: -78px
         bottom: -43px
         margin: 0
-        z-index: 0
+        z-index: -1
+
+        @media screen and ( max-width: 1300px )
+            display: block
+
+        @media screen and ( max-width: 768px )
+            top: -105px
+            left: 465px
+            z-index: 1
 
     .small_circle
         position: absolute
