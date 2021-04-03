@@ -1,11 +1,13 @@
-@import reset
-@import fonts
-@import variables
-@import buttons
+
 @import 'node_modules/swiper/swiper-bundle'
 @import 'node_modules/select2/dist/css/select2.min'
 @import 'node_modules/slick-carousel/slick/slick.scss'
 @import 'node_modules/jquery-datetimepicker/build/jquery.datetimepicker.min'
+@import reset
+@import fonts
+@import variables
+@import buttons
+@import catalog
 
 // $Helvetica: 'Helvetica', 'sans-serif' (700, 400 font-weight)
 
@@ -30,7 +32,6 @@ body
     padding-top: 40px
     position: relative
     z-index: 2
-    margin-bottom: 109px
 
     @media screen and ( max-width: 1050px )
         margin-bottom: 50px
@@ -441,7 +442,7 @@ body
     line-height: 8px
 
 .car_rental
-    margin-bottom: 60px
+    margin: 109px 0 60px 0
 
 .car_rental-inner
     display: flex
@@ -1535,6 +1536,8 @@ body
     background-color: #282828
     padding: 44px 0 42px 0
     position: relative
+    display: flex
+    flex-direction: column
 
 .footer_wrapper
     display: flex
