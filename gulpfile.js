@@ -7,8 +7,6 @@ const uglify = require('gulp-uglify-es').default;
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
 const del = require('del');
-const include = require('gulp-file-include');
-
 
 function browsersync() {
     browserSync.init({
@@ -44,7 +42,6 @@ function cleanDist() {
 function scripts() {
     return src([
         'node_modules/jquery/dist/jquery.min.js',
-        'node_modules/swiper/swiper-bundle.min.js',
         'node_modules/select2/dist/js/select2.min.js',
         'node_modules/slick-carousel/slick/slick.min.js',
         'node_modules/jquery-datetimepicker/build/jquery.datetimepicker.full.min.js',
@@ -55,15 +52,6 @@ function scripts() {
         .pipe(dest('app/js'))
         .pipe(browserSync.stream())
 }
-
-function html() {
-    return src('app/*.html')
-    .pipe(include({
-        prefix: '@@'
-    }))
-    .pipe(dest('app/'))
-}
-
 
 function styles() {
     return src('app/sass/main.sass')
@@ -99,7 +87,7 @@ exports.watching = watching;
 exports.browsersync = browsersync;
 exports.images = images;
 exports.cleanDist = cleanDist;
-exports.html = html;
+
 
 exports.build = series(cleanDist, images, build,);
-exports.default = parallel(html, styles, scripts, browsersync, watching);
+exports.default = parallel(styles, scripts, browsersync, watching);

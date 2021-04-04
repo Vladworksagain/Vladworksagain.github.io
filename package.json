@@ -13,15 +13,13 @@
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-concat": "^2.6.1",
-    "gulp-file-include": "^2.3.0",
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^4.1.0",
     "gulp-uglify-es": "^2.0.0",
     "jquery": "^3.6.0",
     "jquery-datetimepicker": "^2.5.21",
     "select2": "^4.1.0-rc.0",
-    "slick-carousel": "^1.8.1",
-    "swiper": "^6.5.2"
+    "slick-carousel": "^1.8.1"
   },
   "dependencies": {
     "del": "^6.0.0"
