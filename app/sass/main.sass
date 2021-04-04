@@ -1,10 +1,8 @@
-@import 'node_modules/select2/dist/css/select2.min'
-@import 'node_modules/slick-carousel/slick/slick.scss'
-@import 'node_modules/jquery-datetimepicker/build/jquery.datetimepicker.min'
 @import reset
 @import fonts
 @import variables
 @import buttons
+@import libs
 @import catalog
 
 // $Helvetica: 'Helvetica', 'sans-serif' (700, 400 font-weight)
@@ -25,6 +23,17 @@
 
 body
     overflow-x: hidden
+
+body, html
+    height: 100%
+
+.wrapper    
+    display: flex
+    flex-direction: column
+    min-height: 100%
+
+section
+    flex: 1 0 auto
 
 .header
     padding-top: 40px
@@ -1011,10 +1020,11 @@ body
     text-align: center
 
     @media screen and ( max-width: 524px )
-        font-size: 29px
+        font-size: 25px
+        line-height: 33px
 
 .offers_slider-img
-    width: 50%
+    max-width: 50%
     min-height: 397px
     padding-top: 100px
     pointer-events: none
@@ -1536,6 +1546,7 @@ body
     position: relative
     display: flex
     flex-direction: column
+    flex: 0 0 auto
 
 .footer_wrapper
     display: flex

@@ -82,14 +82,17 @@ $('.offers_main-slider').slick({
     arrows: false,
     dots: true,
     dotsClass: 'slider_dots-offers',
-    appendDots: $('.slider_content-info'),   
+    appendDots: $('.slider_content-info'),
     infinite: false,
     fade: true,
     cssEase: 'linear',
     speed: 600,
 });
 
-document.querySelector('.main_info-about').addEventListener('click', show);
+let check = document.querySelector('.main_info-about');
+if (check) {
+    check.addEventListener('click', show, false);
+}
 
 function show() {
     let modal = document.querySelector('.show_more');
@@ -150,8 +153,6 @@ jQuery('#datetimepicker-time-second').datetimepicker({
     datepicker: false,
     format: 'H:i'
 });
-
-
 
 
 
