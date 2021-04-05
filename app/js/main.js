@@ -86,7 +86,7 @@ $('.offers_main-slider').slick({
     infinite: false,
     fade: true,
     cssEase: 'linear',
-    speed: 600,
+    speed: 800,
 });
 
 let check = document.querySelector('.main_info-about');
@@ -96,7 +96,7 @@ if (check) {
 
 function show() {
     let modal = document.querySelector('.show_more');
-    modal.classList.toggle('active');
+    modal.classList.toggle('open');
 }
 
 $(document).ready(function () {
