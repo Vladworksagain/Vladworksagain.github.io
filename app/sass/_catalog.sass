@@ -1,5 +1,5 @@
 @import fonts
-@import variablse
+@import variables
 @import buttons
 
 body, html
@@ -15,3 +15,202 @@ section
 
 .footer
     flex: 0 0 auto
+
+.breadcrumbs
+    padding: 62px 0 37px 0
+
+.breadcrumb_list
+    display: inline-flex
+    &-item
+        padding-left: 2px
+        &::after
+            content: "•"
+            color: $brand-color
+        &:last-child::after
+            display: none
+    &-link
+        font-family: $Ubuntu
+        font-weight: 400
+        font-size: 12px
+        line-height: 14px
+        color: #727272
+        text-decoration: none
+    
+.breadcrumb_active
+    font-family: $Ubuntu
+    font-weight: 400
+    font-size: 12px
+    line-height: 14px
+    color: $top-black-color
+
+.select
+    margin-bottom: 60px
+
+.select_wrapper
+    display: flex
+
+.reservation
+    width: 100%
+    max-width: 321px
+    max-height: 408px
+    border-radius: 5px
+    background: $color-white
+    box-shadow: 0px 2px 13px rgba(0, 0, 0, 0.1)
+    padding: 53px 30px
+    display: flex
+    flex-direction: column 
+    align-items: center
+    margin-right: 24px
+
+    &_main-title
+        font-family: $Ubuntu
+        font-weight: 700
+        font-size: 24px
+        line-height: 27pox
+        color: $top-black-color
+        margin-bottom: 39px
+
+    &_top-select
+        display: flex
+        flex-direction: column
+        margin-bottom: 22px
+        width: 100%
+
+    .bottom_input-info:nth-child(2n+1)
+        margin-right: 14px
+
+    .bottom_input-info:nth-child(2)
+        margin: 0
+
+    .select2-container--custom-select 
+        .select2-selection--single
+            margin-bottom: 22px
+            padding-top: 10px
+
+    .select2-container--custom-select 
+        .select2-selection--single 
+            .select2-selection__clear
+                top: 3px
+                padding-right: 3px
+
+    .select2-container--default 
+        .select2-selection--single
+            border: none
+            border-bottom: 1px solid rgba(0, 0, 0, .5)
+            border-radius: 0
+
+   
+    .select2-container--default 
+        .select2-selection--single 
+            .select2-selection__arrow b
+                background: url(../images/icon-arrow-select.svg) no-repeat top center
+                width: 16px
+                height: 10px
+                border-width: 0
+                position: absolute
+                top: 9px
+                border-color: $top-black-color transparent
+
+    .select2-container--default 
+        .select2-selection--single 
+            .select2-selection__rendered
+                font-size: 10px
+                line-height: 12px
+                color: #717171
+                font-family: $Ubuntu
+                font-weight: 400
+
+    .select2-container--default 
+        .select2-selection--single 
+            .select2-selection__placeholder
+                color: #717171
+
+    .select2-container--default 
+        .select2-selection--single
+            padding-top: 10px
+
+.reservation_first-info
+    display: flex
+    justify-content: space-between
+    margin-bottom: 22px
+
+.reservation_second-info
+    display: flex
+    justify-content: space-between
+    margin-bottom: 30px
+
+.select_car-wrapper
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(192px, 1fr))
+    grid-template-rows: repeat(2, 198px)
+    grid-gap: 11px
+    grid-row-gap: 
+    width: 100%
+
+.select_car-item
+    border-radius: 5px
+    background: $brand-color
+    max-width: 192px
+    height: 198px
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    border: 2px solid transparent
+    z-index: 1
+    width: 100%
+    margin-bottom: 11px
+    margin-right: 5px
+
+    &:hover
+        border: 2px solid #000000
+        background-color: rgba(255, 195, 42, 0.58)
+        &::before
+            content: ""
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            background-color: rgba(255, 195, 42, 0.58)
+        &::after
+            content: ""
+            position: absolute
+            top: 8px 
+            left: 10px
+            background-image: url(../images/select-car-icon.svg)
+            width: 15px
+            height: 13px
+
+.item_circle
+    border: 16px solid #FFFFFF
+    box-shadow: 0px 2px 19px rgba(255, 195, 42, 0.6)
+    border-radius: 50%
+    width: 70px
+    height: 70px
+    position: absolute
+    top: 18px
+    right: 75px
+    z-index: -1
+
+.car_item-images
+    position: relative
+    padding-top: 20px
+    margin-left: auto
+    object-fit: contain
+    z-index: -1
+
+.car_item-text
+    font-family: $Ubuntu
+    font-weight: 700
+    font-size: 24px
+    line-height: 28px
+    color: $color-white
+
+.car_item-info
+    font-family: $Ubuntu
+    font-weight: 500
+    font-size: 17px
+    line-height: 20px
+    color: $color-white
