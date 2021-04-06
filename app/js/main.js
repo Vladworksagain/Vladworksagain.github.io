@@ -62,6 +62,15 @@ settings = {
     slidesToShow: 3,
     slidesToScroll: 1,
     infinite: false,
+    responsive: [
+        {
+            breakpoint: 1167,
+            settings: {
+                arrows: false,
+                dots: true
+            }
+        }
+    ]
 }
 $slick_slider.slick(settings);
 
@@ -81,12 +90,10 @@ $(window).on('resize', function () {
 $('.offers_main-slider').slick({
     arrows: false,
     dots: true,
-    dotsClass: 'slider_dots-offers',
-    appendDots: $('.slider_content-info'),
+    appendDots: '.slider_wrapper',
+    dotsClass: 'offers_slider-dots',
     infinite: false,
-    fade: true,
-    cssEase: 'linear',
-    speed: 800,
+    speed: 600,
 });
 
 let check = document.querySelector('.main_info-about');
@@ -96,7 +103,7 @@ if (check) {
 
 function show() {
     let modal = document.querySelector('.show_more');
-    modal.classList.toggle('open');
+    modal.classList.toggle('show');
 }
 
 $(document).ready(function () {
