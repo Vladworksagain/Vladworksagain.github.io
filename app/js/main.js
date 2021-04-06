@@ -67,7 +67,8 @@ settings = {
             breakpoint: 1167,
             settings: {
                 arrows: false,
-                dots: true
+                dots: true,
+                slidesToScroll: 2,
             }
         }
     ]
