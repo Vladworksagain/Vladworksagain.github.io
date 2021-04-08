@@ -17,7 +17,7 @@ section
     flex: 0 0 auto
 
 .breadcrumbs
-    padding: 62px 0 37px 0
+    margin: 62px 0 37px 0
 
 .breadcrumb_list
     display: inline-flex
@@ -35,7 +35,7 @@ section
         line-height: 14px
         color: #727272
         text-decoration: none
-    
+
 .breadcrumb_active
     font-family: $Ubuntu
     font-weight: 400
@@ -49,6 +49,10 @@ section
 .select_wrapper
     display: flex
 
+    @media screen and ( max-width: 992px )
+        flex-direction: column
+        align-items: center
+
 .reservation
     width: 100%
     max-width: 321px
@@ -58,9 +62,21 @@ section
     box-shadow: 0px 2px 13px rgba(0, 0, 0, 0.1)
     padding: 53px 30px
     display: flex
-    flex-direction: column 
+    flex-direction: column
     align-items: center
     margin-right: 24px
+
+    @media screen and ( max-width: 1292px )
+        margin-right: 0
+        
+    @media screen and ( max-width: 992px )
+        margin-bottom: 45px
+        max-width: 520px
+        width: 100%
+
+    @media screen and ( max-width: 731px )
+        max-width: 100%
+        
 
     &_main-title
         font-family: $Ubuntu
@@ -76,32 +92,40 @@ section
         margin-bottom: 22px
         width: 100%
 
+    .select2-container
+
+        @media screen and ( max-width: 992px )
+            width: 100% !important
+
+    .select2-container--open
+        .select2-selection__arrow b
+            transform: rotate(180deg)
+
     .bottom_input-info:nth-child(2n+1)
         margin-right: 14px
 
     .bottom_input-info:nth-child(2)
         margin: 0
 
-    .select2-container--custom-select 
+    .select2-container--custom-select
         .select2-selection--single
             margin-bottom: 22px
             padding-top: 10px
 
-    .select2-container--custom-select 
-        .select2-selection--single 
+    .select2-container--custom-select
+        .select2-selection--single
             .select2-selection__clear
                 top: 3px
                 padding-right: 3px
 
-    .select2-container--default 
+    .select2-container--default
         .select2-selection--single
             border: none
             border-bottom: 1px solid rgba(0, 0, 0, .5)
             border-radius: 0
 
-   
-    .select2-container--default 
-        .select2-selection--single 
+    .select2-container--default
+        .select2-selection--single
             .select2-selection__arrow b
                 background: url(../images/icon-arrow-select.svg) no-repeat top center
                 width: 16px
@@ -110,9 +134,10 @@ section
                 position: absolute
                 top: 9px
                 border-color: $top-black-color transparent
+                transition: .3s ease all
 
-    .select2-container--default 
-        .select2-selection--single 
+    .select2-container--default
+        .select2-selection--single
             .select2-selection__rendered
                 font-size: 10px
                 line-height: 12px
@@ -120,14 +145,18 @@ section
                 font-family: $Ubuntu
                 font-weight: 400
 
-    .select2-container--default 
-        .select2-selection--single 
+    .select2-container--default
+        .select2-selection--single
             .select2-selection__placeholder
                 color: #717171
 
-    .select2-container--default 
+    .select2-container--default
         .select2-selection--single
             padding-top: 10px
+
+    .select2-container--open
+        .select2-selection__arrow b
+            transform: rotate(180deg)
 
 .reservation_first-info
     display: flex
@@ -139,49 +168,118 @@ section
     justify-content: space-between
     margin-bottom: 30px
 
+.reservation_form-info
+    @media screen and ( max-width: 992px )
+        width: 100%
+        
+
 .select_car-wrapper
     display: grid
     grid-template-columns: repeat(auto-fit, minmax(192px, 1fr))
-    grid-template-rows: repeat(2, 198px)
-    grid-gap: 11px
-    grid-row-gap: 
+    grid-auto-rows: auto
+    grid-row-gap: 11px
+    grid-column-gap: 18px
     width: 100%
+
+    @media screen and ( max-width: 1292px )
+        grid-template-columns: repeat(auto-fit, minmax(148px, 1fr))
+        grid-template-rows: repeat(auto-fit, minmax(160px, 1fr))
+        padding: 0 20px        
+
+    @media screen and ( max-width: 731px )
+        padding: 0
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr))
+        grid-template-rows: repeat(auto-fit, minmax(165px, 1fr))
+
+    @media screen and ( max-width: 582px )
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        align-items: center
 
 .select_car-item
     border-radius: 5px
     background: $brand-color
-    max-width: 192px
     height: 198px
+    width: 192px
     position: relative
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
+    cursor: pointer
+    position: relative
     border: 2px solid transparent
-    z-index: 1
-    width: 100%
-    margin-bottom: 11px
-    margin-right: 5px
+    overflow: hidden
 
-    &:hover
+    @media screen and ( max-width: 1292px )
+        width: 100%
+        height: 100%
+        max-height: 198px
+        padding: 10px
+
+    @media screen and ( max-width: 582px )
+        width: 30%
+        height: 165px
+
+    @media screen and ( max-width: 560px )
+        width: 45%
+        height: auto
+        padding: 20px
+
+    @media screen and ( max-width: 420px )
+        width: 66%
+        height: 100%
+
+    &::before
+        content: ""
+        background: rgba(255, 195, 42, 0.58)
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: 5
+        position: absolute
+        background-image: url(../images/select-car-icon.svg)
+        background-repeat: no-repeat
+        background-position: 13px 14px
+        opacity: 0
+        border-radius: 5px
+        border: 2px solid transparent
+    &:hover:before
+        opacity: 1
+        transition: .3s ease all
         border: 2px solid #000000
-        background-color: rgba(255, 195, 42, 0.58)
-        &::before
-            content: ""
-            position: absolute
-            top: 0
-            left: 0
-            right: 0
-            bottom: 0
-            background-color: rgba(255, 195, 42, 0.58)
-        &::after
-            content: ""
-            position: absolute
-            top: 8px 
-            left: 10px
-            background-image: url(../images/select-car-icon.svg)
-            width: 15px
-            height: 13px
+
+.active_arrow
+    transition: .3s ease all
+    border: 2px solid #000000
+    &:hover
+        background-image: url(../images/select-icon-close.svg)
+        background-repeat: no-repeat
+        background-position: 16px 15px
+        position: relative
+        z-index: 5
+    &:hover:before
+        opacity: 0
+
+.active_arrow
+    &::after
+        content: ""
+        position: absolute
+        border-radius: 50%
+        width: 24px
+        height: 24px
+        background-color: $color-white
+        background-image: url(../images/select-active-icon.svg)
+        background-repeat: no-repeat
+        background-position: center center
+        top: 10px
+        left: 11px
+        transform-origin: center 
+        transition: .4s ease all
+    &:hover:after
+        transform: scale(0)
 
 .item_circle
     border: 16px solid #FFFFFF
@@ -190,16 +288,38 @@ section
     width: 70px
     height: 70px
     position: absolute
-    top: 18px
+    top: 8px
     right: 75px
-    z-index: -1
 
+    @media screen and ( max-width: 1292px )
+        right: 44px
+
+    
 .car_item-images
     position: relative
-    padding-top: 20px
     margin-left: auto
     object-fit: contain
-    z-index: -1
+    height: 60%
+    width: auto
+    margin-top: 15px
+
+    @media screen and ( max-width: 1292px )
+        width: 100%
+        height: 100%
+        right: -10px
+
+    @media screen and ( max-width: 1104px )
+        right: -15px
+
+    @media screen and ( max-width: 582px )
+        right: -11px
+
+    @media screen and ( max-width: 560px )
+        right: -20px
+
+    @media screen and ( max-width:  )
+        width: 100%
+        height: 100%
 
 .car_item-text
     font-family: $Ubuntu
@@ -207,6 +327,9 @@ section
     font-size: 24px
     line-height: 28px
     color: $color-white
+
+    @media screen and ( max-width: 590px )
+        font-size: 23px
 
 .car_item-info
     font-family: $Ubuntu

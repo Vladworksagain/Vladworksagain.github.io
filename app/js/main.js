@@ -1,7 +1,6 @@
 $(document).ready(function () {
     $('.first.select_location').select2({
         placeholder: 'Выберите город',
-        allowClear: true,
         dropdownCssClass: 'select_location-list',
         minimumResultsForSearch: Infinity,
         theme: 'custom-select'
@@ -10,7 +9,6 @@ $(document).ready(function () {
 $(document).ready(function () {
     $('.second.select_location').select2({
         placeholder: 'Выберите место получения',
-        allowClear: true,
         dropdownCssClass: 'select_location-list',
         minimumResultsForSearch: Infinity,
     });
@@ -161,6 +159,14 @@ jQuery('#datetimepicker-time-second').datetimepicker({
     datepicker: false,
     format: 'H:i'
 });
+
+document.querySelectorAll('.select_car-item').forEach((element) => {
+    element.addEventListener('click', function () {
+       this.classList.toggle('active_arrow');
+    });
+});
+
+
 
 
 
