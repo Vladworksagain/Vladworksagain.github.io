@@ -17,7 +17,7 @@ section
     flex: 0 0 auto
 
 .breadcrumbs
-    margin: 62px 0 37px 0
+    margin-top: 62px
 
 .breadcrumb_list
     display: inline-flex
@@ -42,6 +42,9 @@ section
     font-size: 12px
     line-height: 14px
     color: $top-black-color
+
+.select
+    padding: 37px 0 60px 0
 
 .select
     margin-bottom: 60px
@@ -337,3 +340,327 @@ section
     font-size: 17px
     line-height: 20px
     color: $color-white
+
+.rent_wrapper
+    display: flex
+
+.bottom_location-img
+    margin-right: 8px
+
+.rent_filter
+    width: 274px
+    height: 727px
+    background-color: $color-white
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.1)
+    border-radius: 5px
+    border: 1px solid red //for visible//
+    padding: 40px 0 40px 27px
+
+.rent_filter-inner
+    display: flex
+    flex-direction: column
+
+.transmission_wrapper
+    margin-bottom: 40px
+
+    .container
+        display: block
+        position: relative
+        padding-left: 19px
+        margin-bottom: 9px
+        cursor: pointer
+        font-size: 22px
+        -webkit-user-select: none
+        -moz-user-select: none
+        -ms-user-select: none
+        user-select: none
+        font-family: $Ubuntu
+        font-weight: 400
+        font-size: 12px
+        line-height: 14px
+        color: #000000
+
+    .container input 
+        position: absolute
+        opacity: 0
+        cursor: pointer
+        height: 0
+        width: 0
+
+    .checkmark 
+        position: absolute
+        top: 0
+        left: 0
+        height: 13px
+        width: 13px
+        background-color: $color-white  
+        border-radius: 50%
+        border: 3px solid $brand-color
+
+    .container:hover input ~ .checkmark 
+        background-color: $color-white
+
+    .container input:checked ~ .checkmark 
+        background-color: $brand-color
+
+    .checkmark:after 
+        content: ""
+        position: absolute
+        display: none
+
+    .container input:checked ~ .checkmark:after 
+        display: block
+
+.short_tittle
+    font-family: $Ubuntu
+    font-weight: 500
+    font-size: 17px
+    line-height: 20px
+    color: #000000
+    text-transform: uppercase
+    display: inline-block
+    margin-bottom: 13px
+
+.price_wrapper
+    width: 80%
+    margin-bottom: 40px
+
+    .irs
+        top: -6px
+
+    .irs--round .irs-min, .irs--round .irs-max
+        display: none
+
+    .irs--round 
+        .irs-line
+            background-color: $brand-color
+            border-radius: 0
+            border: 1px solid $brand-color
+            height: 0
+
+    .irs--round 
+        .irs-handle
+            width: 10px
+            height: 10px
+            border: none
+            background-color: $brand-color
+            border-radius: 50%
+            top: 25px
+
+    .irs--round 
+        .irs-bar
+            background-color: $brand-color
+            height: 0
+
+    .irs--round 
+        .irs-from, .irs-to
+            background-color: transparent
+            font-weight: 400
+            font-family: $Ubuntu
+            font-size: 10px
+            line-height: 12px
+            color: #000
+            &::before
+                content: none
+
+    .irs-from, .irs-to
+        top: 16px
+
+    .irs--round 
+        .irs-single
+            background-color: $brand-color
+            font-weight: 400
+            font-family: $Ubuntu
+            font-size: 10px
+            line-height: 12px
+            color: #000
+            &::before
+               border-top-color: $brand-color
+
+    .irs--round
+        height: 40px
+
+    .short_tittle
+        margin-bottom: 0
+
+.value
+    display: flex
+    width: 100%
+
+.price_value
+    width: 100%
+    height: 26px
+    background-color: #EEEEEE
+    border: none
+    font-family: $Ubuntu
+    font-weight: 400
+    font-size: 10px
+    line-height: 12px
+    color: #717171
+    
+    &:first-child
+        margin-right: 8px
+
+.body_type-wrapper
+    margin-bottom: 39px
+
+    .container
+        display: block
+        position: relative
+        padding-left: 19px
+        margin-bottom: 9px
+        cursor: pointer
+        font-size: 22px
+        -webkit-user-select: none
+        -moz-user-select: none
+        -ms-user-select: none
+        user-select: none
+        font-family: $Ubuntu
+        font-weight: 400
+        font-size: 12px
+        line-height: 14px
+        color: #000000
+
+    .container input 
+        position: absolute
+        opacity: 0
+        cursor: pointer
+        height: 0
+        width: 0
+
+    .checkmark 
+        position: absolute
+        top: 0
+        left: 0
+        height: 13px
+        width: 13px
+        background-color: $color-white  
+        border-radius: 50%
+        border: 3px solid $brand-color
+
+    .container:hover input ~ .checkmark 
+        background-color: $color-white
+
+    .container input:checked ~ .checkmark 
+        background-color: $brand-color
+
+    .checkmark:after 
+        content: ""
+        position: absolute
+        display: none
+
+    .container input:checked ~ .checkmark:after 
+        display: block
+
+.number_inner
+    
+    .container
+        display: block
+        position: relative
+        padding-left: 19px
+        margin-bottom: 9px
+        cursor: pointer
+        font-size: 22px
+        -webkit-user-select: none
+        -moz-user-select: none
+        -ms-user-select: none
+        user-select: none
+        font-family: $Ubuntu
+        font-weight: 400
+        font-size: 12px
+        line-height: 14px
+        color: #000000
+
+    .container input 
+        position: absolute
+        opacity: 0
+        cursor: pointer
+        height: 0
+        width: 0
+
+    .checkmark 
+        position: absolute
+        top: 0
+        left: 0
+        height: 13px
+        width: 13px
+        background-color: $color-white  
+        border-radius: 50%
+        border: 3px solid $brand-color
+
+    .container:hover input ~ .checkmark 
+        background-color: $color-white
+
+    .container input:checked ~ .checkmark 
+        background-color: $brand-color
+
+    .checkmark:after 
+        content: ""
+        position: absolute
+        display: none
+
+    .container input:checked ~ .checkmark:after 
+        display: block
+
+.rent_main-inner
+    display: flex
+    width: 100%
+    flex-direction: column
+
+.rent_main-info
+    display: flex
+    width: 100%
+    justify-content: space-between
+    align-items: center
+
+
+.rent_title
+    font-family: $Montserrat
+    font-weight: 700
+    font-size: 33px
+    line-height: 41px
+    color: $top-black-color
+    text-transform: uppercase
+    margin-left: 30px
+
+.rent_breadcrumb_list
+    display: flex
+
+.rent_breadcrumb-item
+    margin-left: 15px
+    position: relative
+    &::before
+        content: "|"
+        color: $brand-color
+        position: absolute
+        left: -9px
+    &:first-child
+        margin: 0
+    &:first-child:before
+        content: none
+
+.breadcrumb_item-link
+    font-family: $Ubuntu
+    font-weight: 400
+    font-size: 12px
+    line-height: 14px
+    color: #727272
+    text-decoration: none
+
+.rent_breadcrumb-active
+    color: #000000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
