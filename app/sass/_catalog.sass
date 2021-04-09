@@ -71,7 +71,7 @@ section
 
     @media screen and ( max-width: 1292px )
         margin-right: 0
-        
+
     @media screen and ( max-width: 992px )
         margin-bottom: 45px
         max-width: 520px
@@ -79,7 +79,6 @@ section
 
     @media screen and ( max-width: 731px )
         max-width: 100%
-        
 
     &_main-title
         font-family: $Ubuntu
@@ -174,7 +173,6 @@ section
 .reservation_form-info
     @media screen and ( max-width: 992px )
         width: 100%
-        
 
 .select_car-wrapper
     display: grid
@@ -187,7 +185,7 @@ section
     @media screen and ( max-width: 1292px )
         grid-template-columns: repeat(auto-fit, minmax(148px, 1fr))
         grid-template-rows: repeat(auto-fit, minmax(160px, 1fr))
-        padding: 0 20px        
+        padding: 0 20px
 
     @media screen and ( max-width: 731px )
         padding: 0
@@ -279,7 +277,7 @@ section
         background-position: center center
         top: 10px
         left: 11px
-        transform-origin: center 
+        transform-origin: center
         transition: .4s ease all
     &:hover:after
         transform: scale(0)
@@ -297,7 +295,6 @@ section
     @media screen and ( max-width: 1292px )
         right: 44px
 
-    
 .car_item-images
     position: relative
     margin-left: auto
@@ -351,9 +348,8 @@ section
     width: 274px
     height: 100%
     background-color: $color-white
-    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.1)
+    box-shadow: 0px 2px 13px rgba(0, 0, 0, 0.1)
     border-radius: 5px
-    border: 1px solid red //for visible//
     padding: 40px 0 40px 27px
 
 .rent_filter-inner
@@ -385,35 +381,35 @@ section
     &:last-child
         margin-bottom: 0
 
-.transmission_container input 
+.transmission_container input
     position: absolute
     opacity: 0
     cursor: pointer
     height: 0
     width: 0
 
-.checkmark 
+.checkmark
     position: absolute
     top: 0
     left: 0
     height: 13px
     width: 13px
-    background-color: $color-white  
+    background-color: $color-white
     border-radius: 50%
     border: 3px solid $brand-color
 
-.transmission_container:hover input ~ .checkmark 
+.transmission_container:hover input ~ .checkmark
     background-color: $color-white
 
-.transmission_container input:checked ~ .checkmark 
+.transmission_container input:checked ~ .checkmark
     background-color: $brand-color
 
-.transmission_container:after 
+.transmission_container:after
     content: ""
     position: absolute
     display: none
 
-.transmission_container input:checked ~ .checkmark:after 
+.transmission_container input:checked ~ .checkmark:after
     display: block
 
 .short_tittle
@@ -437,14 +433,14 @@ section
     .irs--round .irs-min, .irs--round .irs-max
         display: none
 
-    .irs--round 
+    .irs--round
         .irs-line
             background-color: $brand-color
             border-radius: 0
             border: 1px solid $brand-color
             height: 0
 
-    .irs--round 
+    .irs--round
         .irs-handle
             width: 10px
             height: 10px
@@ -453,12 +449,12 @@ section
             border-radius: 50%
             top: 25px
 
-    .irs--round 
+    .irs--round
         .irs-bar
             background-color: $brand-color
             height: 0
 
-    .irs--round 
+    .irs--round
         .irs-from, .irs-to
             background-color: transparent
             font-weight: 400
@@ -472,7 +468,7 @@ section
     .irs-from, .irs-to
         top: 16px
 
-    .irs--round 
+    .irs--round
         .irs-single
             background-color: $brand-color
             font-weight: 400
@@ -481,7 +477,7 @@ section
             line-height: 12px
             color: #000
             &::before
-               border-top-color: $brand-color
+                border-top-color: $brand-color
 
     .irs--round
         height: 40px
@@ -503,7 +499,7 @@ section
     font-size: 10px
     line-height: 12px
     color: #717171
-    
+
     &:first-child
         margin-right: 8px
 
@@ -526,7 +522,7 @@ section
         content: "+"
         color: $brand-color
         display: inline-block
-    
+
 .open_more.plus:after
     display: none
 
@@ -555,7 +551,7 @@ section
     width: 100%
     justify-content: space-between
     align-items: center
-
+    margin-bottom: 33px
 
 .rent_title
     font-family: $Montserrat
@@ -593,18 +589,154 @@ section
 .rent_breadcrumb-active
     color: #000000
 
+.rent_main-item
+    background: var(--main_item)
+    width: 100%
+    height: 370px
+    max-width: 912px
+    margin-left: 30px
+    border-radius: 5px
+    background-size: cover
+    display: flex
+    justify-content: flex-end
+    margin-bottom: 16px
 
+.main_flex-inner
+    width: 332px
+    height: 302px
+    max-width: 100%
+    margin: 34px 50px 0 0
 
+.main_class-desc
+    font-family: $Ubuntu
+    font-weight: 500
+    font-size: 17px
+    line-height: 19px
+    color: $brand-color
+    text-transform: uppercase
 
+.main_class-car
+    font-family: $Montserrat
+    font-weight: 700
+    font-size: 33px
+    line-height: 41px
+    color: $color-white
+    margin-bottom: 13px
 
+.flex_items
+    display: flex
+    width: 100%
+    align-items: center
+    justify-content: space-between
+    padding-right: 30px
+    margin-bottom: 22px
 
+.first_flex-items
+    display: flex
+    flex-direction: column
 
+.flex_item-box
+    display: flex
+    margin-bottom: 13px
+    align-items: center
 
+    &:last-child
+        margin: 0
 
+.second_flex-items
+    display: flex
+    flex-direction: column
 
+.flex_item-text
+    font-family: $Ubuntu
+    font-weight: 400
+    font-size: 15px
+    line-height: 18px
+    color: #E3E3E3
+    margin-left: 9px
 
+.flex_items-box
+    width: 332px
+    height: 64px
+    max-width: 100%
+    border-left: 1px solid $color-white
+    padding-left: 5px
 
+.items_box-inner
+    display: flex
+    height: 100%
+    flex-direction: column
+    justify-content: space-between
+    width: 100%
+    margin-bottom: 19px
 
+.items_box-first
+    display: grid
+    grid-template-rows: repeat(1, 14px)
+    grid-template-columns: repeat(auto-fit, minmax(34px, 32px))
+    grid-column-gap: 3px 
+    align-items: center
 
+.items_box-second
+    display: grid
+    grid-template-rows: repeat(1, 14px)
+    grid-template-columns: repeat(auto-fit, minmax(34px, 32px))
+    grid-column-gap: 3px
+    align-items: center
 
+.items_box-three
+    display: grid
+    grid-template-rows: repeat(1, 14px)
+    grid-template-columns: repeat(auto-fit, minmax(34px, 32px))
+    grid-column-gap: 3px
+    align-items: center
 
+.items_short-text
+    font-family: $Ubuntu
+    font-weight: 300
+    font-size: 12px
+    line-height: 14px
+    color: $color-white
+    display: inline-block
+    text-transform: uppercase
+    &:nth-child(-n+3)
+        grid-column: span 3
+        
+
+.item_info-number
+    font-family: $Ubuntu
+    font-weight: 300
+    font-size: 10px
+    line-height: 12px
+    color: #E3E3E3
+    opacity: .8
+    text-align: center
+
+.rent_main-btn
+    width: 100%
+    display: flex
+    justify-content: space-between
+
+.reserve_btn
+    @extend %top_btn-form
+    background-color: $brand-color
+    font-weight: 500
+    font-weight: 700
+    text-align: center
+    padding: 13px
+    &:hover
+        background-color: $brand-color
+
+.detail_btn
+    @extend %top_btn-main
+    margin-left: 13px
+    border: 2px solid $color-white
+    color: $color-white
+    background-color: transparent 
+    font-weight: 700
+    text-align: center
+    padding: 12px
+    &:hover
+        border: 2px solid rgba(255,255 ,255 ,.5 )
+        background-color: $color-white
+        color: $top-black-color
