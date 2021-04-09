@@ -28,6 +28,9 @@ $(document).ready(function () {
     });
 });
 
+
+// modal-popup //
+
 const buttons = document.querySelectorAll('.modal_btn')
 
 const modals = document.querySelectorAll('.popup')
@@ -54,6 +57,10 @@ function openModal(event) {
 function closeModal(event) {
     this.closest('.popup').classList.remove('open')
 }
+
+// modal-popup //
+
+//section car_rental //
 
 $slick_slider = $('.car_rental-slider');
 settings = {
@@ -86,6 +93,9 @@ $(window).on('resize', function () {
     }
 });
 
+//section car_rental //
+
+// section offers //
 $('.offers_main-slider').slick({
     arrows: false,
     dots: true,
@@ -94,6 +104,9 @@ $('.offers_main-slider').slick({
     infinite: false,
     speed: 600,
 });
+// section offers //
+
+// Section about_company -read_more //
 
 let check = document.querySelector('.main_info-about');
 if (check) {
@@ -105,11 +118,21 @@ function show() {
     modal.classList.toggle('show');
 }
 
+$( ".main_info-about" ).click(function() {
+    $( this ).toggleClass( "rotate" );
+  })
+
+// Section about_company -read_more //
+
+// header_burger //
+
 $(document).ready(function () {
     $('.bottom_header-burger').click(function (event) {
         $('.bottom_header-burger,.bottom_header-list').toggleClass('menu-active');
     });
 });
+
+// header_burger //
 
 jQuery.datetimepicker.setLocale('ru');
 
@@ -236,6 +259,20 @@ $inputTo.on("change", function () {
 });
 
 //range value section rent//
+
+// show more info //
+
+$(document).ready(function(){
+    $(".open_more").click(function(){
+      $(this).next('div').toggle();      
+    });
+  });
+
+  $( ".open_more" ).click(function() {
+    $( this ).toggleClass( "plus" );
+  })
+
+// show more info //
 
 
 

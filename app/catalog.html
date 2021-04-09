@@ -305,16 +305,18 @@
                 <div class="rent_wrapper">
                     <aside class="rent_filter">
                         <div class="rent_filter-inner">
-                            <div class="transmission_wrapper">
+                            <div class="transmission">
                                 <span class="short_tittle">ТРАНСМИССИЯ</span>
-                            <label class="container">Автоматическая
-                                <input type="radio" name="transmission">
-                                <span class="checkmark"></span>
-                            </label>
-                            <label class="container">Механическая
-                                <input type="radio" name="transmission">
-                                <span class="checkmark"></span>
-                            </label>
+                                <div class="inner_radio-btn">
+                                    <label class="transmission_container">Автоматическая
+                                        <input type="radio" name="transmission">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="transmission_container">Механическая
+                                        <input type="radio" name="transmission">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
                             </div>
                             <div class="price_wrapper">
                                 <span class="short_tittle">Цена</span>
@@ -324,43 +326,110 @@
                                     <input id="range_input-to" class="price_value" placeholder="До">
                                 </div>  
                             </div>
-                            <div class="body_type-wrapper">
+                            <div class="body_type">
                                 <span class="short_tittle">ТИП КУЗОВА</span>
-                                <label class="container">Седан
-                                    <input type="radio" name="transmission">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="container">Хетчбек
-                                    <input type="radio" name="transmission">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="container">Универсал
-                                    <input type="radio" name="transmission">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="container">Кабриолет
-                                    <input type="radio" name="transmission">
-                                    <span class="checkmark"></span>
-                                </label>
+                                <div class="inner_radio-btn">
+                                    <label class="transmission_container">Седан
+                                        <input type="radio" name="body_type">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="transmission_container">Хетчбек
+                                        <input type="radio" name="body_type">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="transmission_container">Универсал
+                                        <input type="radio" name="body_type">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="transmission_container">Кабриолет
+                                        <input type="radio" name="body_type">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
                             </div>
-                            <div class="number_inner">
+                            <div class="number">
                                 <span class="short_tittle">КОЛ-ВО МЕСТ</span>
-                                <label class="container">Седан
-                                    <input type="radio" name="transmission">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="container">Хетчбек
-                                    <input type="radio" name="transmission">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="container">Универсал
-                                    <input type="radio" name="transmission">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="container">Кабриолет
-                                    <input type="radio" name="transmission">
-                                    <span class="checkmark"></span>
-                                </label>
+                                <div class="inner_radio-btn">
+                                    <label class="transmission_container">2
+                                        <input type="radio" name="number">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="transmission_container">4
+                                        <input type="radio" name="number">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="transmission_container">5
+                                        <input type="radio" name="number">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="transmission_container">6+
+                                        <input type="radio" name="number">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="fuel_type">
+                                <span class="short_tittle open_more">ТИП ТОПЛИВА</span>
+                                <div class="inner_radio-btn more_information" style="display: none; padding-top: 14px;">
+                                    <label class="transmission_container">Седан
+                                        <input type="radio" name="fuel_type">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="transmission_container">Хетчбек
+                                        <input type="radio" name="fuel_type">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="transmission_container">Универсал
+                                        <input type="radio" name="fuel_type">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="transmission_container">Кабриолет
+                                        <input type="radio" name="fuel_type">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="specifications">
+                                <span class="short_tittle open_more">СПЕЦИФИКАЦИИ</span>
+                                <div class="inner_radio-btn more_information" style="display: none; padding-top: 14px;">
+                                    <label class="transmission_container">Седан
+                                        <input type="radio" name="specifications">
+                                        <span class="checkmark"></span>
+                                    </label> 
+                                    <label class="transmission_container">Хетчбек
+                                        <input type="radio" name="specifications">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="transmission_container">Универсал
+                                        <input type="radio" name="specifications">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="transmission_container">Кабриолет
+                                        <input type="radio" name="specifications">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="drive">
+                                <span class="short_tittle open_more">ПРИВОД</span>
+                                <div class="inner_radio-btn more_information" style="display: none; padding-top: 14px;">
+                                    <label class="transmission_container">Седан
+                                        <input type="radio" name="drive">
+                                        <span class="checkmark"></span>
+                                    </label> 
+                                    <label class="transmission_container">Хетчбек
+                                        <input type="radio" name="drive">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="transmission_container">Универсал
+                                        <input type="radio" name="drive">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="transmission_container">Кабриолет
+                                        <input type="radio" name="drive">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
                             </div>
                         </div>
                     </aside>
