@@ -303,7 +303,7 @@
         <section class="rent">
             <div class="container">
                 <div class="rent_wrapper">
-                    <aside class="rent_filter">
+                    <sidebar class="rent_filter">
                         <div class="rent_filter-inner">
                             <div class="transmission">
                                 <span class="short_tittle">ТРАНСМИССИЯ</span>
@@ -432,13 +432,158 @@
                                 </div>
                             </div>
                         </div>
-                    </aside>
+                    </sidebar>
 
                     <div class="rent_main-inner">
-                        <div class="rent_main-info">
+                        <div class="rent_main-info" data-buttons="filter">
                             <h2 class="rent_title">
                                 АРЕНДА АВТО В КИЕВЕ
                             </h2>
+
+                            <div class="rent_mobile-filter" data-filter="filter">
+                                <div class="rent_content-filter">
+                                    <img src="images/filter-close-icon.svg" alt="#" class="close_icon-filter"
+                                        data-filter="#show_filter">
+                                    <sidebar class="rent_filter">
+                                        <div class="rent_filter-inner">
+                                            <div class="first_flex-inner">
+                                                <div class="transmission">
+                                                    <span class="short_tittle">ТРАНСМИССИЯ</span>
+                                                    <div class="inner_radio-btn">
+                                                        <label class="transmission_container">Автоматическая
+                                                            <input type="radio" name="transmission">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <label class="transmission_container">Механическая
+                                                            <input type="radio" name="transmission">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="price_wrapper">
+                                                    <span class="short_tittle">Цена</span>
+                                                    <input type="text" id="price_range-mob" class="js-range-slider"
+                                                        name="my_range" value="" />
+                                                    <div class="value">
+                                                        <input id="range_from-mob" class="price_value" placeholder="От">
+                                                        <input id="range_to-mob" class="price_value" placeholder="До">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="second_flex-inner">
+                                                <div class="body_type">
+                                                    <span class="short_tittle">ТИП КУЗОВА</span>
+                                                    <div class="inner_radio-btn">
+                                                        <label class="transmission_container">Седан
+                                                            <input type="radio" name="body_type">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <label class="transmission_container">Хетчбек
+                                                            <input type="radio" name="body_type">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <label class="transmission_container">Универсал
+                                                            <input type="radio" name="body_type">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <label class="transmission_container">Кабриолет
+                                                            <input type="radio" name="body_type">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="number">
+                                                    <span class="short_tittle">КОЛ-ВО МЕСТ</span>
+                                                    <div class="inner_radio-btn">
+                                                        <label class="transmission_container">2
+                                                            <input type="radio" name="number">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <label class="transmission_container">4
+                                                            <input type="radio" name="number">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <label class="transmission_container">5
+                                                            <input type="radio" name="number">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <label class="transmission_container">6+
+                                                            <input type="radio" name="number">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="three_flex-inner">
+                                                <div class="fuel_type">
+                                                    <span class="short_tittle open_more">ТИП ТОПЛИВА</span>
+                                                    <div class="inner_radio-btn more_information">
+                                                        <label class="transmission_container">Седан
+                                                            <input type="radio" name="fuel_type">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <label class="transmission_container">Хетчбек
+                                                            <input type="radio" name="fuel_type">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <label class="transmission_container">Универсал
+                                                            <input type="radio" name="fuel_type">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <label class="transmission_container">Кабриолет
+                                                            <input type="radio" name="fuel_type">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="specifications">
+                                                    <span class="short_tittle open_more">СПЕЦИФИКАЦИИ</span>
+                                                    <div class="inner_radio-btn more_information">
+                                                        <label class="transmission_container">Седан
+                                                            <input type="radio" name="specifications">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <label class="transmission_container">Хетчбек
+                                                            <input type="radio" name="specifications">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <label class="transmission_container">Универсал
+                                                            <input type="radio" name="specifications">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                        <label class="transmission_container">Кабриолет
+                                                            <input type="radio" name="specifications">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="drive">
+                                                <span class="short_tittle open_more">ПРИВОД</span>
+                                                <div class="inner_radio-btn more_information">
+                                                    <label class="transmission_container">Седан
+                                                        <input type="radio" name="drive">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                    <label class="transmission_container">Хетчбек
+                                                        <input type="radio" name="drive">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                    <label class="transmission_container">Универсал
+                                                        <input type="radio" name="drive">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                    <label class="transmission_container">Кабриолет
+                                                        <input type="radio" name="drive">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </sidebar>
+                                </div>
+                            </div>
+
                             <ul class="rent_breadcrumb_list">
                                 <li class="rent_breadcrumb-item">
                                     <a href="#" class="breadcrumb_item-link rent_breadcrumb-active">Лучшие
@@ -449,7 +594,8 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="rent_main-item" style="--main_item: url(/images/rental-bg-1.png) no-repeat center center">
+                        <div class="rent_main-item"
+                            style="--main_bg-item: url(../images/rental-bg-1.png) no-repeat center center; --main_bg-reverse: url(../images/rental-bg-reverse1.png) no-repeat center center; --main_bg-mob: url(../images/rent-bg-mob1.png)">
                             <div class="main_flex-inner">
                                 <span class="main_class-desc">ЭКОНОМ</span>
                                 <p class="main_class-car">
@@ -458,29 +604,29 @@
                                 <div class="flex_items">
                                     <div class="first_flex-items">
                                         <div class="flex_item-box">
-                                            <img src="/images/flex-icon-1.svg" alt="#" class="flex_item-images">
+                                            <img src="images/flex-icon-1.svg" alt="#" class="flex_item-images">
                                             <span class="flex_item-text">Механика</span>
                                         </div>
                                         <div class="flex_item-box">
-                                            <img src="/images/flex-icon-2.svg" alt="#" class="flex_item-images">
+                                            <img src="images/flex-icon-2.svg" alt="#" class="flex_item-images">
                                             <span class="flex_item-text">Объем: 1,4л</span>
                                         </div>
                                         <div class="flex_item-box">
-                                            <img src="/images/flex-icon-3.svg" alt="#" class="flex_item-images">
+                                            <img src="images/flex-icon-3.svg" alt="#" class="flex_item-images">
                                             <span class="flex_item-text">Кол-во мест: 5</span>
                                         </div>
                                     </div>
                                     <div class="second_flex-items">
                                         <div class="flex_item-box">
-                                            <img src="/images/flex-icon-4.svg" alt="#" class="flex_item-images">
+                                            <img src="images/flex-icon-4.svg" alt="#" class="flex_item-images">
                                             <span class="flex_item-text">Передний привод</span>
                                         </div>
                                         <div class="flex_item-box">
-                                            <img src="/images/flex-icon-5.svg" alt="#" class="flex_item-images">
+                                            <img src="images/flex-icon-5.svg" alt="#" class="flex_item-images">
                                             <span class="flex_item-text">Климат-контроль</span>
                                         </div>
                                         <div class="flex_item-box">
-                                            <img src="/images/flex-icon-6.svg" alt="#" class="flex_item-images">
+                                            <img src="images/flex-icon-6.svg" alt="#" class="flex_item-images">
                                             <span class="flex_item-text">Расход: 6л/100км</span>
                                         </div>
                                     </div>
@@ -526,7 +672,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="rent_main-item" style="--main_item: url(/images/rental-bg-2.png) no-repeat center center">
+                        <div class="rent_main-item"
+                            style="--main_bg-item: url(../images/rental-bg-2.png) no-repeat center center; --main_bg-reverse: url(../images/rental-bg-reverse2.png) no-repeat center center; --main_bg-mob: url(../images/rent-bg-mob1.png)">
                             <div class="main_flex-inner">
                                 <span class="main_class-desc">ЭКОНОМ</span>
                                 <p class="main_class-car">
@@ -535,29 +682,29 @@
                                 <div class="flex_items">
                                     <div class="first_flex-items">
                                         <div class="flex_item-box">
-                                            <img src="/images/flex-icon-1.svg" alt="#" class="flex_item-images">
+                                            <img src="images/flex-icon-1.svg" alt="#" class="flex_item-images">
                                             <span class="flex_item-text">Механика</span>
                                         </div>
                                         <div class="flex_item-box">
-                                            <img src="/images/flex-icon-2.svg" alt="#" class="flex_item-images">
+                                            <img src="images/flex-icon-2.svg" alt="#" class="flex_item-images">
                                             <span class="flex_item-text">Объем: 1,4л</span>
                                         </div>
                                         <div class="flex_item-box">
-                                            <img src="/images/flex-icon-3.svg" alt="#" class="flex_item-images">
+                                            <img src="images/flex-icon-3.svg" alt="#" class="flex_item-images">
                                             <span class="flex_item-text">Кол-во мест: 5</span>
                                         </div>
                                     </div>
                                     <div class="second_flex-items">
                                         <div class="flex_item-box">
-                                            <img src="/images/flex-icon-4.svg" alt="#" class="flex_item-images">
+                                            <img src="images/flex-icon-4.svg" alt="#" class="flex_item-images">
                                             <span class="flex_item-text">Передний привод</span>
                                         </div>
                                         <div class="flex_item-box">
-                                            <img src="/images/flex-icon-5.svg" alt="#" class="flex_item-images">
+                                            <img src="images/flex-icon-5.svg" alt="#" class="flex_item-images">
                                             <span class="flex_item-text">Климат-контроль</span>
                                         </div>
                                         <div class="flex_item-box">
-                                            <img src="/images/flex-icon-6.svg" alt="#" class="flex_item-images">
+                                            <img src="images/flex-icon-6.svg" alt="#" class="flex_item-images">
                                             <span class="flex_item-text">Расход: 6л/100км</span>
                                         </div>
                                     </div>
@@ -603,7 +750,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="rent_main-item" style="--main_item: url(/images/rental-bg-3.png) no-repeat center center">
+                        <div class="rent_main-item"
+                            style="--main_bg-item: url(../images/rental-bg-3.png) no-repeat center center; --main_bg-reverse: url(../images/rental-bg-reverse1.png) no-repeat center center; --main_bg-mob: url(../images/rent-bg-mob1.png)">
                             <div class="main_flex-inner">
                                 <span class="main_class-desc">ЭКОНОМ</span>
                                 <p class="main_class-car">
@@ -612,29 +760,29 @@
                                 <div class="flex_items">
                                     <div class="first_flex-items">
                                         <div class="flex_item-box">
-                                            <img src="/images/flex-icon-1.svg" alt="#" class="flex_item-images">
+                                            <img src="images/flex-icon-1.svg" alt="#" class="flex_item-images">
                                             <span class="flex_item-text">Механика</span>
                                         </div>
                                         <div class="flex_item-box">
-                                            <img src="/images/flex-icon-2.svg" alt="#" class="flex_item-images">
+                                            <img src="images/flex-icon-2.svg" alt="#" class="flex_item-images">
                                             <span class="flex_item-text">Объем: 1,4л</span>
                                         </div>
                                         <div class="flex_item-box">
-                                            <img src="/images/flex-icon-3.svg" alt="#" class="flex_item-images">
+                                            <img src="images/flex-icon-3.svg" alt="#" class="flex_item-images">
                                             <span class="flex_item-text">Кол-во мест: 5</span>
                                         </div>
                                     </div>
                                     <div class="second_flex-items">
                                         <div class="flex_item-box">
-                                            <img src="/images/flex-icon-4.svg" alt="#" class="flex_item-images">
+                                            <img src="images/flex-icon-4.svg" alt="#" class="flex_item-images">
                                             <span class="flex_item-text">Передний привод</span>
                                         </div>
                                         <div class="flex_item-box">
-                                            <img src="/images/flex-icon-5.svg" alt="#" class="flex_item-images">
+                                            <img src="images/flex-icon-5.svg" alt="#" class="flex_item-images">
                                             <span class="flex_item-text">Климат-контроль</span>
                                         </div>
                                         <div class="flex_item-box">
-                                            <img src="/images/flex-icon-6.svg" alt="#" class="flex_item-images">
+                                            <img src="images/flex-icon-6.svg" alt="#" class="flex_item-images">
                                             <span class="flex_item-text">Расход: 6л/100км</span>
                                         </div>
                                     </div>
@@ -676,6 +824,87 @@
                                         <a href="#" class="detail_btn">
                                             ПОДРОБНЕЕ
                                         </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="show_more-car">БОЛЬШЕ МОДЕЛЕЙ</span>
+                        <div class="more_models-car">
+                            <div class="rent_main-item"
+                                style="--main_bg-item: url(../images/rental-bg-1.png) no-repeat center center; --main_bg-reverse: url(../images/rental-bg-reverse1.png) no-repeat center center --main_bg-mob: url(../images/rent-bg-mob1.png)">
+                                <div class="main_flex-inner">
+                                    <span class="main_class-desc">ЭКОНОМ</span>
+                                    <p class="main_class-car">
+                                        Skoda Fabia
+                                    </p>
+                                    <div class="flex_items">
+                                        <div class="first_flex-items">
+                                            <div class="flex_item-box">
+                                                <img src="images/flex-icon-1.svg" alt="#" class="flex_item-images">
+                                                <span class="flex_item-text">Механика</span>
+                                            </div>
+                                            <div class="flex_item-box">
+                                                <img src="images/flex-icon-2.svg" alt="#" class="flex_item-images">
+                                                <span class="flex_item-text">Объем: 1,4л</span>
+                                            </div>
+                                            <div class="flex_item-box">
+                                                <img src="images/flex-icon-3.svg" alt="#" class="flex_item-images">
+                                                <span class="flex_item-text">Кол-во мест: 5</span>
+                                            </div>
+                                        </div>
+                                        <div class="second_flex-items">
+                                            <div class="flex_item-box">
+                                                <img src="images/flex-icon-4.svg" alt="#" class="flex_item-images">
+                                                <span class="flex_item-text">Передний привод</span>
+                                            </div>
+                                            <div class="flex_item-box">
+                                                <img src="images/flex-icon-5.svg" alt="#" class="flex_item-images">
+                                                <span class="flex_item-text">Климат-контроль</span>
+                                            </div>
+                                            <div class="flex_item-box">
+                                                <img src="images/flex-icon-6.svg" alt="#" class="flex_item-images">
+                                                <span class="flex_item-text">Расход: 6л/100км</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex_items-box">
+                                        <div class="items_box-inner">
+                                            <div class="items_box-first">
+                                                <p class="items_short-text">КОЛ-ВО ДНЕЙ</p>
+                                                <span class="item_info-number">1-2</span>
+                                                <span class="item_info-number">3-5</span>
+                                                <span class="item_info-number">6-8</span>
+                                                <span class="item_info-number">9-14</span>
+                                                <span class="item_info-number">15-28</span>
+                                                <span class="item_info-number">29+</span>
+                                            </div>
+                                            <div class="items_box-second">
+                                                <p class="items_short-text">ЦЕНА, USD</p>
+                                                <span class="item_info-number">70</span>
+                                                <span class="item_info-number">64</span>
+                                                <span class="item_info-number">54</span>
+                                                <span class="item_info-number">48</span>
+                                                <span class="item_info-number">44</span>
+                                                <span class="item_info-number">39</span>
+                                            </div>
+                                            <div class="items_box-three">
+                                                <p class="items_short-text">ЗАЛОГ</p>
+                                                <span class="item_info-number">0</span>
+                                                <span class="item_info-number">0</span>
+                                                <span class="item_info-number">400</span>
+                                                <span class="item_info-number">400</span>
+                                                <span class="item_info-number">800</span>
+                                                <span class="item_info-number">800</span>
+                                            </div>
+                                        </div>
+                                        <div class="rent_main-btn">
+                                            <a href="#" class="reserve_btn">
+                                                БРОНИРОВАТЬ
+                                            </a>
+                                            <a href="#" class="detail_btn">
+                                                ПОДРОБНЕЕ
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -685,7 +914,76 @@
             </div>
         </section>
 
-        <!-- <footer class="footer">
+        <aside class="about_company">
+            <div class="container">
+                <h3 class="company_main-tittle">
+                    О КОМПАНИИ
+                </h3>
+                <div class="about_company-wrapper">
+                    <div class="company_text-info">
+                        <p>Elit turpis nec tortor fringilla pulvinar consequat viverra vitae. Velit sagittis id nec
+                            consequat interdum et duis enim, feugiat. Auctor at viverra cursus pulvinar laoreet at.
+                            Adipiscing sed tellus purus arcu ut rutrum proin eleifend. Ut feugiat dignissim mauris vel
+                            sit consequat scelerisque proin. Luctus massa tellus est sit tincidunt mauris, et. Quis
+                            vestibulum bibendum arcu, lacinia placerat.
+                        </p>
+                        <br>
+                        <p>
+                            A pellentesque at turpis dignissim orci nam. Et egestas id cursus aliquam nunc, orci,
+                            pretium ipsum. Pulvinar semper amet, viverra blandit. Ut est luctus vestibulum donec congue
+                            iaculis facilisi tristique.
+                        </p>
+                        <div class="about_company-hidden">
+                            <p>Elit turpis nec tortor fringilla pulvinar consequat viverra vitae. Velit sagittis id nec
+                                consequat interdum et duis enim, feugiat. Auctor at viverra cursus pulvinar laoreet at.
+                                Adipiscing sed tellus purus arcu ut rutrum proin eleifend. Ut feugiat dignissim mauris
+                                vel
+                                sit consequat scelerisque proin. Luctus massa tellus est sit tincidunt mauris, et. Quis
+                                vestibulum bibendum arcu, lacinia placerat.
+                            </p>
+                            <br>
+                            <p>
+                                A pellentesque at turpis dignissim orci nam. Et egestas id cursus aliquam nunc, orci,
+                                pretium ipsum. Pulvinar semper amet, viverra blandit. Ut est luctus vestibulum donec
+                                congue
+                                iaculis facilisi tristique.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="company_text-info">
+                        <p>Vestibulum arcu convallis dictum egestas dolor pretium. Metus sollicitudin elit malesuada
+                            ornare nunc quam quam lectus pretium. Venenatis eget purus egestas massa lectus. Quis
+                            condimentum cursus risus ultricies etiam eu quis placerat integer. Odio purus tincidunt sit
+                            enim condimentum pellentesque elementum volutpat phasellus. Metus interdum quam nec enim.
+                            Suspendisse sem turpis nulla augue adipiscing leo. Sed pretium id suspendisse nunc. Ipsum
+                            gravida id cras nec, ullamcorper. Cursus diam ut suscipit amet. Massa et leo ipsum ultricies
+                            volutpat eget vitae. In leo augue blandit libero pulvinar vel pellentesque pharetra. Sed
+                            mattis orci sem in vel rhoncus lacus.
+                        </p>
+                        <div class="about_company-hidden">
+                            <p>Vestibulum arcu convallis dictum egestas dolor pretium. Metus sollicitudin elit malesuada
+                                ornare nunc quam quam lectus pretium. Venenatis eget purus egestas massa lectus. Quis
+                                condimentum cursus risus ultricies etiam eu quis placerat integer. Odio purus tincidunt
+                                sit
+                                enim condimentum pellentesque elementum volutpat phasellus. Metus interdum quam nec
+                                enim.
+                                Suspendisse sem turpis nulla augue adipiscing leo. Sed pretium id suspendisse nunc.
+                                Ipsum
+                                gravida id cras nec, ullamcorper. Cursus diam ut suscipit amet. Massa et leo ipsum
+                                ultricies
+                                volutpat eget vitae. In leo augue blandit libero pulvinar vel pellentesque pharetra. Sed
+                                mattis orci sem in vel rhoncus lacus.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <span class="company_read-more">
+                    ЧИТАТЬ ДАЛЬШЕ
+                </span>
+            </div>
+        </aside>
+
+        <footer class="footer">
             <div class="container">
                 <div class="footer_wrapper">
                     <a href="/" class="footer_logo">
@@ -796,7 +1094,7 @@
                     </a>
                 </div>
             </div>
-        </footer> -->
+        </footer>
 
     </div>
 

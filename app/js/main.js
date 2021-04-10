@@ -274,6 +274,140 @@ $(document).ready(function(){
 
 // show more info //
 
+// car models //
+
+let condition = document.querySelector('.show_more-car');
+if (condition) {
+    condition.addEventListener('click', showModels, false);
+}
+
+function showModels() {
+    let showCar = document.querySelector('.more_models-car');
+    showCar.classList.toggle('show_models-car');
+}
+
+$( ".show_more-car" ).click(function() {
+    $( this ).toggleClass( "arrow_rotate" );
+  })
+
+// car models //
+
+// section about_company //
+
+let checkCompany = document.querySelector('.company_read-more');
+if (checkCompany) {
+    checkCompany.addEventListener('click', showMoreInfo, false);
+}
+
+function showMoreInfo() {
+    let showText = document.querySelectorAll('.about_company-hidden');
+    for(let i = 0; i < showText.length; i++ ) {
+        showText[i].classList.toggle('about_company-show');
+    }
+}
+
+$( ".company_read-more" ).click(function() {
+    $( this ).toggleClass( "company_arrow-rotate" );
+  })
+
+// section about_company //
+
+// mob-filter //
+
+var $range2 = $("#price_range-mob"),
+$inputFrom2 = $("#range_from-mob"),
+$inputTo2 = $("#range_to-mob"),
+instance2,
+min2 = 0,
+max2 = 1000,
+from2 = 0,
+to2 = 0;
+
+$range2.ionRangeSlider({
+skin: "round",
+type: "double",
+min: min2,
+max: max2,
+from: 0,
+to: 1000,
+step: 0.01,
+onStart: updateInputs2,
+onChange: updateInputs2
+});
+instance2 = $range2.data("ionRangeSlider");
+
+function updateInputs2 (data) {
+from2 = data.from;
+to2 = data.to;
+
+$inputFrom2.prop("value", from2);
+$inputTo2.prop("value", to2);
+}
+
+$inputFrom2.on("input", function () {
+var val = $(this).prop("value");
+
+// validate
+if (val < min2) {
+    val = min2;
+} else if (val > to2) {
+    val = to2;
+}
+
+instance2.update({
+    from: val
+});
+});
+
+$inputTo2.on("input", function () {
+var val = $(this).prop("value");
+
+// validate
+if (val < from2) {
+    val = from2;
+} else if (val > max2) {
+    val = max2;
+}
+
+instance2.update({
+    to: val
+});
+});
+
+
+// popup_filter //
+
+const filterButtons = document.querySelectorAll('.rent_main-info')
+
+const filterModals = document.querySelectorAll('.rent_mobile-filter')
+
+const FiltercloseButtons = document.querySelectorAll('.close_icon-filter')
+
+
+FiltercloseButtons.forEach(buttonClose => {
+    buttonClose.addEventListener('click', closeModal, false)
+})
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', openModal, false)
+})
+
+function openModal(event) {
+    filterModals.forEach(item => {
+        if (event.target.dataset.buttons === item.dataset.filter) {
+            item.classList.add('turn')
+        }
+    })
+}
+
+function closeModal(event) {
+    this.closest('.rent_mobile-filter').classList.remove('turn')
+}
+
+// popup_filter //
+
+
+
 
 
 

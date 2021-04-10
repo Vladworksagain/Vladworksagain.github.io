@@ -19,6 +19,10 @@ section
 .breadcrumbs
     margin-top: 62px
 
+    @media screen and ( max-width: 992px )
+        margin-top: 0
+        
+
 .breadcrumb_list
     display: inline-flex
     &-item
@@ -45,9 +49,6 @@ section
 
 .select
     padding: 37px 0 60px 0
-
-.select
-    margin-bottom: 60px
 
 .select_wrapper
     display: flex
@@ -210,7 +211,6 @@ section
     align-items: center
     cursor: pointer
     position: relative
-    border: 2px solid transparent
     overflow: hidden
 
     @media screen and ( max-width: 1292px )
@@ -338,6 +338,15 @@ section
     line-height: 20px
     color: $color-white
 
+.rent
+    position: relative
+
+    .big_circle
+        width: 283px
+        height: 283px
+        bottom: 0
+        left: -44px
+
 .rent_wrapper
     display: flex
 
@@ -351,10 +360,73 @@ section
     box-shadow: 0px 2px 13px rgba(0, 0, 0, 0.1)
     border-radius: 5px
     padding: 40px 0 40px 27px
+    position: relative
+    &::after
+        content: ""
+        width: 103px
+        height: 103px
+        border: 23px solid #FFC32A
+        border-radius: 50%
+        box-shadow: 0px 2px 20px rgba(255, 195, 42, .6)
+        z-index: 10
+        position: absolute
+        bottom: -160px
+        left: 30px
+
+    &::before
+        content: ""
+        position: absolute
+        width: 282px
+        height: 282px
+        border: 44px solid #FFC32A
+        box-shadow: 0px 2px 20px rgba(255, 195, 42, .6)
+        border-radius: 50%
+        z-index: 2
+        left: -250px
+        bottom: -400px
+
+    @media screen and ( max-width: 768px )
+        display: none
+        padding: 47px 10px
+
+    .first_flex-inner
+        display: flex
+        justify-content: space-between
+
+        @media screen and ( max-width: 768px )
+            justify-content: space-around
+
+        @media screen and ( max-width: 500px )
+            justify-content: space-between
+
+    .second_flex-inner
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        @media screen and ( max-width: 768px )
+            justify-content: space-around
+
+        @media screen and ( max-width: 500px )
+            justify-content: space-between
+
+    .three_flex-inner
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        @media screen and ( max-width: 768px )
+            justify-content: space-around
+
+        @media screen and ( max-width: 500px )
+            justify-content: space-between
 
 .rent_filter-inner
     display: flex
     flex-direction: column
+
+    @media screen and ( max-width: 768px )
+        width: 100%
 
 .transmission
     margin-bottom: 40px
@@ -423,9 +495,19 @@ section
     margin-bottom: 13px
     position: relative
 
+    .inner_radio-btn
+        display: block !important
+
 .price_wrapper
     width: 80%
     margin-bottom: 40px
+
+    @media screen and ( max-width: 768px )
+        width: 155px
+        max-width: 100%
+
+    @media screen and ( max-width: 400px )
+        text-align: center
 
     .irs
         top: -6px
@@ -485,6 +567,9 @@ section
     .short_tittle
         margin-bottom: 0
 
+        @media screen and ( max-width: 768px )
+            margin-bottom: 0
+
 .value
     display: flex
     width: 100%
@@ -506,6 +591,9 @@ section
 .body_type
     margin-bottom: 39px
 
+    @media screen and ( max-width: 768px )
+        margin-bottom: 40px  
+
 .number
     margin-bottom: 40px
 
@@ -516,12 +604,19 @@ section
         margin-bottom: 0
         cursor: pointer
 
+        @media screen and ( max-width: 768px )
+            pointer-events: none
+            margin-bottom: 13px
+
 .open_more
 
     &::after
         content: "+"
         color: $brand-color
         display: inline-block
+
+        @media screen and ( max-width: 768px )
+            content: none
 
 .open_more.plus:after
     display: none
@@ -532,11 +627,24 @@ section
         margin-bottom: 0
         cursor: pointer
 
+        @media screen and ( max-width: 768px )
+            pointer-events: none
+            margin-bottom: 13px
+
 .drive
+    @media screen and ( max-width: 768px )
+        margin-bottom: 20px
+        display: flex
+        flex-direction: column
+        align-items: center
 
     .short_tittle
         margin-bottom: 0
         cursor: pointer
+
+        @media screen and ( max-width: 768px )
+            pointer-events: none
+            margin-bottom: 13px
 
 .specifications
     margin-bottom: 20px
@@ -546,12 +654,35 @@ section
     width: 100%
     flex-direction: column
 
+    @media screen and ( max-width: 768px )
+        align-items: center
+
 .rent_main-info
     display: flex
     width: 100%
     justify-content: space-between
     align-items: center
     margin-bottom: 33px
+    position: relative
+    &::after
+        content: ""
+        position: absolute
+        width: 55px
+        height: 55px
+        background-color: $brand-color
+        border-radius: 50%
+        background-image: url(../images/rent-icon-filter.svg)
+        background-repeat: no-repeat
+        background-position: center center
+        right: 0
+        cursor: pointer
+
+.rent_main-info:after
+    display: none
+
+    @media screen and ( max-width: 768px )
+        display: block
+        padding-right: 45px
 
 .rent_title
     font-family: $Montserrat
@@ -562,8 +693,55 @@ section
     text-transform: uppercase
     margin-left: 30px
 
+    @media screen and ( max-width: 580px )
+        margin-left: 0
+        padding-right: 60px
+
+    @media screen and ( max-width: 350px )
+        font-size: 25px
+
+.rent_mobile-filter
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(255,255 ,255 , .5 )
+    z-index: 10
+    display: flex
+    justify-content: center
+    align-items: center
+    opacity: 0
+    visibility: hidden
+    transition: .3s ease all
+
+    .rent_content-filter
+        position: relative
+
+    .close_icon-filter
+        position: absolute
+        right: 20px
+        top: 20px
+        z-index: 1
+
+    .rent_filter
+        width: 100vw
+        height: 100vh
+
+        @media screen and ( max-width: 768px )
+            display: flex
+            justify-content: space-between
+
+.rent_mobile-filter
+    &.turn
+        opacity: 1
+        visibility: visible
+
 .rent_breadcrumb_list
     display: flex
+
+    @media screen and ( max-width: 916px )
+        display: none
 
 .rent_breadcrumb-item
     margin-left: 15px
@@ -590,10 +768,10 @@ section
     color: #000000
 
 .rent_main-item
-    background: var(--main_item)
+    background: var(--main_bg-item)
     width: 100%
     height: 370px
-    max-width: 912px
+    max-width: 913px
     margin-left: 30px
     border-radius: 5px
     background-size: cover
@@ -601,12 +779,39 @@ section
     justify-content: flex-end
     margin-bottom: 16px
 
+    @media screen and ( max-width: 768px )
+        width: 100vw
+        margin-left: 0
+
+    @media screen and ( max-width: 580px )
+        background: var(--main_bg-reverse)
+        justify-content: flex-start
+        background-size: cover
+
+    @media screen and ( max-width: 380px )
+        background-image: var(--main_bg-mob)
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: top center
+        background-color: #282828
+        justify-content: center
+        align-items: center
+        height: 754px
+        padding: 0 15px
+
 .main_flex-inner
     width: 332px
     height: 302px
     max-width: 100%
     margin: 34px 50px 0 0
 
+    @media screen and ( max-width: 580px )
+        margin: 34px 0 0 36px
+
+    @media screen and ( max-width: 380px )
+        margin: 20px 0 0 0
+        width: 100%
+         
 .main_class-desc
     font-family: $Ubuntu
     font-weight: 500
@@ -630,6 +835,10 @@ section
     justify-content: space-between
     padding-right: 30px
     margin-bottom: 22px
+
+    @media screen and ( max-width: 380px )
+        padding: 0
+        width: 100%
 
 .first_flex-items
     display: flex
@@ -662,6 +871,10 @@ section
     border-left: 1px solid $color-white
     padding-left: 5px
 
+    @media screen and ( max-width: 380px )
+        border: none
+        height: 100%
+
 .items_box-inner
     display: flex
     height: 100%
@@ -670,12 +883,24 @@ section
     width: 100%
     margin-bottom: 19px
 
+    @media screen and ( max-width: 380px )
+        flex-direction: row
+        width: 100%
+        justify-content: space-between
+        align-items: center
+        height: auto
+
 .items_box-first
     display: grid
     grid-template-rows: repeat(1, 14px)
     grid-template-columns: repeat(auto-fit, minmax(34px, 32px))
-    grid-column-gap: 3px 
+    grid-column-gap: 3px
     align-items: center
+
+    @media screen and ( max-width: 380px )
+        display: flex
+        flex-direction: column
+        height: 100%
 
 .items_box-second
     display: grid
@@ -684,12 +909,22 @@ section
     grid-column-gap: 3px
     align-items: center
 
+    @media screen and ( max-width: 380px )
+        display: flex
+        flex-direction: column
+        height: 100%
+
 .items_box-three
     display: grid
     grid-template-rows: repeat(1, 14px)
     grid-template-columns: repeat(auto-fit, minmax(34px, 32px))
     grid-column-gap: 3px
     align-items: center
+
+    @media screen and ( max-width: 380px )
+        display: flex
+        flex-direction: column
+        height: 100%
 
 .items_short-text
     font-family: $Ubuntu
@@ -701,7 +936,12 @@ section
     text-transform: uppercase
     &:nth-child(-n+3)
         grid-column: span 3
-        
+
+        @media screen and ( max-width: 380px )
+            font-size: 15px
+            line-height: 18px
+            color: $brand-color
+            margin-bottom: 10px
 
 .item_info-number
     font-family: $Ubuntu
@@ -711,11 +951,22 @@ section
     color: #E3E3E3
     opacity: .8
     text-align: center
+    
+    @media screen and ( max-width: 380px )
+        margin-bottom: 22px
+        &:last-child
+            margin-bottom: 0
+        
 
 .rent_main-btn
     width: 100%
     display: flex
     justify-content: space-between
+
+    @media screen and ( max-width: 380px )
+        flex-direction: column
+        align-items: center
+        width: 100%
 
 .reserve_btn
     @extend %top_btn-form
@@ -727,12 +978,17 @@ section
     &:hover
         background-color: $brand-color
 
+    @media screen and ( max-width: 380px )
+        width: 100%
+        margin-bottom: 11px
+            
+
 .detail_btn
     @extend %top_btn-main
     margin-left: 13px
     border: 2px solid $color-white
     color: $color-white
-    background-color: transparent 
+    background-color: transparent
     font-weight: 700
     text-align: center
     padding: 12px
@@ -740,3 +996,110 @@ section
         border: 2px solid rgba(255,255 ,255 ,.5 )
         background-color: $color-white
         color: $top-black-color
+
+    @media screen and ( max-width: 380px )
+        margin-left: 0
+        width: 100%
+        margin-bottom: 11px
+
+.show_more-car
+    position: relative
+    text-transform: uppercase
+    font-family: $Ubuntu
+    font-weight: 700
+    font-size: 15px
+    line-height: 18px
+    color: $top-black-color
+    display: block
+    text-align: right
+    margin: 0 15px 16px 0
+    cursor: pointer
+
+    @media screen and ( max-width: 768px )
+        display: block
+        text-align: right
+        margin-right: 35px
+        width: 100%
+
+    @media screen and ( max-width: 380px )
+        text-align: center
+
+    &::after
+        content: "▼"
+        position: absolute
+        right: -16px
+        transform: rotate(0)
+        transition: .3s ease all
+        
+
+.show_more-car.arrow_rotate:after
+    transform: rotate(180deg)
+
+.more_models-car
+    display: none
+
+.show_models-car
+    display: block
+
+.company_main-tittle
+    font-family: $Montserrat
+    font-weight: 700
+    font-size: 33px
+    line-height: 41px
+    color: #000
+    margin-bottom: 26px
+
+    @media screen and ( max-width: 380px )
+        font-size: 30px
+
+.about_company-wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.company_text-info
+    width: 100%
+    max-width: 571px
+    height: 100%
+    margin-bottom: 29px
+
+    p
+        color: #686868
+        font-size: 12px
+        line-height: 18px
+        font-family: $Ubuntu
+        font-weight: 400
+
+.company_read-more
+    position: relative
+    font-weight: 700
+    font-family: $Ubuntu
+    font-size: 13px
+    line-height: 15px
+    color: $top-black-color
+    cursor: pointer
+
+    @media screen and ( max-width: 380px )
+        display: inline-block
+        text-align: center
+        width: 100%
+
+    &::after
+        content: "▼"
+        position: absolute
+        top: 0
+        right: -15px
+        transform: rotate(0)
+        transition: .3s ease all
+
+        @media screen and ( max-width: 380px )
+            right: 55px
+
+.company_read-more.company_arrow-rotate:after
+    transform: rotate(180deg)
+
+.about_company-hidden
+    display: none
+
+.about_company-show
+    display: block
