@@ -377,32 +377,19 @@ instance2.update({
 
 // popup_filter //
 
-const filterButtons = document.querySelectorAll('.rent_main-info')
+ let filterButtons = document.querySelector('.rent_main-info');
+ let filterCloseButton = document.querySelector('.close_icon-filter');
 
-const filterModals = document.querySelectorAll('.rent_mobile-filter')
+ function filterShow() {
+     let hideFilter = document.querySelector('.rent_mobile-filter');
+     if (hideFilter.classList.contains('turn')) {
+        hideFilter.classList.remove('turn');
+     } else {
+        hideFilter.classList.add('turn');
+     }
+ }
 
-const FiltercloseButtons = document.querySelectorAll('.close_icon-filter')
-
-
-FiltercloseButtons.forEach(buttonClose => {
-    buttonClose.addEventListener('click', closeModal, false)
-})
-
-filterButtons.forEach(button => {
-    button.addEventListener('click', openModal, false)
-})
-
-function openModal(event) {
-    filterModals.forEach(item => {
-        if (event.target.dataset.buttons === item.dataset.filter) {
-            item.classList.add('turn')
-        }
-    })
-}
-
-function closeModal(event) {
-    this.closest('.rent_mobile-filter').classList.remove('turn')
-}
+filterButtons.onclick = filterShow;
 
 // popup_filter //
 

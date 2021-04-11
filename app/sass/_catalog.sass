@@ -718,11 +718,14 @@ section
     .rent_content-filter
         position: relative
 
+        @media screen and ( max-width: 768px )
+            height: 100%
+
     .close_icon-filter
         position: absolute
         right: 20px
         top: 20px
-        z-index: 1
+        z-index: 1        
 
     .rent_filter
         width: 100vw
@@ -731,6 +734,7 @@ section
         @media screen and ( max-width: 768px )
             display: flex
             justify-content: space-between
+            height: 100%
 
 .rent_mobile-filter
     &.turn
@@ -1030,6 +1034,9 @@ section
         right: -16px
         transform: rotate(0)
         transition: .3s ease all
+
+        @media screen and ( max-width: 380px )
+            right: 68px
         
 
 .show_more-car.arrow_rotate:after
@@ -1093,7 +1100,7 @@ section
         transition: .3s ease all
 
         @media screen and ( max-width: 380px )
-            right: 55px
+            right: 88px
 
 .company_read-more.company_arrow-rotate:after
     transform: rotate(180deg)
