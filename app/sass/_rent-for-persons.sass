@@ -1,0 +1,259 @@
+@import fonts
+@import variables
+@import buttons
+
+body, html
+    height: 100%
+
+.wrapper
+    display: flex
+    flex-direction: column
+    min-height: 100%
+
+section
+    flex: 1 0 auto
+
+.footer
+    flex: 0 0 auto
+
+.rent_car
+    margin: 37px 0 31px 0
+
+.rent_car-tittle
+    font-family: $Montserrat
+    font-weight: 700
+    font-size: 33px
+    line-height: 41px
+    color: $top-black-color
+    display: block
+    text-align: center
+    margin-bottom: 33px
+
+    @media screen and ( max-width: 440px )
+        font-size: 22px
+        margin-bottom: 20px
+
+.rent_car-inner
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-evenly
+    align-items: center
+    margin: 0 -17px
+    position: relative
+    &::before
+        content: ""
+        width: 103px
+        height: 103px
+        border: 23px solid $brand-color
+        border-radius: 50%
+        box-shadow: 0px 2px 20px rgba(255, 195, 42, 0.6)
+        position: absolute
+        left: -57px
+        top: -30px
+    &::after
+        content: ""
+        width: 191px
+        height: 191px
+        border: 35px solid $brand-color
+        box-shadow: 0px 2px 20px rgba(255, 195, 42, 0.6)
+        border-radius: 50%
+        position: absolute
+        right: -55px
+        bottom: -60px
+        z-index: -1
+
+        @media screen and ( max-width: 1320px )
+            display: none
+
+.rent_car-item
+    width: 258px
+    max-width: 100%
+    max-height: 100%
+    background: $color-white
+    box-shadow: 0px 2px 13px rgba(0, 0, 0, 0.1)
+    border-radius: 5px
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    padding: 27px 25px
+    margin: 0 17px 21px
+
+.rent_car-image
+    margin-bottom: 10px
+
+.rent_car-text
+    font-family: $Ubuntu
+    font-weight: 500
+    font-size: 17px
+    line-height: 20px
+    color: $top-black-color
+    text-align: center
+
+.our_clients
+    padding: 53px 0 52px 0
+    background: url(../images/our-clients-bg.png) no-repeat center center
+    background-size: cover
+    position: relative
+    z-index: -2
+
+.our_clients_tittle
+    font-family: $Montserrat
+    font-weight: 700
+    font-size: 33px
+    line-height: 41px
+    color: $color-white
+    margin-bottom: 14px
+    display: block
+    text-align: center
+
+.our_clients_inner
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    @media screen and ( max-width: 1020px )
+        flex-wrap: wrap
+        justify-content: center
+
+.our_clients-image
+    padding: 0 10px
+
+    @media screen and ( max-width: 500px )
+        padding: 15px 15px
+
+.have_questions
+    background-color: $brand-color
+    padding: 36px 0 34px 0
+    margin-bottom: 60px
+
+    @media screen and ( max-width: 768px )
+        margin-bottom: 30px
+
+.have_questions-inner
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    @media screen and ( max-width: 768px )
+        flex-wrap: wrap
+        justify-content: center
+        align-items: center
+
+.have_questions-info
+    width: 47%
+
+    @media screen and ( max-width: 1020px )
+        padding-right: 10px
+
+    @media screen and ( max-width: 768px )
+        margin-bottom: 15px
+        padding: 0
+        width: 100%
+
+.have_questions-tittle
+    font-family: $Montserrat
+    font-weight: 700
+    font-size: 33px
+    line-height: 40px
+    color: $color-white
+    margin-bottom: 16px
+    
+    @media screen and ( max-width: 400px )
+        text-align: center
+        font-size: 27px
+
+.have_questions-text
+    font-family: $Ubuntu
+    font-weight: 400
+    font-size: 15px
+    line-height: 17px
+    color: $color-white
+
+
+.have_questions-form
+    width: 100%
+    height: 219px
+    max-width: 517px
+    background-color: $color-white
+    border-radius: 5px
+
+    @media screen and ( max-width: 768px )
+        height: auto
+        
+
+    form
+        padding: 34px 40px
+        width: 100%
+
+        @media screen and ( max-width: 768px )
+            padding: 25px 40px
+
+.have_questions-flex
+    display: flex
+    width: 100%
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 18px
+
+    @media screen and ( max-width: 600px )
+        flex-wrap: wrap
+
+    input
+        width: 135px
+        max-width: 100%
+        border: none
+        border-bottom: 1px solid #000000
+        padding-bottom: 9px
+        font-family: $Ubuntu
+        font-weight: 400
+        font-size: 10px
+        line-height: 12px
+        color: #717171
+        text-overflow: ellipsis
+        &::placeholder
+            font-family: $Ubuntu
+            font-weight: 400
+            font-size: 10px
+            line-height: 12px
+            color: #717171
+
+        @media screen and ( max-width: 768px )
+            margin: 7px
+            width: 100%
+
+.have_questions-feedback
+    width: 100%
+    margin-bottom: 27px
+    border: none
+    border-bottom: 1px solid rgba(0,0 ,0 , .5)
+    resize: none
+    height: 47px
+    font-family: $Ubuntu
+    font-weight: 400
+    font-size: 10px
+    line-height: 12px
+    color: #717171
+    &::placeholder
+        font-family: $Ubuntu
+        font-weight: 400
+        font-size: 10px
+        line-height: 12px
+        color: #717171
+
+.have_questions-btn
+    @extend %top_btn-form
+    width: 100%
+
+.rent_about-company
+    padding-bottom: 50px
+    background: url(../images/rent-about-company-bg.png) no-repeat center bottom
+    background-size: cover
+    width: 100%
+
+    .company_main-tittle
+
+        @media screen and ( max-width: 400px )
+            text-align: center
+            font-size: 21px
+            line-height: 30px

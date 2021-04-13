@@ -118,9 +118,9 @@ function show() {
     modal.classList.toggle('show');
 }
 
-$( ".main_info-about" ).click(function() {
-    $( this ).toggleClass( "rotate" );
-  })
+$(".main_info-about").click(function () {
+    $(this).toggleClass("rotate");
+})
 
 // Section about_company -read_more //
 
@@ -262,15 +262,15 @@ $inputTo.on("change", function () {
 
 // show more info //
 
-$(document).ready(function(){
-    $(".open_more").click(function(){
-      $(this).next('div').toggle();      
+$(document).ready(function () {
+    $(".open_more").click(function () {
+        $(this).next('div').toggle();
     });
-  });
+});
 
-  $( ".open_more" ).click(function() {
-    $( this ).toggleClass( "plus" );
-  })
+$(".open_more").click(function () {
+    $(this).toggleClass("plus");
+})
 
 // show more info //
 
@@ -286,9 +286,9 @@ function showModels() {
     showCar.classList.toggle('show_models-car');
 }
 
-$( ".show_more-car" ).click(function() {
-    $( this ).toggleClass( "arrow_rotate" );
-  })
+$(".show_more-car").click(function () {
+    $(this).toggleClass("arrow_rotate");
+})
 
 // car models //
 
@@ -301,95 +301,105 @@ if (checkCompany) {
 
 function showMoreInfo() {
     let showText = document.querySelectorAll('.about_company-hidden');
-    for(let i = 0; i < showText.length; i++ ) {
+    for (let i = 0; i < showText.length; i++) {
         showText[i].classList.toggle('about_company-show');
     }
 }
 
-$( ".company_read-more" ).click(function() {
-    $( this ).toggleClass( "company_arrow-rotate" );
-  })
+$(".company_read-more").click(function () {
+    $(this).toggleClass("company_arrow-rotate");
+})
 
 // section about_company //
 
 // mob-filter //
 
 var $range2 = $("#price_range-mob"),
-$inputFrom2 = $("#range_from-mob"),
-$inputTo2 = $("#range_to-mob"),
-instance2,
-min2 = 0,
-max2 = 1000,
-from2 = 0,
-to2 = 0;
+    $inputFrom2 = $("#range_from-mob"),
+    $inputTo2 = $("#range_to-mob"),
+    instance2,
+    min2 = 0,
+    max2 = 1000,
+    from2 = 0,
+    to2 = 0;
 
 $range2.ionRangeSlider({
-skin: "round",
-type: "double",
-min: min2,
-max: max2,
-from: 0,
-to: 1000,
-step: 0.01,
-onStart: updateInputs2,
-onChange: updateInputs2
+    skin: "round",
+    type: "double",
+    min: min2,
+    max: max2,
+    from: 0,
+    to: 1000,
+    step: 0.01,
+    onStart: updateInputs2,
+    onChange: updateInputs2
 });
 instance2 = $range2.data("ionRangeSlider");
 
-function updateInputs2 (data) {
-from2 = data.from;
-to2 = data.to;
+function updateInputs2(data) {
+    from2 = data.from;
+    to2 = data.to;
 
-$inputFrom2.prop("value", from2);
-$inputTo2.prop("value", to2);
+    $inputFrom2.prop("value", from2);
+    $inputTo2.prop("value", to2);
 }
 
 $inputFrom2.on("input", function () {
-var val = $(this).prop("value");
+    var val = $(this).prop("value");
 
-// validate
-if (val < min2) {
-    val = min2;
-} else if (val > to2) {
-    val = to2;
-}
+    // validate
+    if (val < min2) {
+        val = min2;
+    } else if (val > to2) {
+        val = to2;
+    }
 
-instance2.update({
-    from: val
-});
+    instance2.update({
+        from: val
+    });
 });
 
 $inputTo2.on("input", function () {
-var val = $(this).prop("value");
+    var val = $(this).prop("value");
 
-// validate
-if (val < from2) {
-    val = from2;
-} else if (val > max2) {
-    val = max2;
-}
+    // validate
+    if (val < from2) {
+        val = from2;
+    } else if (val > max2) {
+        val = max2;
+    }
 
-instance2.update({
-    to: val
-});
+    instance2.update({
+        to: val
+    });
 });
 
 
 // popup_filter //
 
- let filterButtons = document.querySelector('.rent_main-info');
- let filterCloseButton = document.querySelector('.close_icon-filter');
+let filterButtons = document.querySelector('.rent_filter-icon');
+let filterCloseButton = document.querySelector('.close_icon-filter');
 
- function filterShow() {
-     let hideFilter = document.querySelector('.rent_mobile-filter');
-     if (hideFilter.classList.contains('turn')) {
+function filterShow() {
+    let showFilter = document.querySelector('.rent_mobile-filter');
+    if (showFilter.classList.contains('turn')) {
+        showFilter.classList.remove('turn');
+    } else {
+        showFilter.classList.add('turn');
+    }
+}
+
+function filterHide() {
+    let hideFilter = document.querySelector('.rent_mobile-filter');
+    if (hideFilter.classList.contains('turn')) {
         hideFilter.classList.remove('turn');
-     } else {
+    } else {
         hideFilter.classList.add('turn');
-     }
- }
+    }
+}
 
-filterButtons.onclick = filterShow;
+    filterButtons.onclick = filterShow;
+    filterCloseButton.onclick = filterHide;
 
 // popup_filter //
 

@@ -46,6 +46,7 @@ section
     font-size: 12px
     line-height: 14px
     color: $top-black-color
+    text-decoration: none
 
 .select
     padding: 37px 0 60px 0
@@ -664,25 +665,13 @@ section
     align-items: center
     margin-bottom: 33px
     position: relative
-    &::after
-        content: ""
-        position: absolute
-        width: 55px
-        height: 55px
-        background-color: $brand-color
-        border-radius: 50%
-        background-image: url(../images/rent-icon-filter.svg)
-        background-repeat: no-repeat
-        background-position: center center
-        right: 0
-        cursor: pointer
 
-.rent_main-info:after
+.rent_filter-icon
     display: none
 
     @media screen and ( max-width: 768px )
         display: block
-        padding-right: 45px
+        order: 1
 
 .rent_title
     font-family: $Montserrat
@@ -715,6 +704,11 @@ section
     visibility: hidden
     transition: .3s ease all
 
+.rent_mobile-filter
+    &.turn
+        opacity: 1
+        visibility: visible
+
     .rent_content-filter
         position: relative
 
@@ -735,11 +729,6 @@ section
             display: flex
             justify-content: space-between
             height: 100%
-
-.rent_mobile-filter
-    &.turn
-        opacity: 1
-        visibility: visible
 
 .rent_breadcrumb_list
     display: flex
@@ -972,21 +961,18 @@ section
         align-items: center
         width: 100%
 
-.reserve_btn
-    @extend %top_btn-form
-    background-color: $brand-color
-    font-weight: 500
-    font-weight: 700
-    text-align: center
-    padding: 13px
-    &:hover
-        background-color: $brand-color
+    .reserve_btn
+        @extend %top_btn-form
+        background: $brand-color
+        font-weight: 700
+        display: flex
+        justify-content: center
+        align-items: center
 
-    @media screen and ( max-width: 380px )
-        width: 100%
-        margin-bottom: 11px
+        @media screen and ( max-width: 380px )
+            max-width: 100%
+            margin-bottom: 11px
             
-
 .detail_btn
     @extend %top_btn-main
     margin-left: 13px
@@ -1019,12 +1005,6 @@ section
     margin: 0 15px 16px 0
     cursor: pointer
 
-    @media screen and ( max-width: 768px )
-        display: block
-        text-align: right
-        margin-right: 35px
-        width: 100%
-
     @media screen and ( max-width: 380px )
         text-align: center
 
@@ -1033,11 +1013,7 @@ section
         position: absolute
         right: -16px
         transform: rotate(0)
-        transition: .3s ease all
-
-        @media screen and ( max-width: 380px )
-            right: 68px
-        
+        transition: .3s ease all        
 
 .show_more-car.arrow_rotate:after
     transform: rotate(180deg)
@@ -1094,13 +1070,8 @@ section
     &::after
         content: "▼"
         position: absolute
-        top: 0
-        right: -15px
         transform: rotate(0)
         transition: .3s ease all
-
-        @media screen and ( max-width: 380px )
-            right: 88px
 
 .company_read-more.company_arrow-rotate:after
     transform: rotate(180deg)
