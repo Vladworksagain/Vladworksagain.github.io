@@ -125,10 +125,6 @@ section
 .have_questions
     background-color: $brand-color
     padding: 36px 0 34px 0
-    margin-bottom: 60px
-
-    @media screen and ( max-width: 768px )
-        margin-bottom: 30px
 
 .have_questions-inner
     display: flex
@@ -158,7 +154,7 @@ section
     line-height: 40px
     color: $color-white
     margin-bottom: 16px
-    
+
     @media screen and ( max-width: 400px )
         text-align: center
         font-size: 27px
@@ -170,7 +166,6 @@ section
     line-height: 17px
     color: $color-white
 
-
 .have_questions-form
     width: 100%
     height: 219px
@@ -180,7 +175,6 @@ section
 
     @media screen and ( max-width: 768px )
         height: auto
-        
 
     form
         padding: 34px 40px
@@ -222,6 +216,10 @@ section
             margin: 7px
             width: 100%
 
+        @media screen and ( max-width: 600px )
+            margin: 0 0 7px 0
+            
+
 .have_questions-feedback
     width: 100%
     margin-bottom: 27px
@@ -241,6 +239,15 @@ section
         line-height: 12px
         color: #717171
 
+    @media screen and ( max-width: 768px )
+        width: 97%
+        margin-left: 7px
+
+    @media screen and ( max-width: 600px )
+        margin: 0 0 27px 0
+        width: 100%
+
+
 .have_questions-btn
     @extend %top_btn-form
     width: 100%
@@ -250,6 +257,10 @@ section
     background: url(../images/rent-about-company-bg.png) no-repeat center bottom
     background-size: cover
     width: 100%
+    margin-top: 60px
+
+    @media screen and ( max-width: 768px )
+        margin-top: 30px
 
     .company_main-tittle
 
