@@ -1,0 +1,140 @@
+@import fonts
+@import variables
+@import buttons
+
+.wrapper
+    display: flex
+    flex-direction: column
+    min-height: 100%
+
+section
+    flex: 1 0 auto
+
+.footer
+    flex: 0 0 auto
+
+.contacts_inner
+    display: flex
+    align-items: center
+
+    @media screen and ( max-width: 800px )
+        flex-direction: column
+
+.contacts_info
+    width: 50%
+
+    @media screen and ( max-width: 800px )
+        width: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+
+    @media screen and ( max-width: 768px )
+        margin-top: 25px
+
+    @media screen and ( max-width: 450px )
+        text-align: center
+
+    &-tittle
+        font-family: $Montserrat
+        font-weight: 700
+        font-size: 33px
+        line-height: 41px
+        color: #000000
+        margin-bottom: 31px
+
+.contacts_main-info
+    max-width: 502px
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+
+    @media screen and ( max-width: 800px )
+        margin-bottom: 25px
+
+    @media screen and ( max-width: 450px )
+        flex-direction: column
+        align-items: center
+
+.contacts_item
+    width: 50%
+
+    @media screen and ( max-width: 450px )
+        margin-bottom: 25px
+    
+    &:nth-child(even)
+        padding-left: 30px
+
+        @media screen and ( max-width: 450px )
+            padding-left: 0
+    &:nth-child(1)
+        margin-bottom: 25px
+
+    &:nth-child(2)
+        margin-bottom: 25px
+
+
+.contacts_short-tittle
+    font-family: $Ubuntu
+    font-weight: 500
+    font-size: 17px
+    line-height: 20px
+    color: $brand-color
+    margin-bottom: 5px
+
+    @media screen and ( max-width: 450px )
+        font-size: 15px
+        line-height: 18px
+
+.contacts_short-desc
+    text-decoration: none
+    font-family: $Ubuntu
+    font-weight: 500
+    font-size: 16px
+    line-height: 18px
+    color: $color-text
+
+    @media screen and ( max-width: 450px )
+        line-height: 17px
+        font-size: 14px
+
+.contacts_map
+    width: 50%
+    position: relative
+
+    @media screen and ( max-width: 800px )
+        display: flex
+        justify-content: center
+        width: 100%
+    
+    &::before
+        content: ""
+        position: absolute
+        width: 166px
+        height: 166px
+        border: 30px solid #FFC32A
+        box-shadow: 0px 2px 20px rgba(255, 195, 42, 0.6)
+        border-radius: 50%
+        z-index: 1
+        left: -65px
+
+        @media screen and ( max-width: 800px )
+            left: -30px
+
+        @media screen and ( max-width: 560px )
+            display: none
+
+    &::after
+        content: ""
+        position: absolute
+        width: 87px
+        height: 87px
+        border-radius: 50%
+        border: 20px solid #FFC32A
+        box-shadow: 0px 2px 20px rgba(255, 195, 42, 0.6)
+        top: -43px
+        right: 80px
+
+        @media screen and ( max-width: 800px )
+            display: none
+
