@@ -1,0 +1,460 @@
+@import fonts
+@import variables
+@import buttons
+
+    
+.wrapper
+    display: flex
+    flex-direction: column
+    min-height: 100%
+
+section
+    flex: 1 0 auto
+
+.footer
+    flex: 0 0 auto
+
+.car_rent
+    margin: 37px 0 50px 0
+
+    &-tittle
+        font-family: $Montserrat
+        font-weight: 700
+        font-size: 33px
+        line-height: 41px
+        color: $top-black-color
+        text-align: center
+        margin-bottom: 25px
+
+        @media screen and ( max-width: 500px )
+            font-size: 25px
+    &-inner
+        display: flex
+        justify-content: space-between
+        position: relative
+
+        @media screen and ( max-width: 768px )
+            flex-direction: column
+            align-items: center
+
+        &::after
+            content: ""
+            position: absolute
+            width: 103px
+            height: 103px
+            border: 23px solid #FFC32A
+            box-shadow: 0px 2px 20px rgba(255, 195, 42, 0.6)
+            border-radius: 50%
+            right: -55px
+            top: -140px
+
+            @media screen and ( max-width: 1214px )
+                display: none
+
+    &-card
+        max-width: 258px
+        width: 100%
+        height: 157px
+        background-color: $color-white
+        box-shadow: 0px 2px 13px rgba(0, 0, 0, 0.1)
+        border-radius: 5px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        padding: 22px 15px 22px 15px
+        text-align: center
+
+        @media screen and ( max-width: 1214px )
+            margin: 10px
+
+        @media screen and ( max-width: 768px )
+            max-width: 70%
+
+        @media screen and ( max-width: 500px )
+            max-width: 100%
+
+.rent_card-img
+    margin-bottom: 13px
+
+.rent_card-desc
+    font-family: $Ubuntu
+    font-weight: 500
+    font-size: 16px
+    line-height: 20px
+    color: $top-black-color
+
+.car_your-rent-feedback
+    margin-bottom: 50px
+
+    .have_questions-inner
+        flex-direction: row
+
+        @media screen and ( max-width: 968px )
+            flex-direction: column
+
+    .have_questions-text
+
+        @media screen and ( max-width: 968px )
+            margin-bottom: 10px 
+
+    .have_questions-tittle
+
+        @media screen and ( max-width: 968px )
+            text-align: center
+    
+    .have_questions-info
+
+        @media screen and ( max-width: 968px )
+            width: 100%
+
+    .have_questions-form
+        
+        @media screen and ( max-width: 768px )
+            max-width: 100%
+
+
+    .have_questions-flex
+        flex-wrap: wrap
+        margin-bottom: 23px
+
+        input
+            margin-bottom: 12px
+
+            &:nth-child(n+7)
+                margin-bottom: 0
+
+                @media screen and ( max-width: 768px )
+                    margin-bottom: 12px
+
+.cards
+    margin-bottom: 70px
+
+    .rental_procedure_item
+        max-width: 209px
+        width: 100%
+        max-height: 100%
+        min-height: 181px
+        padding: 36px 0 0 26px
+        margin: 0
+        position: relative
+        z-index: 1
+        
+
+        @media screen and ( max-width: 1214px )
+            margin: 10px
+
+        @media screen and ( max-width: 968px )
+            max-width: 60%
+
+        @media screen and ( max-width: 500px )
+            max-width: 100%
+            padding: 36px 10px 0 26px
+            
+
+    .rental_procedure-number
+        line-height: 38px
+        margin-bottom: 16px
+
+    .first_cards-inner
+        display: flex
+        justify-content: space-between
+        position: relative
+
+        @media screen and ( max-width: 968px )
+            flex-direction: column
+            align-items: center
+
+        &::before
+            content: ""
+            position: absolute
+            width: 282px
+            height: 282px
+            border: 43px solid #FFC32A
+            box-shadow: 0px 2px 19px rgba(255, 195, 42, 0.6)
+            border-radius: 50%
+            z-index: 1
+            left: -210px
+            top: 5px
+
+.cards_car
+    margin-bottom: 51px
+    background: url(../images/cards-car-bg.png) no-repeat center top
+    background-size: cover
+    position: relative
+    z-index: 1
+ 
+.card_main-tittle
+    text-transform: uppercase
+    font-size: 33px
+    line-height: 41px
+    font-family: $Montserrat
+    font-weight: 700
+    color: $top-black-color
+    text-align: center
+    margin-bottom: 30px
+
+    @media screen and ( max-width: 500px )
+        font-size: 25px
+
+.second_cards-inner
+    display: flex
+    justify-content: space-between
+    margin-bottom: 63px
+
+    @media screen and ( max-width: 760px )
+        flex-direction: column
+        align-items: center
+
+    .rent_terms-item
+        max-width: 276px
+        width: 100%
+        min-height: 140px
+        padding: 70px 0 21px 0
+        margin: 0
+        display: flex
+        justify-content: flex-start
+
+        @media screen and ( max-width: 1281px )
+            margin: 10px
+
+        @media screen and ( max-width: 760px )
+            margin-bottom: 50px
+            max-width: 60%
+            &:last-child
+                margin-bottom: 0
+
+        @media screen and ( max-width: 500px )
+            max-width: 100%
+
+    .rent_terms-desc
+        font-family: $Ubuntu
+        font-weight: 500
+        font-size: 17px
+        line-height: 20px
+        color: $top-black-color
+        text-transform: uppercase
+
+.second
+    margin-bottom: 73px
+    font-size: 25px
+
+.owners_income
+    margin-bottom: 25px
+
+.cards_items-inner
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    align-items: center
+    margin: 0 -21px -20px 0
+
+.cards_item
+    max-width: 376px
+    width: 100%
+    min-height: 196px
+    background-color: $brand-color
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin: 0 21px 20px 0
+    border-radius: 5px
+    overflow: hidden
+    padding-left: 11px
+    transition: .3s ease all
+    &:hover
+        transform: scale(1.05)
+        transform: translateY(-10px)
+
+    @media screen and ( max-width: 812px )
+        max-width: 70%
+
+    @media screen and ( max-width: 500px )
+        max-width: 100%
+
+    &-text
+        font-family: $Montserrat
+        font-weight: 700
+        color: $color-white
+        font-size: 33px
+        line-height: 41px
+        margin-bottom: 7px
+
+    &-desc
+        font-family: $Ubuntu
+        font-weight: 700
+        font-size: 24px
+        line-height: 28px
+        color: $color-white
+
+.cards_item-img
+    position: relative
+    &::before
+        content: ""
+        position: absolute
+        width: 94px
+        height: 94px
+        border: 23px solid #FFFFFF
+        box-shadow: 0px 2px 20px rgba(255, 195, 42, 0.6)
+        border-radius: 50%
+        left: 43px
+    
+    img
+        position: relative
+
+.instruction
+    padding: 57px 0 55px 0
+    background: url(../images/our-clients-bg.png) no-repeat center
+    background-size: cover
+    margin-bottom: 60px
+
+.tittle_instruction
+    margin-bottom: 35px
+    color: $color-white
+
+.instruction_list
+    display: flex
+    justify-content: space-between
+    margin-bottom: 40px
+
+    @media screen and ( max-width: 1092px )
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+    &-item
+        font-family: $Ubuntu
+        font-weight: 500
+        font-size: 17px
+        line-height: 20px
+        color: $color-white
+        text-transform: uppercase
+        position: relative
+
+        @media screen and ( max-width: 1092px )
+            margin-bottom: 15px
+
+        &::after
+            content: ""
+            position: absolute
+            width: 18px
+            height: 33px
+            background: url(../images/instruction-arrow.png) no-repeat top center
+            top: -7px
+            right: -65px
+
+            @media screen and ( max-width: 1092px )
+                display: none
+
+        &:last-child::after
+            display: none
+
+.instruction_info-inner
+    display: flex
+    justify-content: center
+    align-items: center
+
+.instruction_info
+    min-height: 80px
+    border-left: 6px solid #FFC32A
+    padding-left: 32px
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+    &-desc
+        font-family: $Ubuntu
+        font-weight: 400
+        font-size: 15px
+        line-height: 18px
+        color: rgba(255,255,255, .4)
+        margin-bottom: 3px
+
+        span
+            color: $color-white
+            font-family: $Ubuntu
+            font-weight: 700
+
+.advantages-tittle
+    margin-bottom: 25px
+
+.advantages_cards-inner
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 61px
+
+    @media screen and ( max-width: 1100px )
+        flex-direction: column
+
+.advantages_card-item
+    text-align: center
+    max-width: 258px
+    min-height: 157px
+    width: 100%
+    background-color: $color-white
+    border-radius: 5px
+    box-shadow: 0px 2px 13px rgba(0, 0, 0, 0.1)
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 27px 51px
+    justify-content: space-around
+
+    @media screen and ( max-width: 1100px )
+        max-width: 50%
+        margin-bottom: 25px
+
+    @media screen and ( max-width: 768px )
+        max-width: 75%
+
+    @media screen and ( max-width: 500px )
+        max-width: 100%
+        
+.card_item-images
+    margin-bottom: 10px
+
+.card_item-text
+    font-family: $Ubuntu
+    font-weight: 500
+    font-size: 17px
+    line-height: 20px
+    color: $top-black-color
+
+.advantages_info
+    text-align: left
+    margin-bottom: 54px
+
+.advantages_info-tittle
+    margin-bottom: 21px
+
+.advantages_feedback
+
+    .have_questions-inner
+        flex-direction: row
+
+        @media screen and ( max-width: 850px )
+            flex-direction: column
+            max-width: 100%
+
+    .have_questions-flex
+        width: 100%
+        flex-wrap: wrap
+
+        input
+            margin-bottom: 12px
+
+            &:nth-child(n+7)
+                margin-bottom: 0
+
+                @media screen and ( max-width: 768px )
+                    &:nth-child(n+7)
+                        margin-bottom: 12px
+                        
+
+
+
+
+                
+
+

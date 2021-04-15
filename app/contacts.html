@@ -63,7 +63,7 @@
                                     <a href="rent-for-persons.html">Аренда авто для Юр лиц</a>
                                 </li>
                                 <li>
-                                    <a href="#">Ваше авто</a>
+                                    <a href="rent-your-car.html">Ваше авто</a>
                                 </li>
                             </ul>
                         </li>
@@ -243,17 +243,38 @@
                         </p>
                     </div>
                     <div class="have_questions-form">
-                        <form action="#">
+                        <form action="#" class="form">
                             <div class="have_questions-flex">
-                                <input type="text" placeholder="Ваше имя">
-                                <input type="tel" placeholder="Номер телефона">
-                                <input type="email" placeholder="Ваш Email">
+                                <label for="#" class="label_form">
+                                    <input type="text" placeholder="Ваше имя" data-validate-field="name">
+                                </label>
+                                <label for="#" class="label_form">
+                                    <input type="tel" placeholder="Номер телефона" data-validate-field="tel">
+                                </label>
+                                <label for="#" class="label_form">
+                                    <input type="email" placeholder="Ваш Email" data-validate-field="email">
+                                </label>
                             </div>
                             <textarea cols="30" rows="10" class="have_questions-feedback"
                                 placeholder="Ваше сообщение"></textarea>
-                            <button class="have_questions-btn">
+                            <button type="submit" class="have_questions-btn">
                                 ОТПРАВИТЬ
                             </button>
+                            <div class="popup_letter">
+                                <div class="letter_content">
+                                    <a href="#" class="letter_content-close letter_popup-close"></a>
+                                    <img src="images/header-letter-vector.svg" alt="#" class="letter_content-img">
+                                    <span class="letter_content-desc">
+                                        Спасибо!
+                                    </span>
+                                    <p class="letter_content-text">
+                                        Мы скоро с Вами свяжемся
+                                    </p>
+                                    <button type="button" class="letter_content-btn letter_popup-close">
+                                        НАЗАД
+                                    </button>
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </div>

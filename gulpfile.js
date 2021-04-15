@@ -46,6 +46,8 @@ function scripts() {
         'node_modules/slick-carousel/slick/slick.min.js',
         'node_modules/jquery-datetimepicker/build/jquery.datetimepicker.full.min.js',
         'node_modules/ion-rangeslider/js/ion.rangeSlider.min.js',
+        'node_modules/inputmask/dist/inputmask.min.js',
+        'node_modules/just-validate/dist/js/just-validate.min.js',
         'app/js/main.js'
     ])
         .pipe(concat('main.min.js'))

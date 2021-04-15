@@ -183,6 +183,13 @@ section
         @media screen and ( max-width: 768px )
             padding: 25px 40px
 
+.js-validate-error-label
+    font-family: $Ubuntu
+    font-weight: 400
+    font-size: 10px
+    line-height: 12px
+    position: absolute
+
 .have_questions-flex
     display: flex
     width: 100%
@@ -190,14 +197,14 @@ section
     align-items: center
     margin-bottom: 18px
 
-    @media screen and ( max-width: 600px )
+    @media screen and ( max-width: 768px )
         flex-wrap: wrap
 
     input
         width: 135px
         max-width: 100%
-        border: none
-        border-bottom: 1px solid #000000
+        border: none !important
+        border-bottom: 1px solid #000000 !important
         padding-bottom: 9px
         font-family: $Ubuntu
         font-weight: 400
@@ -218,7 +225,79 @@ section
 
         @media screen and ( max-width: 600px )
             margin: 0 0 7px 0
-            
+
+.popup_letter
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: rgba(0,0 ,0 , .7 )
+    z-index: 2
+    opacity: 0
+    visibility: hidden
+    transition: .3s ease all
+
+.popup_letter
+    &.popup_letter-show
+        opacity: 1
+        visibility: visible
+
+.letter_content
+    width: 197px
+    height: 149px
+    background-color: $color-white
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    padding: 22px 42px
+    text-align: center
+    position: relative
+
+    .letter_content-close
+        background-image: url(../images/back-icon-popup.svg)
+        position: absolute
+        top: 14px
+        right: 14px
+        width: 10px
+        height: 9px
+
+    &-img
+        margin-bottom: 6px
+
+    &-desc
+        font-family: $Montserrat
+        font-weight: 600
+        font-size: 11px
+        line-height: 13px
+        color: #000
+        margin-bottom: 3px
+    
+    &-text
+        font-family: $Montserrat
+        font-weight: 400
+        font-size: 8px
+        line-height: 9px
+        color: #3D4143
+        margin-bottom: 18px
+        white-space: nowrap
+
+    &-btn
+        @extend %top_btn-form
+        max-width: 105px
+        min-height: 26px
+        font-size: 7px
+        line-height: 8px
+
+.label_form
+    position: relative
+
+    @media screen and ( max-width: 768px )
+        width: 100%
 
 .have_questions-feedback
     width: 100%
@@ -246,7 +325,6 @@ section
     @media screen and ( max-width: 600px )
         margin: 0 0 27px 0
         width: 100%
-
 
 .have_questions-btn
     @extend %top_btn-form

@@ -377,31 +377,116 @@ $inputTo2.on("input", function () {
 
 // popup_filter //
 
-let filterButtons = document.querySelector('.rent_filter-icon');
-let filterCloseButton = document.querySelector('.close_icon-filter');
+// let filterButtons = document.querySelector('.rent_filter-icon');
+// let filterCloseButton = document.querySelector('.close_icon-filter');
 
-function filterShow() {
-    let showFilter = document.querySelector('.rent_mobile-filter');
-    if (showFilter.classList.contains('turn')) {
-        showFilter.classList.remove('turn');
-    } else {
-        showFilter.classList.add('turn');
+// function filterShow() {
+//     let showFilter = document.querySelector('.rent_mobile-filter');
+//     if (showFilter.classList.contains('turn')) {
+//         showFilter.classList.remove('turn');
+//     } else {
+//         showFilter.classList.add('turn');
+//     }
+// }
+
+// function filterHide() {
+//     let hideFilter = document.querySelector('.rent_mobile-filter');
+//     if (hideFilter.classList.contains('turn')) {
+//         hideFilter.classList.remove('turn');
+//     } else {
+//         hideFilter.classList.add('turn');
+//     }
+// }
+
+//     filterButtons.onclick = filterShow;
+//     filterCloseButton.onclick = filterHide;
+
+let filterButton = document.querySelectorAll('.rent_filter-icon');
+
+let filterModal = document.querySelectorAll('.rent_mobile-filter');
+
+let filterClose = document.querySelectorAll('.close_icon-filter');
+
+filterClose.forEach(closeFilter => {
+  closeFilter.addEventListener('click', close, false)
+})
+
+filterButton.forEach(buttons => {
+  buttons.addEventListener('click', open, false)
+})
+
+function open(event) {
+  filterModal.forEach(item => {
+    if (event.target.dataset.open === item.dataset.close) {
+      item.classList.add('rent_filter-open')
     }
+  })
 }
 
-function filterHide() {
-    let hideFilter = document.querySelector('.rent_mobile-filter');
-    if (hideFilter.classList.contains('turn')) {
-        hideFilter.classList.remove('turn');
-    } else {
-        hideFilter.classList.add('turn');
-    }
+function close(event) {
+  this.closest('.rent_mobile-filter').classList.remove('rent_filter-open')
 }
-
-    filterButtons.onclick = filterShow;
-    filterCloseButton.onclick = filterHide;
 
 // popup_filter //
+
+
+// input type=tel //
+
+let selector = document.querySelectorAll('input[type="tel"]');
+
+let im = new Inputmask('+38 (999) 999 99 99', {"clearIncomplete": true});
+
+im.mask(selector);
+
+
+let validateForms = function(selector, rules, successModal) {
+    new window.JustValidate(selector, {
+        rules: rules,
+        messages: {
+            name: {
+                required: 'Заполните это поле'
+            },
+            email: {
+                required: 'Заполните это поле',
+                email: 'Некорректный адрес электронной почты'
+            },
+            tel: {
+                required: 'Заполните это поле'
+            }
+        },
+        colorWrong: 'red',
+        submitHandler: function(form) {
+           document.querySelectorAll('.popup_letter').forEach((element) => {
+            element.classList.add('popup_letter-show');
+           });
+           function letterClose() {
+            document.querySelectorAll('.popup_letter').forEach((element) => {
+                element.classList.remove('popup_letter-show')
+            })
+           }
+           let closeLetter = document.querySelectorAll('.letter_popup-close');
+           for (let i = 0; i < closeLetter.length; i++ ) {
+               closeLetter[i].addEventListener('click', letterClose)    
+           }
+        }
+    });
+}
+
+validateForms('.form', {
+    email: {
+        required: true,
+        email: true
+    },
+    tel: {
+        required: true
+    },
+    name: {
+        required: true,
+    },
+})
+
+// input type=tel //
+
 
 
 

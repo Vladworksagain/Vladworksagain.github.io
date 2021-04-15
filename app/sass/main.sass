@@ -8,6 +8,7 @@
 @import rent-terms
 @import about-us
 @import contacts
+@import rent-your-car
 
 // $Helvetica: 'Helvetica', 'sans-serif' (700, 400 font-weight)
 
@@ -418,6 +419,13 @@ section
     flex-direction: column
     justify-content: center
     align-items: center
+
+    .js-validate-error-label
+        bottom: -1px
+        font-size: 8px
+        left: 5px
+    .js-validate-error-field
+        position: relative
 
 .popup_input-form
     width: 177px
@@ -1588,6 +1596,9 @@ section
     background-color: $brand-color
     font-weight: 700
     font-size: 11px
+    cursor: pointer
+    text-align: center
+    padding: 12px
 
     @media screen and ( max-width: 1290px )
         margin-bottom: 45px
