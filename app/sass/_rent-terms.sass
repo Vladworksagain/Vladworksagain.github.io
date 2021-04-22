@@ -32,11 +32,8 @@ section
     display: flex
     justify-content: space-between
     align-items: center
-    margin:
-        top: 0
-        right: -10px
-        left: -10px
-        bottom: 39px
+    margin: -10px
+    flex-wrap: wrap
 
     @media screen and ( max-width: 903px )
         flex-wrap: wrap
@@ -57,7 +54,7 @@ section
     justify-content: center
     align-items: center
     flex-direction: column
-    margin: 0 10px
+    margin: 10px
 
     @media screen and ( max-width: 895px )
         margin-bottom: 10px
@@ -104,6 +101,7 @@ section
 .rent_terms-wrapper
     display: flex
     justify-content: center
+    margin-top: 39px
 
 .rent_terms-info
     border-left: 6px solid #FFC32A
@@ -131,17 +129,24 @@ section
     @media screen and ( max-width: 768px )
         margin-bottom: 10px
 
-.rent_terms-cards
-    display: flex
-    flex-wrap: wrap
-    justify-content: space-between
-    margin-bottom: 80px
+.grid_wrapper
 
-    @media screen and ( max-width: 1280px )
+    @media screen and ( max-width: 868px )
+        display: flex
         justify-content: center
 
+.rent_terms-cards
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr))
+    grid-column-gap: 25px
+    grid-row-gap: 21px
+    margin-bottom: 80px
+
+    @media screen and ( max-width: 868px )
+        grid-template-columns: repeat(auto-fit, minmax(50%, 1fr))
+
     @media screen and ( max-width: 768px )
-        margin-bottom: 30px
+        width: 100%
 
 .rent_terms-card
     width: 100%
@@ -154,12 +159,10 @@ section
     flex-direction: column
     align-items: flex-start
     padding: 25px 30px
-    margin-bottom: 21px
-    &:nth-child(n+3)
-        margin: 0
 
-        @media screen and ( max-width: 1280px )
-            margin-bottom: 21px
+    @media screen and ( max-width: 768px )
+        max-width: 100%
+
 .car_short-tittle
     font-family: $Ubuntu
     font-weight: 700
@@ -215,32 +218,31 @@ section
             font-size: 13px
 
     &_flex-inner
-        display: flex
-        flex-wrap: wrap
-        justify-content: space-between
-        align-items: center
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(23%, 1fr)) 
+        grid-row-gap: 18px
+        grid-column-gap: 26px
 
-        @media screen and ( max-width: 1280px )
-            justify-content: center
+        @media screen and ( max-width: 660px )
+            grid-template-columns: repeat(auto-fit, minmax(31%, 1fr))
+
+        @media screen and ( max-width: 460px )
+            grid-template-columns: repeat(auto-fit, minmax(47%, 1fr))
 
     &_item
         border-radius: 5px
         background-color: $brand-color
         width: 100%
         max-width: 273px
-        height: 136px
+        min-height: 136px
         display: flex
         flex-direction: column
         justify-content: center
         align-items: center
-        &:nth-child(-n+4)
-            margin-bottom: 18px
+        padding: 15px
 
-            @media screen and ( max-width: 1280px )
-                margin-bottom: 10px
-
-        @media screen and ( max-width: 1280px )
-            margin: 10px 10px
+        @media screen and ( max-width: 660px )
+            max-width: 100%
 
 .item_short-tittle
     color: $color-white

@@ -438,6 +438,9 @@ section
 .transmission
     margin-bottom: 40px
 
+    @media screen and ( max-width: 768px )
+        min-width: 146px
+
 .inner_radio-btn
     padding-left: 14px
 
@@ -510,8 +513,8 @@ section
     margin-bottom: 40px
 
     @media screen and ( max-width: 768px )
-        width: 155px
-        max-width: 100%
+        max-width: 146px
+        width: 100%
 
     @media screen and ( max-width: 400px )
         text-align: center
@@ -600,9 +603,13 @@ section
 
     @media screen and ( max-width: 768px )
         margin-bottom: 40px  
+        min-width: 146px
 
 .number
     margin-bottom: 40px
+
+    @media screen and ( max-width: 768px )
+        min-width: 146px
 
 .fuel_type
     margin-bottom: 20px
@@ -664,6 +671,7 @@ section
 
     @media screen and ( max-width: 768px )
         align-items: center
+        margin-left: 0
 
 .rent_main-info
     display: flex
@@ -710,6 +718,9 @@ section
     opacity: 0
     visibility: hidden
     transition: .3s ease all
+
+    @media screen and ( min-width: 768px )
+        display: none
 
 .rent_mobile-filter
     &.rent_filter-open
@@ -779,15 +790,17 @@ section
     padding-bottom: 25px
 
     @media screen and ( max-width: 768px )
-        width: 100vw
+        width: 100%
         margin-left: 0
+        
 
     @media screen and ( max-width: 580px )
         background: var(--main_bg-reverse)
         justify-content: flex-start
         background-size: cover
+        width: 100vw
 
-    @media screen and ( max-width: 380px )
+    @media screen and ( max-width: 400px )
         background-image: var(--main_bg-mob)
         background-repeat: no-repeat
         background-size: contain
@@ -805,7 +818,7 @@ section
     @media screen and ( max-width: 580px )
         margin: 34px 0 0 36px
 
-    @media screen and ( max-width: 380px )
+    @media screen and ( max-width: 400px )
         margin: 20px 0 0 0
         width: 100%
         height: 50%
@@ -849,6 +862,9 @@ section
     color: #E3E3E3
     margin-left: 9px
 
+    @media screen and ( max-width: 340px )
+        font-size: 13px
+
 .flex_items-box
     width: auto
     height: 64px
@@ -856,7 +872,7 @@ section
     border-left: 1px solid $color-white
     padding-left: 5px
 
-    @media screen and ( max-width: 380px )
+    @media screen and ( max-width: 400px )
         border: none
         height: 60%
         width: 100%
@@ -868,7 +884,7 @@ section
     justify-content: space-between
     width: 100%
 
-    @media screen and ( max-width: 380px )
+    @media screen and ( max-width: 400px )
         flex-direction: row
         width: 100%
         justify-content: space-between
@@ -883,7 +899,7 @@ section
     grid-column-gap: 16px
     align-items: center
 
-    @media screen and ( max-width: 380px )
+    @media screen and ( max-width: 400px )
         display: flex
         flex-direction: column
         height: 100%
@@ -896,7 +912,7 @@ section
     grid-column-gap: 16px
     align-items: center
 
-    @media screen and ( max-width: 380px )
+    @media screen and ( max-width: 400px )
         display: flex
         flex-direction: column
         height: 100%
@@ -909,7 +925,7 @@ section
     grid-column-gap: 16px
     align-items: center
 
-    @media screen and ( max-width: 380px )
+    @media screen and ( max-width: 400px )
         display: flex
         flex-direction: column
         height: 100%
@@ -926,7 +942,7 @@ section
         grid-column: span 2
         white-space: nowrap
 
-        @media screen and ( max-width: 380px )
+        @media screen and ( max-width: 400px )
             font-size: 15px
             line-height: 18px
             color: $brand-color
@@ -941,7 +957,7 @@ section
     opacity: .8
     text-align: center
     
-    @media screen and ( max-width: 380px )
+    @media screen and ( max-width: 400px )
         margin-bottom: 22px
         &:last-child
             margin-bottom: 0
@@ -953,7 +969,7 @@ section
     justify-content: space-between
     margin-top: 19px
 
-    @media screen and ( max-width: 380px )
+    @media screen and ( max-width: 400px )
         flex-direction: column
         align-items: center
         width: 100%
@@ -967,7 +983,7 @@ section
     justify-content: center
     align-items: center
         
-    @media screen and ( max-width: 380px )
+    @media screen and ( max-width: 400px )
         margin-bottom: 11px
         width: 100% !important
                 
@@ -985,7 +1001,7 @@ section
         background-color: $color-white
         color: $top-black-color
 
-    @media screen and ( max-width: 380px )
+    @media screen and ( max-width: 400px )
         margin-left: 0
         width: 100% !important
         margin-bottom: 11px
@@ -1003,7 +1019,7 @@ section
     margin: 0 15px 16px 0
     cursor: pointer
 
-    @media screen and ( max-width: 380px )
+    @media screen and ( max-width: 400px )
         text-align: center
 
     &::after
@@ -1021,6 +1037,10 @@ section
 
 .show_models-car
     display: block
+    width: 100%
+
+    @media screen and ( max-width: 580px )
+        width: 100vw
 
 .company_main-tittle
     font-family: $Montserrat
@@ -1037,11 +1057,6 @@ section
     display: flex
     justify-content: space-between
     align-items: center
-
-.company_text-info
-    width: 100%
-    max-width: 571px
-    height: 100%
     margin-bottom: 29px
 
     p
@@ -1050,6 +1065,10 @@ section
         line-height: 18px
         font-family: $Ubuntu
         font-weight: 400
+
+.company_main-text
+    columns: 570px
+    column-gap: 27px
 
 .company_read-more
     position: relative
@@ -1076,6 +1095,7 @@ section
 
 .about_company-hidden
     display: none
+    margin-top: 20px
 
 .about_company-show
     display: block

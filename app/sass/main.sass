@@ -273,7 +273,7 @@ section
     @media screen and ( max-width: 580px )
         display: block
         position: absolute
-        top: -300px
+        top: -400px
         left: 0
         padding-left: 10px
         transition: .4s ease all
@@ -316,9 +316,7 @@ section
     transition: .5s ease all
 
     @media screen and ( max-width: 580px )
-        top: 20px
-        left: 55px
-        padding: 5px
+        display: none
 
     li
         margin-top: 5px
@@ -337,6 +335,12 @@ section
         text-decoration: none
         font-family: $Helvetica
         text-transform: uppercase
+
+.mob_link
+    display: none
+
+    @media screen and ( max-width: 580px )
+        display: block
 
 .bottom_header-link
     &:hover
@@ -1311,7 +1315,6 @@ section
         .item_btn-more
             border: 1px solid #FFFFFF
             color: $color-white
-
     @media screen and ( max-width: 1300px )
         background: rgba(255, 255, 255, 1.1)
         z-index: 2
@@ -1373,6 +1376,7 @@ section
     text-align: center
     transition: .3s ease all
     z-index: 3
+    padding: 10px
 
     @media screen and ( max-width: 350px )
         margin-bottom: 25px
