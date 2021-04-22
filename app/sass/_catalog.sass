@@ -30,6 +30,8 @@ section
         &::after
             content: "•"
             color: $brand-color
+            position: relative
+            top: 1px
         &:last-child::after
             display: none
     &-link
@@ -199,6 +201,9 @@ section
         flex-wrap: wrap
         justify-content: center
         align-items: center
+        grid-row-gap: 0
+        grid-column-gap: 0
+        margin: -15px -8px
 
 .select_car-item
     border-radius: 5px
@@ -223,6 +228,7 @@ section
     @media screen and ( max-width: 582px )
         width: 30%
         height: 165px
+        margin: 15px 8px
 
     @media screen and ( max-width: 560px )
         width: 45%
@@ -654,6 +660,7 @@ section
     display: flex
     width: 100%
     flex-direction: column
+    margin-left: 30px
 
     @media screen and ( max-width: 768px )
         align-items: center
@@ -763,14 +770,13 @@ section
 .rent_main-item
     background: var(--main_bg-item)
     width: 100%
-    height: 370px
     max-width: 913px
-    margin-left: 30px
     border-radius: 5px
     background-size: cover
     display: flex
     justify-content: flex-end
     margin-bottom: 16px
+    padding-bottom: 25px
 
     @media screen and ( max-width: 768px )
         width: 100vw
@@ -793,8 +799,6 @@ section
         padding: 0 15px
 
 .main_flex-inner
-    width: 332px
-    height: 302px
     max-width: 100%
     margin: 34px 50px 0 0
 
@@ -804,7 +808,8 @@ section
     @media screen and ( max-width: 380px )
         margin: 20px 0 0 0
         width: 100%
-         
+        height: 50%
+
 .main_class-desc
     font-family: $Ubuntu
     font-weight: 500
@@ -821,33 +826,20 @@ section
     color: $color-white
     margin-bottom: 13px
 
-.flex_items
-    display: flex
-    width: 100%
-    align-items: center
-    justify-content: space-between
-    padding-right: 30px
-    margin-bottom: 22px
-
-    @media screen and ( max-width: 380px )
-        padding: 0
-        width: 100%
-
-.first_flex-items
-    display: flex
-    flex-direction: column
+.grid_items
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(46%, 50%))
+    margin-bottom: 20px
+    grid-row-gap: 13px
 
 .flex_item-box
     display: flex
-    margin-bottom: 13px
+    justify-content: flex-start
     align-items: center
 
-    &:last-child
-        margin: 0
-
-.second_flex-items
-    display: flex
-    flex-direction: column
+.flex_item-images
+    width: 15px
+    height: 15px
 
 .flex_item-text
     font-family: $Ubuntu
@@ -858,7 +850,7 @@ section
     margin-left: 9px
 
 .flex_items-box
-    width: 332px
+    width: auto
     height: 64px
     max-width: 100%
     border-left: 1px solid $color-white
@@ -866,7 +858,8 @@ section
 
     @media screen and ( max-width: 380px )
         border: none
-        height: 100%
+        height: 60%
+        width: 100%
 
 .items_box-inner
     display: flex
@@ -874,7 +867,6 @@ section
     flex-direction: column
     justify-content: space-between
     width: 100%
-    margin-bottom: 19px
 
     @media screen and ( max-width: 380px )
         flex-direction: row
@@ -886,8 +878,9 @@ section
 .items_box-first
     display: grid
     grid-template-rows: repeat(1, 14px)
-    grid-template-columns: repeat(auto-fit, minmax(34px, 32px))
-    grid-column-gap: 3px
+    grid-auto-flow: column
+    grid-auto-columns: 30px 
+    grid-column-gap: 16px
     align-items: center
 
     @media screen and ( max-width: 380px )
@@ -898,8 +891,9 @@ section
 .items_box-second
     display: grid
     grid-template-rows: repeat(1, 14px)
-    grid-template-columns: repeat(auto-fit, minmax(34px, 32px))
-    grid-column-gap: 3px
+    grid-auto-flow: column
+    grid-auto-columns: 30px 
+    grid-column-gap: 16px
     align-items: center
 
     @media screen and ( max-width: 380px )
@@ -910,8 +904,9 @@ section
 .items_box-three
     display: grid
     grid-template-rows: repeat(1, 14px)
-    grid-template-columns: repeat(auto-fit, minmax(34px, 32px))
-    grid-column-gap: 3px
+    grid-auto-flow: column
+    grid-auto-columns: 30px 
+    grid-column-gap: 16px
     align-items: center
 
     @media screen and ( max-width: 380px )
@@ -928,7 +923,8 @@ section
     display: inline-block
     text-transform: uppercase
     &:nth-child(-n+3)
-        grid-column: span 3
+        grid-column: span 2
+        white-space: nowrap
 
         @media screen and ( max-width: 380px )
             font-size: 15px
@@ -955,24 +951,26 @@ section
     width: 100%
     display: flex
     justify-content: space-between
+    margin-top: 19px
 
     @media screen and ( max-width: 380px )
         flex-direction: column
         align-items: center
         width: 100%
+        max-width: 100%
 
-    .reserve_btn
-        @extend %top_btn-form
-        background: $brand-color
-        font-weight: 700
-        display: flex
-        justify-content: center
-        align-items: center
-
-        @media screen and ( max-width: 380px )
-            max-width: 100%
-            margin-bottom: 11px
-            
+.reserve_btn
+    @extend %top_btn-form
+    background: $brand-color
+    font-weight: 700
+    display: flex
+    justify-content: center
+    align-items: center
+        
+    @media screen and ( max-width: 380px )
+        margin-bottom: 11px
+        width: 100% !important
+                
 .detail_btn
     @extend %top_btn-main
     margin-left: 13px
@@ -989,7 +987,7 @@ section
 
     @media screen and ( max-width: 380px )
         margin-left: 0
-        width: 100%
+        width: 100% !important
         margin-bottom: 11px
 
 .show_more-car

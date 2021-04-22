@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
     $('.first.select_location').select2({
         placeholder: 'Выберите город',
@@ -66,7 +67,7 @@ $slick_slider = $('.car_rental-slider');
 settings = {
     slidesToShow: 3,
     slidesToScroll: 1,
-    infinite: false,
+    infinite: true,
     responsive: [
         {
             breakpoint: 1167,
@@ -408,38 +409,37 @@ let filterModal = document.querySelectorAll('.rent_mobile-filter');
 let filterClose = document.querySelectorAll('.close_icon-filter');
 
 filterClose.forEach(closeFilter => {
-  closeFilter.addEventListener('click', close, false)
+    closeFilter.addEventListener('click', close, false)
 })
 
 filterButton.forEach(buttons => {
-  buttons.addEventListener('click', open, false)
+    buttons.addEventListener('click', open, false)
 })
 
 function open(event) {
-  filterModal.forEach(item => {
-    if (event.target.dataset.open === item.dataset.close) {
-      item.classList.add('rent_filter-open')
-    }
-  })
+    filterModal.forEach(item => {
+        if (event.target.dataset.open === item.dataset.close) {
+            item.classList.add('rent_filter-open')
+        }
+    })
 }
 
 function close(event) {
-  this.closest('.rent_mobile-filter').classList.remove('rent_filter-open')
+    this.closest('.rent_mobile-filter').classList.remove('rent_filter-open')
 }
 
 // popup_filter //
 
 
-// input type=tel //
+// input validation form //
 
 let selector = document.querySelectorAll('input[type="tel"]');
 
-let im = new Inputmask('+38 (999) 999 99 99', {"clearIncomplete": true});
+let im = new Inputmask('+38 (999) 999 99 99', { "clearIncomplete": true });
 
 im.mask(selector);
 
-
-let validateForms = function(selector, rules, successModal) {
+let validateForms = function (selector, rules, successModal) {
     new window.JustValidate(selector, {
         rules: rules,
         messages: {
@@ -455,19 +455,19 @@ let validateForms = function(selector, rules, successModal) {
             }
         },
         colorWrong: 'red',
-        submitHandler: function(form) {
-           document.querySelectorAll('.popup_letter').forEach((element) => {
-            element.classList.add('popup_letter-show');
-           });
-           function letterClose() {
+        submitHandler: function (form) {
             document.querySelectorAll('.popup_letter').forEach((element) => {
-                element.classList.remove('popup_letter-show')
-            })
-           }
-           let closeLetter = document.querySelectorAll('.letter_popup-close');
-           for (let i = 0; i < closeLetter.length; i++ ) {
-               closeLetter[i].addEventListener('click', letterClose)    
-           }
+                element.classList.add('popup_letter-show');
+            });
+            function letterClose() {
+                document.querySelectorAll('.popup_letter').forEach((element) => {
+                    element.classList.remove('popup_letter-show')
+                })
+            }
+            let closeLetter = document.querySelectorAll('.letter_popup-close');
+            for (let i = 0; i < closeLetter.length; i++) {
+                closeLetter[i].addEventListener('click', letterClose)
+            }
         }
     });
 }
@@ -485,9 +485,121 @@ validateForms('.form', {
     },
 })
 
-// input type=tel //
 
 
+// input validation form //
+
+// car_car-slider //
+
+$('.slider_car-vertical').slick({
+    infinite: true,
+    arrows: false,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    vertical: true,
+    verticalSwiping: true,
+    asNavFor: '.slider_car-horizontal',
+    centerMode: true,
+    focusOnSelect: true,
+    centerPadding: "0px",
+    responsive: [
+        {
+            breakpoint: 1125,
+            settings: {
+                slidesToScroll: 1,
+                slidesToShow: 3
+            }
+        },
+        {
+            breakpoint: 860,
+            settings: {
+                slidesToShow: 2
+            }
+        },
+        {
+            breakpoint: 630,
+            settings: {
+                slidesToShow: 4
+            }
+        },
+        {
+            breakpoint: 570,
+            settings: {
+                slidesToShow: 3
+            }
+        },
+        {
+            breakpoint: 482,
+            settings: {
+                slidesToShow: 3
+            }
+        },      
+        {
+            breakpoint: 360,
+            settings: {
+                slidesToShow: 2
+            }
+        }
+    ]
+});
+
+$('.slider_car-horizontal').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    asNavFor: '.slider_car-vertical',
+    vertical: true,
+    arrows: false,
+    verticalSwiping: true,
+});
+
+$('.proposition_slider').slick({
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    arrows: true,
+    infinite: true,
+    centerPadding: "0px",
+    responsive: [
+        {
+            breakpoint: 581,
+            settings: {
+                slidesToScroll: 1,
+                slidesToShow: 1
+            }
+        }
+    ]
+});
+
+
+// car_car-slider //
+
+// cooment section //
+
+$('.recall_visitors-slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: true,
+    dotsClass: 'recall_dots-slider'
+});
+
+// cooment section //
+
+
+// plus minus //
+
+$(document).ready(function () {
+    $(".car_short-tittle").click(function () {
+        $(this).next('p').toggle();
+    });
+});
+
+$(".car_short-tittle").click(function () {
+    $(this).toggleClass("minus");
+})
+
+
+// plus minus //
 
 
 

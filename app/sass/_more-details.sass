@@ -1,0 +1,789 @@
+@import fonts
+@import variables
+@import buttons
+
+.wrapper
+    display: flex
+    flex-direction: column
+    min-height: 100%
+
+section
+    flex: 1 0 auto
+
+.footer
+    flex: 0 0 auto
+
+.main_card
+    margin: 33px 0 52px 0
+    &-inner
+        display: flex
+        align-items: center
+        position: relative
+        margin-bottom: 32px
+        @media screen and ( max-width: 480px )
+            flex-direction: column
+
+    @media screen and ( max-width: 580px )
+        margin: 33px 0 0 0
+        padding-bottom: 52px
+    
+    
+
+    .rent_terms-cards
+        margin-bottom: 0
+
+    @media screen and ( max-width: 580px )
+        background-image: url(../images/rent-about-company-bg.png)
+        background-repeat: no-repeat
+        background-size: cover
+
+    .rent_terms-card
+        @media screen and ( max-width: 580px )
+            min-height: 100%
+
+    .car_short-tittle
+        pointer-events: none
+
+        @media screen and ( max-width: 580px )
+            pointer-events: auto
+            padding-right: 24px
+
+        &::after
+            content: none
+            position: absolute
+            background: url(../images/mob-icon-plus.png) no-repeat center
+            background-size: cover
+            width: 24px
+            height: 24px
+            right: 0
+            transition: .3s ease all
+            padding-left: 24px
+
+            @media screen and ( max-width: 580px )
+                content: ""
+
+        @media screen and ( max-width: 580px )
+            margin-bottom: 0
+            font-size: 18px
+            line-height: 22px
+            position: relative
+            width: 100%
+
+    .main_class-desc
+        @media screen and ( max-width: 1125px )
+            display: none
+
+    .main_class-car
+        @media screen and ( max-width: 1125px )
+            display: none
+
+    .grid_items
+        @media screen and ( max-width: 1125px )
+            display: flex
+            grid-row-gap: 0
+            flex-direction: column
+            margin-bottom: 0
+
+        @media screen and ( max-width: 480px )
+            display: grid
+            grid-template-columns: repeat(auto-fit, minmax(46%, 50%))
+            grid-row-gap: 0
+            max-width: 100%
+
+    .flex_items-box
+        @media screen and ( max-width: 1125px )
+            display: none
+
+    .rent_main-btn
+        @media screen and ( max-width: 1125px )
+            display: none
+
+    .car_short-tittle.minus:after
+        background: url(../images/mob-icon-minus.png) no-repeat center
+        width: 24px
+        height: 24px
+        background-size: cover
+
+    .card_short-text
+        @media screen and ( min-width: 581px )
+            display: block !important
+
+    .flex_item-box
+
+        @media screen and ( max-width: 340px )
+            padding: 5px
+
+        @media screen and ( max-width: 1125px )
+            margin: 15px 0
+
+        @media screen and ( max-width: 868px )
+            margin: 0 0 15px 0
+            &:last-child
+                margin: 0
+        @media screen and ( max-width: 468px )
+            margin: 0
+            
+
+    .flex_item-text
+        @media screen and ( max-width: 580px )
+            white-space: nowrap
+
+        @media screen and ( max-width: 468px )
+            white-space: normal
+            font-size: 10px
+
+.flex_items-mob
+    display: none
+    margin-bottom: 50px
+
+    @media screen and ( max-width: 1125px )
+        display: flex
+        align-items: flex-end
+        justify-content: space-evenly
+
+    @media screen and ( max-width: 860px )
+        justify-content: space-around
+
+    @media screen and ( max-width: 580px )
+        justify-content: space-between
+
+    @media screen and ( max-width: 380px )
+        width: 100%
+        
+
+    .items_short-text
+        color: $top-black-color
+
+    .item_info-number
+        color: $color-text
+
+    .items_box-inner
+        padding-left: 4px
+        width: auto
+        border-left: 3px solid #FFC32A
+
+        @media screen and ( max-width: 380px )
+            border: none
+            width: 100%
+
+    .items_box-first
+        margin-bottom: 5px
+
+        @media screen and ( max-width: 380px )
+            margin-bottom: 0
+
+    .items_box-second
+        margin-bottom: 5px
+        
+        @media screen and ( max-width: 380px )
+            margin-bottom: 0
+
+.main_btn-mob
+    display: none
+
+    @media screen and ( max-width: 1125px )
+        display: flex
+        flex-direction: column
+        justify-content: center
+        text-align: center
+
+    @media screen and ( max-width: 580px )
+        padding-left: 18px
+
+    span
+        font-family: $Ubuntu
+        font-weight: 500
+        font-size: 17px
+        line-height: 20px
+        color: #000
+        margin-bottom: 3px
+
+    @media screen and ( max-width: 570px )
+        display: none
+
+.card_text-mobile
+    font-family: $Montserrat
+    font-weight: 700
+    font-size: 30px
+    line-height: 37px
+    color: $top-black-color
+    text-transform: uppercase
+    display: none
+    margin-bottom: 14px
+    position: relative
+    span
+        color: $brand-color
+        position: relative
+        margin-left: 15px
+        &::before
+            content: "|"
+            position: absolute
+            left: -15px
+            top: -3px
+
+    @media screen and ( max-width: 1125px )
+        display: block
+
+    .car_short-tittle.minus:after
+        background: url(../images/mob-icon-minus.png) no-repeat center
+        background-size: cover
+        width: 24px
+        height: 24px
+        transition: .3s ease all
+
+.card_car-slider
+    display: flex
+    width: 61%
+
+    @media screen and ( max-width: 1125px )
+        align-items: center
+
+    @media screen and ( max-width: 580px )
+        width: 68%
+
+    @media screen and ( max-width: 480px )
+        width: 100%
+
+.slider_car-vertical
+    max-height: 100px
+    .slick-slide
+        margin-bottom: 25px
+
+        @media screen and ( max-width: 1125px )
+            margin-bottom: 10px
+
+        @media screen and ( max-width: 580px )
+            margin-bottom: 7px
+
+    @media screen and ( max-width: 1125px )
+        max-height: 100%
+
+    @media screen and ( max-width: 400px )
+        order: 1
+
+    .slick-list
+        margin-bottom: -25px
+
+        @media screen and ( max-width: 1125px )
+            margin-bottom: -10px
+
+        @media screen and ( max-width: 580px )
+            margin-bottom: -7px
+
+    .slick-track
+        max-width: 125px
+
+        @media screen and ( max-width: 480px )
+            max-width: 100%
+
+    .slick-current
+        position: relative
+        &::before
+            content: ""
+            position: absolute
+            background-color: rgba(255, 195, 42, .8)
+            width: 100%
+            height: 100%
+
+.vertical_slider-wrapper
+    max-width: 127px
+    height: 77px
+    width: 100%
+
+    @media screen and ( max-width: 1125px )
+        min-width: 127px
+
+    @media screen and ( max-width: 630px )
+        min-width: 60px
+        height: 40px
+
+.vertical_car-img
+    max-width: 125px
+    height: 77px
+    width: 100%
+    border-radius: 5px
+
+    @media screen and ( max-width: 1125px )
+        min-width: 100%
+
+    @media screen and ( max-width: 630px )
+        min-width: 60px
+        height: 40px
+
+.slider_car-horizontal
+
+    .slick-slide
+        margin-left: 15px
+
+        @media screen and ( max-width: 1125px )
+            width: 100% !important
+
+        @media screen and ( max-width: 580px )
+            margin-left: 10px
+
+.horizontal_car-img
+    max-width: 566px
+    max-height: 391px
+    width: 100%
+
+.card_car-description
+    margin-left: 28px
+
+    @media screen and ( max-width: 1125px )
+        margin-left: 0
+
+    @media screen and ( max-width: 468px )
+        width: 100%
+        margin-top: 15px
+    &::after
+        content: ""
+        position: absolute
+        width: 214px
+        height: 214px
+        border: 36px solid #FFC32A
+        box-shadow: 0px 2px 19px rgba(255, 195, 42, 0.6)
+        border-radius: 50%
+        right: -135px
+        top: -80px
+
+        @media screen and ( max-width: 1440px )
+            display: none
+
+    .flex_items-box
+        border-left: 3px solid $brand-color
+
+    .main_flex-inner
+        margin: 0 0 0 0
+
+        @media screen and ( max-width: 1280px )
+            padding-left: 15px
+
+    .main_class-car
+        color: $top-black-color
+
+    .flex_item-text
+        color: $color-text
+
+    .items_short-text
+        color: $top-black-color
+
+    .item_info-number
+        color: $color-text
+
+    .rent_main-btn
+        margin-top: 29px
+        justify-content: normal
+        align-items: center
+        span
+            font-family: $Ubuntu
+            font-weight: 500
+            font-size: 17px
+            line-height: 20px
+            color: #000000
+            margin-left: 16px
+
+.proposition
+    min-height: 443px
+    background-color: $brand-color
+    margin-bottom: 51px
+
+    @media screen and ( max-width: 1180px )
+        padding: 0 20px
+
+    @media screen and ( max-width: 380px )
+        padding: 0
+        min-height: 472px
+        
+    .slick-initialized
+        .slick-slide
+            display: flex
+
+    .slick-list
+        margin: 0 -24px
+
+        @media screen and ( max-width: 1156px )
+            margin: 0 -10px
+
+    .slick-slide
+        margin: 0px 24px
+        opacity: 0
+        transition-delay: 0s
+        transition-duration: 0.2s
+        transition-property: opacity
+        transition-timing-function: ease-out
+
+        @media screen and ( max-width: 1156px )
+            margin: 0 10px
+
+    .slick-slide.slick-active
+        opacity: 1
+        transition-delay: 0.3s
+        transition-duration: 0.2s
+        transition-property: opacity
+        transition-timing-function: ease-in
+
+    .slick-arrow
+        font-size: 0
+        background: url(../images/proposition-slider-icon.svg) no-repeat center center
+        background-size: contain
+        width: 22px
+        height: 38px
+        border: none
+        background-color: transparent
+        position: absolute
+
+    .slick-next
+        transform: rotate(180deg)
+        right: -40px
+
+        @media screen and ( max-width: 380px )
+            bottom: -40px
+            left: 60%
+            transform: translate(-22px, 0), rotate(180deg)
+
+        @media screen and ( max-width: 380px )
+            bottom: -50px
+
+    .slick-prev
+        left: -40px
+        
+        @media screen and ( max-width: 380px )
+            bottom: -40px
+            left: 40%
+            transform: translate(-22px, 0)
+
+        @media screen and ( max-width: 380px )
+            bottom: -50px
+
+    .rent_main-btn
+        @media screen and ( max-width: 380px )
+            flex-direction: row
+            padding-right: 25px
+
+    .container
+        @media screen and ( max-width: 320px )
+            padding: 0 20px
+
+.proposition_main-tittle
+    font-family: $Montserrat
+    font-weight: 700
+    font-size: 33px
+    line-height: 41px
+    color: $color-white
+    text-transform: uppercase
+    margin: 50px 0 39px 0
+    text-align: center
+
+    @media screen and ( max-width: 466px )
+        margin: 30px 0 20px 0
+
+.proposition_slider
+    display: flex
+    justify-content: center
+    align-items: center
+
+.proposition_slider-car
+    background: var(--slider_car)
+    width: 530px
+    max-width: 100%
+    min-height: 263px
+    background-size: cover
+    display: flex
+    flex-direction: column
+    padding-left: 25px
+    justify-content: center
+    border-radius: 5px
+
+    @media screen and ( max-width: 320px )
+        width: 300px
+    .flex_item-box
+        margin-bottom: 13px
+
+    .rent_main-btn
+        margin-top: 10px
+        justify-content: normal
+        align-items: center
+
+        .detail_btn
+            margin: 0
+
+        span
+            font-family: $Ubuntu
+            font-weight: 700
+            font-size: 24px
+            line-height: 28px
+            color: $color-white
+            margin-left: 10px
+
+            @media screen and ( max-width: 380px )
+                white-space: nowrap
+
+.proposition_slider-tittle
+    font-family: $Montserrat
+    font-weight: 700
+    font-size: 33px
+    line-height: 41px
+    color: $color-white
+    margin-bottom: 15px
+
+.comment
+    padding-bottom: 60px
+    background: url(../images/main-card-bg.png) no-repeat top
+    background-size: cover
+
+    .have_questions-form
+        max-width: 488px
+        height: 216px
+        box-shadow: 0px 2px 13px rgba(0, 0, 0, 0.1)
+
+        @media screen and ( max-width: 868px )
+            max-width: 65%
+
+        @media screen and ( max-width: 580px )
+            max-width: 100%
+            height: 100%
+
+    .label_form
+        width: 100%
+        &:first-child
+            margin-right: 11px
+        &:last-child
+            margin-left: 11px
+
+    .have_questions-flex
+        input
+            width: 100%
+            max-width: 100%
+
+        @media screen and ( max-width: 768px )
+            flex-wrap: nowrap
+
+    .rental_procedure-desc
+        margin-top: 73px
+
+        @media screen and ( max-width: 580px )
+            font-size: 30px
+            line-height: 36px
+
+    .rental_procedure_items
+        margin-bottom: 0
+        position: relative
+        z-index: 1
+        &::before
+            content: ""
+            position: absolute
+            width: 282px
+            height: 282px
+            border: 43px solid #FFC32A
+            border-radius: 50%
+            box-shadow: 0px 2px 19px rgba(255, 195, 42, 0.6)
+            left: -200px
+            top: -100px
+            z-index: 1
+
+            @media screen and ( max-width: 580px )
+                display: none
+
+    .rental_procedure_item
+        position: relative
+        z-index: 2
+
+        @media screen and ( max-width: 500px )
+            width: 100%
+            max-width: 100%
+            height: 170px
+
+.comment_main-tittle
+    font-family: $Montserrat
+    font-weight: 700
+    font-size: 33px
+    line-height: 41px
+    color: #000000
+    text-transform: uppercase
+    text-align: center
+    margin-bottom: 21px
+
+    @media screen and ( max-width: 320px )
+        margin-bottom: 40px
+
+.comment_wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    @media screen and ( max-width: 868px )
+        flex-direction: column
+
+.recall_visitors-slider
+    max-width: 506px
+    width: 100%
+    position: relative
+    &::before
+        content: ""
+        position: absolute
+        background: url(../images/recall-visitors-icon.png) no-repeat top center
+        width: 37px
+        height: 39px
+        left: -40px
+        top: -20px
+
+        @media screen and ( max-width: 580px )
+            left: -10px
+
+        @media screen and ( max-width: 320px )
+            top: -30px
+            left: 0
+
+    @media screen and ( max-width: 1125px )
+        padding-right: 15px
+
+    @media screen and ( max-width: 868px )
+        margin-bottom: 25px
+
+    @media screen and ( max-width: 580px )
+        padding: 0 35px
+
+    @media screen and ( max-width: 320px )
+        padding: 0
+
+.visitors_slider-feedback
+    max-width: 506px
+    width: 100%
+    display: flex
+    flex-direction: column
+    margin-bottom: 20px
+
+.slider_feedback-desc
+    font-family: $Ubuntu
+    font-weight: 500
+    font-size: 17px
+    line-height: 20px
+    color: #000000
+    margin-bottom: 13px
+    display: inline-block
+
+.slider_feedback-text
+    align-self: stretch
+    font-family: $Ubuntu
+    font-weight: 400
+    font-size: 12px
+    line-height: 14px
+    color: #686868
+
+.recall_dots-slider
+    display: flex
+    margin: 0 -6px
+
+    @media screen and ( max-width: 320px )
+        flex-direction: row-reverse
+
+    li
+        margin: 0 6px
+
+        button
+            font-size: 0
+            border: none
+            width: 14px
+            height: 14px
+            border-radius: 50%
+            background-color: rgba(255, 195, 42, 0.3)
+            padding: 0
+
+    .slick-active
+        button
+            background-color: $brand-color
+
+.recall_information-logo
+    width: 54px
+    height: 19px
+
+.question_feedback
+    margin-bottom: 67px
+    .questions_flex-reverse
+        .have_questions-inner
+            flex-direction: row
+            align-items: flex-end
+
+    .have_questions-info
+        width: 100%
+        padding: 0 0 24px 0
+
+        @media screen and ( max-width: 768px )
+            padding: 0
+
+    .feedback_btn
+        @extend %top_btn-main
+        min-width: 160px
+        min-height: 40px
+        text-align: center
+        padding: 12px
+
+        @media screen and ( max-width: 768px )
+            margin-bottom: 10px
+
+        @media screen and ( max-width: 580px )
+            display: none
+
+    .main_social-items
+        &:first-child
+            margin: 0
+
+    .aside_main-social
+
+        @media screen and ( max-width: 768px )
+            justify-content: center
+
+        @media screen and ( max-width: 580px )
+            display: none
+
+    .have_questions-text
+        @media screen and ( max-width: 400px )
+            text-align: center
+
+.have_questions-mob
+    display: none
+
+    @media screen and ( max-width: 580px )
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 100%
+
+    @media screen and ( max-width: 400px )
+        flex-direction: column
+        justify-content: center
+
+    .feedback_btn
+        display: block
+        margin-bottom: 0
+        max-width: 50%
+        width: 100%
+
+        @media screen and ( max-width: 400px )
+            margin-bottom: 15px
+            max-width: 100%
+
+    .aside_main-social
+        display: flex
+        margin-top: 0
+
+.details_car-rental
+    background: url(../images/details-bg-mountains.png) no-repeat bottom
+    padding-bottom: 72px
+    width: 100%
+    height: 100%
+    background-size: cover
+
+    .company_main-tittle
+        span
+            color: $brand-color
+            position: relative
+            margin-left: 15px
+            &::before
+                content: "|"
+                position: absolute
+                left: -15px
+                top: -3px
+
+            @media screen and ( max-width: 580px )
+                display: inline-block
