@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="top_header-wrapper">
+                <div class="bottom_header-burger">
+                    <span></span>
+                </div>
+                <a href="index.html" class="top_header-logo">
+                    <img src="https://cdn4.iconfinder.com/data/icons/social-media-free-13/32/Github_social_media_logo-64.png" alt="/" class="top_header-img">
+                </a>
+                <div class="top_header-right">
+                    <a href="tel:+380442222222" class="top_header-tel">
+                        +380442222222
+                    </a>
+                    <a href="tel:+380442222222" class="top_header-tel">
+                        +380442222222
+                    </a>
+                    <a href="tel:+380442222222" class="top_header-tel">
+                        +380442222222
+                    </a>
+                    <div class="currency_selection header_select">
+                        <img src="images/icon-currency.svg" alt="#">
+                        <select class="currency_selection-point">
+                            <option value="">usd</option>
+                            <option value="">uah</option>
+                            <option value="">eur</option>
+                        </select>
+                    </div>
+                    <div class="language_selection header_select">
+                        <img src="images/header-language.svg" alt="#">
+                        <select class="language_selection-point">
+                            <option value="">ru</option>
+                            <option value="">ua</option>
+                            <option value="">en</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom_header-wrapper">
+                <nav>
+                    <ul class="bottom_header-list">
+                        <li class="bottom_header-link">
+                            <a class="header_list-link" href="catalog.html">АВТОПАРК</a>
+                        </li>
+                        <li class="bottom_header-link">
+                            <a class="header_list-link" href="rent-terms.html">УСЛОВИЯ АРЕНДЫ</a>
+                        </li>
+                        <li class="bottom_header-link">
+                            <a class="header_list-link" href="#">УСЛУГИ</a>
+                            <ul class="list_hidden">
+                                <li>
+                                    <a href="rent-for-persons.html">Аренда авто для Юр лиц</a>
+                                </li>
+                                <li>
+                                    <a href="rent-your-car.html" >Ваше авто</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="bottom_header-link mob_link">
+                            <a href="rent-for-persons.html" class="header_list-link">Аренда авто для Юр лиц</a>
+                        </li>
+                        <li class="bottom_header-link mob_link">
+                            <a href="rent-your-car.html" class="header_list-link">Ваше авто</a>
+                        </li>
+                        <li class="bottom_header-link">
+                            <a class="header_list-link" href="about-us.html">О НАС</a>
+                        </li>
+                        <li class="bottom_header-link">
+                            <a class="header_list-link" href="contacts.html">КОНТАКТЫ</a>
+                        </li>
+                        <li class="bottom_header-link">
+                            <a id='active' class="header_list-link modal_btn" href="#" data-button="feedback">СВЯЗАТЬСЯ
+                                С
+                                НАМИ</a>
+                        </li>
+                    </ul>
+                </nav>
+                <ul class="bottom_header-social">
+                    <li>
+                        <a href="#">
+                            <svg width="22" height="21" viewBox="0 0 22 21" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M10.9725 0.0691833C5.2237 0.0691833 0.563354 4.72953 0.563354 10.4784C0.563354 16.2272 5.2237 20.8875 10.9725 20.8875C16.7214 20.8875 21.3817 16.2272 21.3817 10.4784C21.3817 4.72953 16.7214 0.0691833 10.9725 0.0691833ZM8.68394 4.96029C9.27611 4.93334 9.46533 4.92675 10.9731 4.92675H10.9713C12.4795 4.92675 12.668 4.93334 13.2602 4.96029C13.8512 4.98735 14.2549 5.08092 14.6088 5.21821C14.9743 5.35989 15.2831 5.54957 15.5919 5.85838C15.9007 6.16696 16.0904 6.47669 16.2326 6.84183C16.3691 7.19482 16.4628 7.59823 16.4905 8.18925C16.5172 8.78142 16.5241 8.97064 16.5241 10.4784C16.5241 11.9861 16.5172 12.1748 16.4905 12.767C16.4628 13.3578 16.3691 13.7613 16.2326 14.1144C16.0904 14.4795 15.9007 14.7892 15.5919 15.0978C15.2834 15.4066 14.9741 15.5967 14.6091 15.7385C14.2559 15.8758 13.852 15.9694 13.261 15.9964C12.6688 16.0234 12.4802 16.03 10.9724 16.03C9.46475 16.03 9.27565 16.0234 8.68347 15.9964C8.09257 15.9694 7.68904 15.8758 7.33582 15.7385C6.97091 15.5967 6.66118 15.4066 6.35272 15.0978C6.04403 14.7892 5.85435 14.4795 5.71243 14.1143C5.57526 13.7613 5.48169 13.3579 5.45451 12.7669C5.42768 12.1747 5.42097 11.9861 5.42097 10.4784C5.42097 8.97064 5.42791 8.78131 5.4544 8.18913C5.481 7.59835 5.57468 7.19482 5.71232 6.84171C5.85458 6.47669 6.04426 6.16696 6.35307 5.85838C6.66164 5.54969 6.97138 5.36001 7.33651 5.21821C7.6895 5.08092 8.09292 4.98735 8.68394 4.96029Z"
+                                    fill="#FFC32A" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M10.475 5.92726C10.5717 5.92711 10.6757 5.92716 10.788 5.92721L10.973 5.92726C12.4553 5.92726 12.631 5.93258 13.2164 5.95918C13.7576 5.98393 14.0514 6.07438 14.2471 6.15037C14.5062 6.25099 14.6909 6.37127 14.8851 6.56558C15.0794 6.75989 15.1997 6.94494 15.3005 7.20402C15.3765 7.39948 15.4671 7.69325 15.4917 8.23454C15.5183 8.81977 15.5241 8.99557 15.5241 10.4772C15.5241 11.9587 15.5183 12.1345 15.4917 12.7198C15.467 13.2611 15.3765 13.5548 15.3005 13.7503C15.1999 14.0094 15.0794 14.1938 14.8851 14.388C14.6908 14.5823 14.5063 14.7026 14.2471 14.8033C14.0516 14.8796 13.7576 14.9698 13.2164 14.9946C12.6311 15.0212 12.4553 15.0269 10.973 15.0269C9.49065 15.0269 9.31496 15.0212 8.72973 14.9946C8.18845 14.9696 7.89467 14.8791 7.69886 14.8031C7.43979 14.7025 7.25473 14.5822 7.06043 14.3879C6.86612 14.1936 6.74583 14.009 6.64498 13.7498C6.56899 13.5544 6.47843 13.2606 6.4538 12.7193C6.4272 12.1341 6.42188 11.9583 6.42188 10.4758C6.42188 8.99326 6.4272 8.81838 6.4538 8.23315C6.47855 7.69187 6.56899 7.39809 6.64498 7.2024C6.7456 6.94332 6.86612 6.75827 7.06043 6.56396C7.25473 6.36966 7.43979 6.24937 7.69886 6.14852C7.89456 6.07218 8.18845 5.98197 8.72973 5.9571C9.24187 5.93397 9.44034 5.92703 10.475 5.92587V5.92726ZM13.9364 6.84908C13.5686 6.84908 13.2702 7.14713 13.2702 7.51504C13.2702 7.88283 13.5686 8.18123 13.9364 8.18123C14.3042 8.18123 14.6026 7.88283 14.6026 7.51504C14.6026 7.14724 14.3042 6.84885 13.9364 6.84885V6.84908ZM8.12201 10.4784C8.12201 8.90399 9.39847 7.62749 10.9729 7.62743C12.5473 7.62743 13.8235 8.90395 13.8235 10.4784C13.8235 12.0529 12.5475 13.3288 10.973 13.3288C9.39853 13.3288 8.12201 12.0529 8.12201 10.4784Z"
+                                    fill="#FFC32A" />
+                                <path
+                                    d="M10.973 8.62787C11.995 8.62787 12.8236 9.45633 12.8236 10.4784C12.8236 11.5004 11.995 12.3289 10.973 12.3289C9.95096 12.3289 9.1225 11.5004 9.1225 10.4784C9.1225 9.45633 9.95096 8.62787 10.973 8.62787Z"
+                                    fill="#FFC32A" />
+                            </svg>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0)">
+                                    <path
+                                        d="M21.567 10.8572C21.567 5.09009 16.8277 0.416046 10.98 0.416046C5.13239 0.416046 0.393066 5.09009 0.393066 10.8572C0.393066 16.0696 4.26393 20.3888 9.32583 21.1719V13.8753H6.63773V10.8572H9.32583V8.55687C9.32583 5.94047 10.9056 4.49461 13.3249 4.49461C14.4828 4.49461 15.6946 4.69854 15.6946 4.69854V7.26804H14.3588C13.0437 7.26804 12.6343 8.07356 12.6343 8.89947V10.8572H15.5705L15.1011 13.8753H12.6343V21.1719C17.6962 20.3888 21.567 16.0696 21.567 10.8572Z"
+                                        fill="#FFC32A" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0">
+                                        <rect width="21.174" height="20.8823" fill="white"
+                                            transform="translate(0.393066 0.416046)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M22.4357 10.8572C22.4357 16.6237 17.5428 21.2983 11.5072 21.2983C5.47157 21.2983 0.578735 16.6237 0.578735 10.8572C0.578735 5.0907 5.47157 0.416046 11.5072 0.416046C17.5428 0.416046 22.4357 5.0907 22.4357 10.8572ZM7.89697 9.90074C6.80222 10.3574 5.67738 10.8266 4.64882 11.3679L4.64875 11.368C4.11167 11.7437 4.82555 12.0094 5.49523 12.2587C5.6017 12.2983 5.70704 12.3375 5.80607 12.3767C5.88847 12.4009 5.97228 12.4264 6.0572 12.4522C6.802 12.679 7.63251 12.9318 8.35559 12.5515C9.54341 11.8996 10.6644 11.1459 11.7845 10.3928C12.1514 10.146 12.5183 9.89934 12.8874 9.65632C12.9047 9.64575 12.9242 9.63366 12.9456 9.62046C13.26 9.42571 13.9672 8.98775 13.7056 9.59122C13.0871 10.2375 12.4245 10.8096 11.7583 11.3849C11.3094 11.7726 10.8588 12.1617 10.4189 12.5758C10.0358 12.8732 9.63797 13.4713 10.067 13.8878C11.055 14.5486 12.0586 15.1935 13.0615 15.838C13.3879 16.0477 13.7141 16.2573 14.0398 16.4675C14.5918 16.8885 15.4545 16.548 15.5758 15.89C15.6298 15.5873 15.684 15.2847 15.7382 14.982C16.0376 13.3094 16.3371 11.6362 16.6017 9.95815C16.6377 9.69494 16.6784 9.43173 16.7192 9.16839C16.8181 8.53012 16.9171 7.89108 16.948 7.24937C16.8683 6.60901 16.0556 6.74981 15.6033 6.8938C13.2787 7.73892 10.9772 8.64669 8.68488 9.57047C8.4252 9.68039 8.16197 9.7902 7.89697 9.90074Z"
+                                    fill="#FFC32A" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M11.3756 0.416046C17.4112 0.416046 22.3041 5.0907 22.3041 10.8572C22.3041 16.6237 17.4112 21.2983 11.3756 21.2983C5.33998 21.2983 0.447144 16.6237 0.447144 10.8572C0.447144 5.0907 5.33998 0.416046 11.3756 0.416046ZM14.2872 9.53395C14.234 9.12138 14.1013 8.79744 13.8656 8.5105C13.5595 8.14103 13.1684 7.91978 12.5894 7.78854C12.212 7.70106 12.0595 7.7111 11.923 7.83021C11.7959 7.94181 11.7711 8.16553 11.8682 8.3104C11.9365 8.41555 12.0154 8.45322 12.2346 8.49434C12.5265 8.54565 12.7283 8.61225 12.9118 8.71251C13.3013 8.92739 13.4827 9.26366 13.5021 9.80805C13.5112 10.0637 13.5343 10.1422 13.6278 10.2329C13.801 10.3986 14.1092 10.3664 14.2399 10.1681C14.2879 10.0933 14.2952 10.0608 14.3003 9.88723C14.3036 9.77978 14.2988 9.61983 14.2872 9.53395ZM14.2924 7.00273C15.2185 7.71822 15.7359 8.73514 15.8128 9.99912C15.8452 10.497 15.8022 10.6591 15.6184 10.7515C15.4525 10.837 15.2646 10.8089 15.1356 10.68C15.0502 10.5962 15.0174 10.4816 15.0186 10.2787C15.0224 9.71757 14.8871 9.09096 14.6671 8.65616C14.4125 8.1501 14.0189 7.71945 13.5238 7.4046C13.0901 7.12806 12.5161 6.94127 11.9596 6.89475C11.5987 6.86458 11.4698 6.80617 11.4005 6.64084C11.3575 6.54194 11.3689 6.37096 11.4192 6.29439C11.4668 6.22377 11.5736 6.14568 11.649 6.12504C11.729 6.10275 12.1953 6.14172 12.4485 6.1898C13.1399 6.32425 13.7706 6.6007 14.2924 7.00273ZM17.5011 14.8667C17.4753 14.7945 17.4149 14.683 17.3717 14.619C17.1 14.227 15.6398 13.1352 14.9107 12.7781C14.4945 12.5738 14.1861 12.5057 13.9574 12.5697C13.7115 12.6358 13.5821 12.7451 13.1702 13.2342C13.0041 13.4303 12.8337 13.614 12.7884 13.6429C12.6762 13.7172 12.4562 13.777 12.301 13.777C11.9408 13.775 11.2872 13.5521 10.7847 13.259C10.3943 13.032 9.89392 12.6254 9.50997 12.223C9.05701 11.7504 8.74862 11.3335 8.50487 10.8629C8.18998 10.2583 8.11018 9.88882 8.24173 9.61845C8.27409 9.55036 8.31723 9.47814 8.33662 9.45541C8.35604 9.4348 8.5588 9.27587 8.78309 9.10251C9.22311 8.76819 9.29428 8.69183 9.37624 8.46274C9.47976 8.17173 9.45174 7.87454 9.29213 7.57531C9.16918 7.34828 8.84781 6.85297 8.61488 6.53309C8.30644 6.11209 7.5386 5.21227 7.38544 5.09047C7.10936 4.87585 6.75567 4.83868 6.36524 4.98318C5.95332 5.1359 5.18114 5.73027 4.85113 6.1451C4.55348 6.52071 4.43921 6.78692 4.42193 7.13778C4.40685 7.42669 4.43272 7.5464 4.59233 7.91583C5.84115 10.8134 7.70466 13.1269 10.2649 14.9637C11.6021 15.9234 12.989 16.654 14.4276 17.1534C15.2666 17.4444 15.6311 17.4588 16.0603 17.2195C16.2415 17.1163 16.6902 16.6767 16.9403 16.3568C17.3545 15.8243 17.5076 15.5787 17.5507 15.3827C17.5809 15.2485 17.5572 15.0153 17.5011 14.8667ZM16.9496 8.33414C17.2123 8.98798 17.3383 9.57444 17.366 10.2894C17.3703 10.4307 17.3683 10.6894 17.3587 10.8647C17.3388 11.2008 17.3197 11.2675 17.2184 11.3564C17.0557 11.5023 16.7385 11.4676 16.6182 11.2917C16.5553 11.1974 16.5465 11.1283 16.5587 10.7357C16.5936 9.57435 16.3477 8.66504 15.7555 7.75579C15.0478 6.66493 13.9892 5.93007 12.6127 5.57056C12.2616 5.47905 11.9658 5.42328 11.5057 5.3641C11.206 5.32662 11.1404 5.31077 11.0664 5.26728C10.843 5.13054 10.84 4.7843 11.0627 4.64548C11.1777 4.5722 11.2625 4.56893 11.6371 4.61477C12.7358 4.74595 13.7162 5.05785 14.5217 5.52918C15.0991 5.86747 15.4632 6.17137 15.9319 6.70361C16.4277 7.27127 16.6902 7.69097 16.9496 8.33414Z"
+                                    fill="#FFC32A" />
+                            </svg>
+
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header_popup popup" data-modal="feedback">
+                <div class="popup_content">
+                    <a href="javascript://" class="popup_close-btn">
+                        <img src="images/back-icon-popup.svg" alt="#">
+                    </a>
+                    <h2 class="popup_short-title">
+                        Форма обратной связи
+                    </h2>
+                    <form action="#" class="popup_input-wrapper">
+                        <input class="popup_input-form" type="text" placeholder="Ваше имя*" required>
+                        <input class="popup_input-form" type="tel" placeholder="Номер телефона*" required>
+                        <input class="popup_input-form" type="email" placeholder="Ваш Email*" required>
+                        <textarea class="pupup_textarea-form" placeholder="Что вас интересует?*"></textarea>
+                        <button class="popup_form-btn">
+                            Отправить запрос
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="wrapper">
+        <section class="car_rental">
+            <div class="container">
+                <div class="car_rental-inner">
+                    <div class="car_rental-main">
+                        <h1 class="car_rental-title">
+                            ПРОКАТ АВТО
+                        </h1>
+                        <p class="car_rental-text">
+                            Прокат новых автомобилей в Киеве
+                            2016-2019 года выпуска с коробкой автомат в средних
+                            и топовых комплектациях <br> по лучшим ценам
+                        </p>
+                        <div class="car_rental-box">
+                            <div class="rental_box-wrapper">
+                                <div class="top_select-box">
+                                    <select class="first select_location" name="#">
+                                        <option></option>
+                                        <option>Киев</option>
+                                        <option>Вишневое</option>
+                                        <option>Шпола</option>
+                                        <option>Бровары</option>
+                                    </select>
+                                    <select class="second select_location" name="#">
+                                        <option></option>
+                                        <option>Почта №1</option>
+                                        <option>Почта №172</option>
+                                        <option>ОССТ 3</option>
+                                        <option>Почта 253</option>
+                                    </select>
+                                </div>
+                                <form action="#" class="bottom_info">
+                                    <input type="text" class="bottom_input-info" id="datetimepicker-main-first"
+                                        placeholder="Дата получения" readonly>
+                                    <input type="text" class="bottom_input-info" id="datetimepicker-time-first"
+                                        placeholder="Время получения" readonly>
+                                    <input type="text" class="bottom_input-info" id="datetimepicker-main-second"
+                                        placeholder="Дата возврата" readonly>
+                                    <input type="text" class="bottom_input-info" id="datetimepicker-time-second"
+                                        placeholder="Время возврата" readonly>
+                                </form>
+                                <button class="show_result">
+                                    ПОКАЗАТЬ РЕЗУЛЬТАТЫ
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="car_rental-top">
+                        <span class="rental_big-circle big_circle"></span>
+                        <span class="rental_small-circle small_circle"></span>
+                        <img src="images/car-rental-main.svg" alt="#" class="car_rental-vehicle">
+                        <img src="images/p-mountains.jpg" alt="#" class="car_rental-mountains">
+                    </div>
+                </div>
+                <p class="car_rental-bottom">
+                    КЛАССЫ АВТО
+                </p>
+                <div class="slider_rental-wrapper">
+                    <div class="car_rental-slider">
+                        <div class="slider_item" style="--slider: url(../images/car-slider-1.svg) no-repeat top center">
+                            <p class="slider_item-descr">Эконом</p>
+                            <span class="slider_item-mob">Эконом</span>
+                            <p class="slider_item-text">За комфорт не нужно переплачивать! Кондиционер, навигатор и
+                                аудиосистема.</p>
+                            <span class="slider_item-info">от 20$</span>
+                            <a class="slider_item-btn" href="catalog.html">
+                                ПРОСМОТРЕТЬ
+                            </a>
+                            <img class="slider_img" src="images/car-slider-first.png" alt="#">
+                            <span class="slider_circle"></span>
+                        </div>
+                        <div class="slider_item" style="--slider: url(../images/car-slider-2.svg) no-repeat top center">
+                            <p class="slider_item-descr">Комфорт</p>
+                            <span class="slider_item-mob">Комфорт</span>
+                            <p class="slider_item-text">Комфортные, имеют стильный, современный, технологичный
+                                дизайн, достойные показатели.</p>
+                            <span class="slider_item-info">от 38$</span>
+                            <a class="slider_item-btn" href="catalog.html">
+                                ПРОСМОТРЕТЬ
+                            </a>
+                            <img class="slider_img" src="images/car-slider-second.png" alt="#">
+                            <span class="slider_circle"></span>
+                        </div>
+                        <div class="slider_item" style="--slider: url(../images/car-slider-3.svg) no-repeat top center">
+                            <p class="slider_item-descr">Бизнес</p>
+                            <span class="slider_item-mob">Бизнес</span>
+                            <p class="slider_item-text">Они демонстрируют социальный статус и многое могут сказать
+                                об успехе человека.</p>
+                            <span class="slider_item-info">от 43$</span>
+                            <a class="slider_item-btn" href="catalog.html">
+                                ПРОСМОТРЕТЬ
+                            </a>
+                            <img class="slider_img" src="images/car-slider-three.png" alt="#">
+                            <span class="slider_circle"></span>
+                        </div>
+                        <div class="slider_item" style="--slider: url(../images/car-slider-4.svg) no-repeat top center">
+                            <p class="slider_item-descr">Эконом</p>
+                            <span class="slider_item-mob">VIP-класс</span>
+                            <p class="slider_item-text">За комфорт не нужно переплачивать! Кондиционер, навигатор и
+                                аудиосистема.</p>
+                            <span class="slider_item-info">от 20$</span>
+                            <a class="slider_item-btn" href="catalog.html">
+                                ПРОСМОТРЕТЬ
+                            </a>
+                            <img class="slider_img" src="images/car-slider-first.png" alt="#">
+                            <span class="slider_circle"></span>
+                        </div>
+                        <div class="slider_item" style="--slider: url(../images/car-slider-5.svg) no-repeat top center">
+                            <p class="slider_item-descr">Комфорт</p>
+                            <span class="slider_item-mob">Кроссоверы</span>
+                            <p class="slider_item-text">За комфорт не нужно переплачивать! Кондиционер, навигатор и
+                                аудиосистема.</p>
+                            <span class="slider_item-info">от 20$</span>
+                            <a class="slider_item-btn" href="catalog.html">
+                                ПРОСМОТРЕТЬ
+                            </a>
+                            <img class="slider_img" src="images/car-slider-second.png" alt="#">
+                            <span class="slider_circle"></span>
+                        </div>
+                        <div class="slider_item" style="--slider: url(../images/car-slider-6.svg) no-repeat top center">
+                            <p class="slider_item-descr">Бизнес</p>
+                            <span class="slider_item-mob">Электро</span>
+                            <p class="slider_item-text">За комфорт не нужно переплачивать! Кондиционер, навигатор и
+                                аудиосистема.</p>
+                            <span class="slider_item-info">от 20$</span>
+                            <a class="slider_item-btn" href="catalog.html">
+                                ПРОСМОТРЕТЬ
+                            </a>
+                            <img class="slider_img" src="images/car-slider-three.png" alt="#">
+                            <span class="slider_circle"></span>
+                        </div>
+                        <div class="slider_item" style="--slider: url(../images/car-slider-7.svg) no-repeat top center">
+                            <p class="slider_item-descr">Эконом</p>
+                            <span class="slider_item-mob">Кабриолеты</span>
+                            <p class="slider_item-text">За комфорт не нужно переплачивать! Кондиционер, навигатор и
+                                аудиосистема.</p>
+                            <span class="slider_item-info">от 20$</span>
+                            <a class="slider_item-btn" href="catalog.html">
+                                ПРОСМОТРЕТЬ
+                            </a>
+                            <img class="slider_img" src="images/car-slider-first.png" alt="#">
+                            <span class="slider_circle"></span>
+                        </div>
+                        <div class="slider_item" style="--slider: url(../images/car-slider-8.svg) no-repeat top center">
+                            <p class="slider_item-descr">Комфорт</p>
+                            <span class="slider_item-mob">Спорт</span>
+                            <p class="slider_item-text">За комфорт не нужно переплачивать! Кондиционер, навигатор и
+                                аудиосистема.</p>
+                            <span class="slider_item-info">от 20$</span>
+                            <a class="slider_item-btn" href="catalog.html">
+                                ПРОСМОТРЕТЬ
+                            </a>
+                            <img class="slider_img" src="images/car-slider-second.png" alt="#">
+                            <span class="slider_circle"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <section class="offers">
+        <div class="container">
+            <div class="offers_wrapper">
+                <div class="offers_slider-img">
+                    <img src="images/offers-car-slider.svg" alt="#" class="offers_cars">
+                </div>
+                <div class="slider_wrapper">
+                    <h2 class="slider_short-title">
+                        СПЕЦИАЛЬНЫЕ ПРЕДЛОЖЕНИЯ
+                    </h2>
+                    <div class="offers_main-slider">
+                        <div class="slider_content-info">
+                            <p class="slider-content-descr">
+                                Tesla Model YT
+                            </p>
+                            <span class="old_price">$567</span>
+                            <span class="actual_price">$345</span>
+                            <a href="rent-for-persons.html" class="slider_content-btn">
+                                АРЕНДА АВТО
+                            </a>
+                        </div>
+                        <div class="slider_content-info">
+                            <p class="slider-content-descr">
+                                Tesla Model YT
+                            </p>
+                            <span class="old_price">$567</span>
+                            <span class="actual_price">$345</span>
+                            <a href="rent-for-persons.html" class="slider_content-btn">
+                                АРЕНДА АВТО
+                            </a>
+                        </div>
+                        <div class="slider_content-info">
+                            <p class="slider-content-descr">
+                                Tesla Model YT
+                            </p>
+                            <span class="old_price">$567</span>
+                            <span class="actual_price">$345</span>
+                            <a href="rent-for-persons.html" class="slider_content-btn">
+                                АРЕНДА АВТО
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+            <span class="big_circle"></span>
+            <div class="container">
+                <h3 class="services_heading">
+                    НАШИ УСЛУГИ
+                </h3>
+                <div class="services_wrapper">
+                    <div class="services_item"
+                        style="--image: url(../images/back-item-servisec.png) no-repeat center center">
+                        <span class="item_top-img"
+                            style="--icon: url(../images/icon-car-services.svg) no-repeat center #FFC32A"></span>
+                        <p class="item_short-title">
+                            Аренда авто для юр. лиц
+                        </p>
+                        <p class="item_main-text">
+                            Подходящая услуга в том случае, если ваша компания ценит комфорт, время, премиум-сервис и
+                            грамотно расходует финансовые ресурсы. Главным преимуществом работы с прокатными
+                            автомобилями
+                            для юридических лиц является простота и удобство работы.
+                        </p>
+                        <a href="rent-your-car.html" class="item_btn-more">ПОДРОБНЕЕ</a>
+                    </div>
+                    <div class="services_item"
+                        style="--image: url(../images/back-item-servisec.png) no-repeat center center">
+                        <span class="item_top-img"
+                            style="--icon: url(../images/icon-logo-services.svg) no-repeat center #FFC32A"></span>
+                        <p class="item_short-title">
+                            Ваше авто — заработок
+                        </p>
+                        <p class="item_main-text">
+                            Сдача Вашего автомобиля
+                            в аренду — это постоянный и высокий доход с понятной схемой работы и минимальными рисками.
+                            Доход
+                            от 400USD и до 6000USD (в зависимости от класса авто). Ежемесячные выплаты.
+                        </p>
+                        <a href="rent-your-car.html" class="item_btn-more">ПОДРОБНЕЕ</a>
+                    </div>
+                    <div class="services_item"
+                        style="--image: url(../images/back-item-servisec.png) no-repeat center center">
+                        <span class="item_top-img"
+                            style="--icon: url(../images/icon-money-services.svg) no-repeat center #FFC32A"></span>
+                        <p class="item_short-title">
+                            Франчайзинг
+                        </p>
+                        <p class="item_main-text">
+                            Мы заинтересованы в развитии сотрудничества, поэтому предлагаем Вам получить эксклюзивное
+                            право
+                            на использование торговой марки в Вашем регионе. Готовая бизнес-модель, проверенная
+                            10ти
+                            летним опытом работы в сфере проката.
+                        </p>
+                        <a href="rent-your-car.html" class="item_btn-more">ПОДРОБНЕЕ</a>
+                    </div>
+                    <div class="services_item"
+                        style="--image: url(../images/back-item-servisec.png) no-repeat center center">
+                        <span class="item_top-img"
+                            style="--icon: url(../images/icon-car-services.svg) no-repeat center #FFC32A"></span>
+                        <p class="item_short-title">
+                            Франчайзинг
+                        </p>
+                        <p class="item_main-text">
+                            Мы заинтересованы в развитии сотрудничества, поэтому предлагаем Вам получить эксклюзивное
+                            право
+                            на использование торговой марки GELB в Вашем регионе. Готовая бизнес-модель, проверенная
+                            10ти
+                            летним опытом работы в сфере проката.
+                        </p>
+                        <a href="rent-your-car.html" class="item_btn-more">ПОДРОБНЕЕ</a>
+                    </div>
+                    <div class="services_item"
+                        style="--image: url(../images/back-item-servisec.png) no-repeat center center">
+                        <span class="item_top-img"
+                            style="--icon: url(../images/icon-logo-services.svg) no-repeat center #FFC32A"></span>
+                        <p class="item_short-title">
+                            Франчайзинг
+                        </p>
+                        <p class="item_main-text">
+                            Мы заинтересованы в развитии сотрудничества, поэтому предлагаем Вам получить эксклюзивное
+                            право
+                            на использование торговой марки в Вашем регионе. Готовая бизнес-модель, проверенная
+                            10ти
+                            летним опытом работы в сфере проката.
+                        </p>
+                        <a href="rent-your-car.html" class="item_btn-more">ПОДРОБНЕЕ</a>
+                    </div>
+                </div>
+                <p class="rental_procedure-desc">
+                    ПРОЦЕДУРА ПРОКАТА АВТО
+                </p>
+                <div class="rental_procedure_items">
+                    <div class="rental_procedure_item">
+                        <span class="rental_procedure-number">1</span>
+                        <p class="rental_procedure-subtitle">
+                            Бронирование
+                        </p>
+                        <p class="rental_procedure-text">
+                            Вы выбираете нужное место, дату, время и срок бронирования.
+                        </p>
+                    </div>
+                    <div class="rental_procedure_item">
+                        <span class="rental_procedure-number">2</span>
+                        <p class="rental_procedure-subtitle">
+                            Связь с менеджером
+                        </p>
+                        <p class="rental_procedure-text">
+                            Подтверждение бронирования авто или помощь выбора более подходящего варианта.
+                        </p>
+                    </div>
+                    <div class="rental_procedure_item">
+                        <span class="rental_procedure-number">3</span>
+                        <p class="rental_procedure-subtitle">
+                            Заключение договора
+                        </p>
+                        <p class="rental_procedure-text">
+                            Проверка документов, осмотр состояния авто.
+                        </p>
+                    </div>
+                    <div class="rental_procedure_item">
+                        <span class="rental_procedure-number">4</span>
+                        <p class="rental_procedure-subtitle">
+                            Процесс оплаты
+                        </p>
+                        <p class="rental_procedure-text">
+                            Внесение залога и оплата проката автомобиля.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="aside">
+                <div class="container">
+                    <h4 class="aside_short-title">
+                        ИНТЕРЕСУЮТ НОВИНКИ И СПЕЦПРЕДЛОЖЕНИЯ?
+                    </h4>
+                    <div class="aside_inner">
+                        <p class="aside_main-text">
+                            Подписывайтесь на нас в соцсетях, чтобы первыми узнавать о новых акционных предложениях
+                        </p>
+                        <ul class="aside_main-social">
+                            <li class="main_social-items">
+                                <a href="#" class="main_social-link">
+                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M14.2055 0.462646C6.83978 0.462646 0.868713 6.43371 0.868713 13.7994C0.868713 21.1651 6.83978 27.1362 14.2055 27.1362C21.5712 27.1362 27.5422 21.1651 27.5422 13.7994C27.5422 6.43371 21.5712 0.462646 14.2055 0.462646ZM11.2732 6.72938C12.0319 6.69485 12.2744 6.68641 14.2062 6.68641H14.2039C16.1363 6.68641 16.3778 6.69485 17.1366 6.72938C17.8938 6.76406 18.411 6.88394 18.8644 7.05984C19.3327 7.24137 19.7284 7.4844 20.124 7.88006C20.5197 8.27542 20.7627 8.67227 20.945 9.1401C21.1199 9.59237 21.2399 10.1092 21.2755 10.8665C21.3095 11.6252 21.3184 11.8676 21.3184 13.7994C21.3184 15.7312 21.3095 15.973 21.2755 16.7318C21.2399 17.4887 21.1199 18.0057 20.945 18.4581C20.7627 18.9258 20.5197 19.3227 20.124 19.718C19.7288 20.1137 19.3326 20.3573 18.8649 20.539C18.4123 20.7149 17.8948 20.8348 17.1376 20.8694C16.3789 20.904 16.1372 20.9124 14.2053 20.9124C12.2736 20.9124 12.0314 20.904 11.2726 20.8694C10.5155 20.8348 9.99852 20.7149 9.54595 20.539C9.07842 20.3573 8.68157 20.1137 8.28635 19.718C7.89084 19.3227 7.64781 18.9258 7.46599 18.458C7.29024 18.0057 7.17035 17.4888 7.13553 16.7316C7.10115 15.9729 7.09255 15.7312 7.09255 13.7994C7.09255 11.8676 7.10145 11.6251 7.13538 10.8663C7.16946 10.1094 7.2895 9.59237 7.46584 9.13995C7.64811 8.67227 7.89114 8.27542 8.2868 7.88006C8.68216 7.48454 9.07901 7.24152 9.54684 7.05984C9.99911 6.88394 10.516 6.76406 11.2732 6.72938Z"
+                                            fill="#181C1D" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M13.568 7.96833C13.6919 7.96814 13.8252 7.9682 13.9691 7.96826L14.2061 7.96833C16.1053 7.96833 16.3304 7.97515 17.0804 8.00923C17.7739 8.04094 18.1503 8.15683 18.401 8.25419C18.733 8.38311 18.9696 8.53722 19.2184 8.78618C19.4674 9.03513 19.6215 9.27223 19.7507 9.60417C19.8481 9.85461 19.9641 10.231 19.9957 10.9245C20.0298 11.6744 20.0372 11.8996 20.0372 13.7979C20.0372 15.6962 20.0298 15.9214 19.9957 16.6712C19.964 17.3648 19.8481 17.7412 19.7507 17.9916C19.6218 18.3235 19.4674 18.5599 19.2184 18.8087C18.9695 19.0577 18.7331 19.2118 18.401 19.3407C18.1506 19.4385 17.7739 19.5541 17.0804 19.5858C16.3305 19.6199 16.1053 19.6273 14.2061 19.6273C12.3068 19.6273 12.0817 19.6199 11.3319 19.5858C10.6384 19.5538 10.262 19.4379 10.0111 19.3406C9.67914 19.2116 9.44204 19.0575 9.19308 18.8086C8.94413 18.5596 8.79001 18.3231 8.66079 17.991C8.56343 17.7406 8.4474 17.3642 8.41584 16.6707C8.38176 15.9208 8.37494 15.6956 8.37494 13.7961C8.37494 11.8966 8.38176 11.6726 8.41584 10.9227C8.44755 10.2292 8.56343 9.85283 8.66079 9.6021C8.78972 9.27016 8.94413 9.03306 9.19308 8.7841C9.44204 8.53515 9.67914 8.38103 10.0111 8.25181C10.2618 8.15401 10.6384 8.03842 11.3319 8.00656C11.9881 7.97693 12.2423 7.96803 13.568 7.96655V7.96833ZM18.003 9.14938C17.5318 9.14938 17.1494 9.53125 17.1494 10.0026C17.1494 10.4739 17.5318 10.8562 18.003 10.8562C18.4742 10.8562 18.8566 10.4739 18.8566 10.0026C18.8566 9.5314 18.4742 9.14908 18.003 9.14908V9.14938ZM10.5533 13.7994C10.5533 11.7822 12.1887 10.1467 14.206 10.1466C16.2232 10.1466 17.8583 11.7821 17.8583 13.7994C17.8583 15.8167 16.2234 17.4515 14.2061 17.4515C12.1888 17.4515 10.5533 15.8167 10.5533 13.7994Z"
+                                            fill="#181C1D" />
+                                        <path
+                                            d="M14.2061 11.4285C15.5155 11.4285 16.5771 12.4899 16.5771 13.7995C16.5771 15.1089 15.5155 16.1705 14.2061 16.1705C12.8966 16.1705 11.8351 15.1089 11.8351 13.7995C11.8351 12.4899 12.8966 11.4285 14.2061 11.4285Z"
+                                            fill="#181C1D" />
+                                    </svg>
+
+                                </a>
+                            </li>
+                            <li class="main_social-items">
+                                <a href="#" class="main_social-link">
+                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M27.342 14.0032C27.342 6.6141 21.2697 0.625488 13.7774 0.625488C6.28509 0.625488 0.21283 6.6141 0.21283 14.0032C0.21283 20.6816 5.17237 26.2156 11.6579 27.2189V17.8702H8.21381V14.0032H11.6579V11.0559C11.6579 7.70365 13.682 5.85115 16.7817 5.85115C18.2654 5.85115 19.8179 6.11244 19.8179 6.11244V9.40461H18.1064C16.4214 9.40461 15.8969 10.4367 15.8969 11.4949V14.0032H19.6589L19.0575 17.8702H15.8969V27.2189C22.3824 26.2156 27.342 20.6816 27.342 14.0032Z"
+                                            fill="#181C1D" />
+                                    </svg>
+
+                                </a>
+                            </li>
+                            <li class="main_social-items">
+                                <a href="#" class="main_social-link">
+                                    <svg width="29" height="28" viewBox="0 0 29 28" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M28.0173 14.0032C28.0173 21.3915 21.7483 27.3809 14.0152 27.3809C6.28201 27.3809 0.0130615 21.3915 0.0130615 14.0032C0.0130615 6.61489 6.28201 0.625488 14.0152 0.625488C21.7483 0.625488 28.0173 6.61489 28.0173 14.0032ZM9.38955 12.7777C7.9869 13.3629 6.5457 13.964 5.22785 14.6576L5.22776 14.6577C4.53962 15.139 5.45429 15.4795 6.31231 15.7989C6.44872 15.8496 6.5837 15.8999 6.71058 15.9501C6.81616 15.9811 6.92353 16.0137 7.03233 16.0469C7.98662 16.3373 9.05071 16.6612 9.97715 16.174C11.499 15.3387 12.9353 14.3731 14.3704 13.4081C14.8406 13.092 15.3107 12.7759 15.7836 12.4646C15.8057 12.451 15.8307 12.4355 15.8581 12.4186C16.261 12.1691 17.167 11.608 16.8319 12.3812C16.0393 13.2093 15.1904 13.9423 14.3369 14.6793C13.7617 15.176 13.1844 15.6745 12.6208 16.2052C12.1299 16.5862 11.6202 17.3525 12.1698 17.8861C13.4358 18.7329 14.7216 19.5591 16.0066 20.3848C16.4247 20.6535 16.8428 20.9221 17.2601 21.1914C17.9673 21.7309 19.0726 21.2945 19.2281 20.4515C19.2972 20.0638 19.3666 19.676 19.436 19.2883C19.8197 17.1452 20.2035 15.0014 20.5425 12.8513C20.5886 12.5141 20.6408 12.1768 20.6931 11.8394C20.8197 11.0216 20.9466 10.2028 20.9862 9.38068C20.8841 8.56021 19.8428 8.74061 19.2633 8.9251C16.2848 10.0079 13.3361 11.171 10.3991 12.3546C10.0663 12.4954 9.72908 12.6361 9.38955 12.7777Z"
+                                            fill="#181C1D" />
+                                    </svg>
+
+                                </a>
+                            </li>
+                            <li class="main_social-items">
+                                <a href="#" class="main_social-link">
+                                    <svg width="29" height="28" viewBox="0 0 29 28" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M14.6903 0.625488C22.4234 0.625488 28.6924 6.61489 28.6924 14.0032C28.6924 21.3915 22.4234 27.3809 14.6903 27.3809C6.95712 27.3809 0.688171 21.3915 0.688171 14.0032C0.688171 6.61489 6.95712 0.625488 14.6903 0.625488ZM18.4207 12.3077C18.3526 11.7791 18.1826 11.3641 17.8806 10.9964C17.4884 10.523 16.9873 10.2396 16.2454 10.0714C15.7618 9.95932 15.5665 9.97219 15.3916 10.1248C15.2287 10.2678 15.1969 10.5544 15.3214 10.74C15.409 10.8748 15.5099 10.923 15.7908 10.9757C16.1649 11.0415 16.4233 11.1268 16.6585 11.2552C17.1576 11.5306 17.39 11.9614 17.4149 12.6589C17.4265 12.9864 17.4561 13.0871 17.5758 13.2032C17.7977 13.4156 18.1927 13.3743 18.3602 13.1202C18.4217 13.0244 18.431 12.9827 18.4375 12.7604C18.4418 12.6227 18.4356 12.4178 18.4207 12.3077ZM18.4274 9.06464C19.6139 9.98136 20.2769 11.2843 20.3755 12.9038C20.417 13.5416 20.3619 13.7494 20.1263 13.8677C19.9138 13.9773 19.673 13.9412 19.5078 13.7762C19.3983 13.6688 19.3563 13.522 19.3579 13.262C19.3627 12.543 19.1894 11.7402 18.9075 11.1831C18.5813 10.5347 18.077 9.98294 17.4426 9.57953C16.887 9.22522 16.1516 8.98589 15.4386 8.92629C14.9761 8.88763 14.8109 8.8128 14.7221 8.60097C14.6671 8.47425 14.6817 8.25519 14.7462 8.15707C14.8071 8.0666 14.9439 7.96655 15.0406 7.9401C15.1431 7.91153 15.7405 7.96147 16.065 8.02308C16.9508 8.19533 17.7589 8.54953 18.4274 9.06464ZM22.5386 19.1405C22.5054 19.0479 22.4281 18.9051 22.3728 18.8231C22.0246 18.3208 20.1537 16.9219 19.2197 16.4644C18.6863 16.2027 18.2911 16.1154 17.9982 16.1974C17.6832 16.282 17.5173 16.4221 16.9895 17.0488C16.7768 17.3001 16.5584 17.5354 16.5004 17.5724C16.3567 17.6676 16.0748 17.7443 15.8758 17.7443C15.4143 17.7416 14.577 17.4561 13.9331 17.0806C13.4329 16.7897 12.7918 16.2688 12.2999 15.7532C11.7195 15.1476 11.3244 14.6135 11.0121 14.0106C10.6087 13.2359 10.5064 12.7625 10.675 12.4161C10.7164 12.3289 10.7717 12.2363 10.7965 12.2072C10.8214 12.1808 11.0812 11.9772 11.3686 11.7551C11.9324 11.3267 12.0235 11.2289 12.1286 10.9354C12.2612 10.5625 12.2253 10.1817 12.0208 9.79833C11.8633 9.50745 11.4515 8.87283 11.1531 8.46298C10.7579 7.92358 9.77408 6.77068 9.57784 6.61463C9.22412 6.33965 8.77096 6.29203 8.27072 6.47716C7.74294 6.67284 6.75358 7.43438 6.33076 7.96588C5.9494 8.44712 5.80298 8.78821 5.78085 9.23774C5.76152 9.60792 5.79467 9.76129 5.99917 10.2346C7.59923 13.9471 9.98684 16.9113 13.2671 19.2647C14.9805 20.4943 16.7574 21.4304 18.6006 22.0703C19.6756 22.4431 20.1426 22.4616 20.6926 22.1549C20.9247 22.0227 21.4995 21.4595 21.8201 21.0496C22.3507 20.3674 22.5469 20.0527 22.6021 19.8015C22.6408 19.6297 22.6104 19.3309 22.5386 19.1405ZM21.832 10.7706C22.1686 11.6083 22.33 12.3597 22.3654 13.2758C22.3711 13.4567 22.3684 13.7883 22.3562 14.0129C22.3306 14.4434 22.3062 14.529 22.1764 14.6429C21.9679 14.8298 21.5614 14.7853 21.4073 14.56C21.3268 14.4391 21.3155 14.3506 21.3311 13.8476C21.3758 12.3596 21.0608 11.1945 20.302 10.0296C19.3953 8.63189 18.039 7.69035 16.2753 7.22972C15.8255 7.11248 15.4465 7.04102 14.857 6.9652C14.473 6.91718 14.3889 6.89688 14.2941 6.84115C14.0078 6.66595 14.004 6.22233 14.2894 6.04447C14.4367 5.95058 14.5453 5.94638 15.0254 6.00512C16.4331 6.17319 17.6891 6.57282 18.7213 7.17671C19.4611 7.61014 19.9275 7.99951 20.5281 8.68145C21.1633 9.40877 21.4997 9.94651 21.832 10.7706Z"
+                                            fill="#181C1D" />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about_company">
+            <div class="container">
+                <div class="about_company-wrapper">
+                    <div class="main_info">
+                        <h5 class="main_info-title">
+                            О КОМПАНИИ
+                        </h5>
+                        <div class="show_more-text">
+                            <p class="main_info-text">
+                                По мере роста нашей компании рос и рынок в целом, и появлялись новые проблемы, которые
+                                требовали
+                                объединения участников рынка.Мы взяли на себя инициативу и основали Ассоциацию Прокатных
+                                компаний,
+                                которая <br> успешно работает и сегодня и объединяет более 200 компаний по автопрокату.
+                            </p>
+                            <p class="main_info-text show_more show">
+                                Компания была основана тремя амбициозными друзьями. В то время автопрокат в Украине только
+                                зарождался. Идея состояла в том, чтобы предоставить свободу передвижения всем, кто нуждался
+                                и
+                                удовлетворить разные потребности. Всё началось с 7ми авто Peugeot и Suzuki. Наша компания
+                                развивалась очень динамично и к 2008 году автопарк вырос втрое.
+                            </p>
+                        </div>
+                        <div class="main_info-about">
+                            <span>
+                                ЧИТАТЬ ДАЛЬШЕ
+                            </span>
+                        </div>
+                        <a href="catalog.html" class="main_info-btn">
+                            В АВТОПАРК
+                        </a>
+                    </div>
+                    <div class="about_company-circle">
+                        <div id="map" style="width:100%;height:450px;">
+                        </div>
+                        <span class="big_circle"></span>
+                        <span class="small_circle"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer_wrapper">
+                    <a href="/" class="footer_logo">
+                        <img src="https://cdn4.iconfinder.com/data/icons/social-media-free-13/32/Github_social_media_logo-64.png" alt="/" class="footer_logo-img">
+                    </a>
+                    <div class="footer_top-wrapper">
+                        <nav>
+                            <ul class="footer_top-list">
+                                <li class="top_footer-link">
+                                    <a class="footer_list-link" href="catalog.html">АВТОПАРК</a>
+                                </li>
+                                <li class="top_footer-link">
+                                    <a class="footer_list-link" href="rent-terms.html">УСЛОВИЯ АРЕНДЫ</a>
+                                </li>
+                                <li class="top_footer-link">
+                                    <a class="footer_list-link" href="#">УСЛУГИ</a>
+                                </li>
+                                <li class="top_footer-link">
+                                    <a class="footer_list-link" href="about-us.html">О НАС</a>
+                                </li>
+                                <li class="top_footer-link">
+                                    <a class="footer_list-link" href="contacts.html">КОНТАКТЫ</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <ul class="footer_social">
+                            <li>
+                                <a href="#">
+                                    <svg width="22" height="21" viewBox="0 0 22 21" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M10.9725 0.0691833C5.2237 0.0691833 0.563354 4.72953 0.563354 10.4784C0.563354 16.2272 5.2237 20.8875 10.9725 20.8875C16.7214 20.8875 21.3817 16.2272 21.3817 10.4784C21.3817 4.72953 16.7214 0.0691833 10.9725 0.0691833ZM8.68394 4.96029C9.27611 4.93334 9.46533 4.92675 10.9731 4.92675H10.9713C12.4795 4.92675 12.668 4.93334 13.2602 4.96029C13.8512 4.98735 14.2549 5.08092 14.6088 5.21821C14.9743 5.35989 15.2831 5.54957 15.5919 5.85838C15.9007 6.16696 16.0904 6.47669 16.2326 6.84183C16.3691 7.19482 16.4628 7.59823 16.4905 8.18925C16.5172 8.78142 16.5241 8.97064 16.5241 10.4784C16.5241 11.9861 16.5172 12.1748 16.4905 12.767C16.4628 13.3578 16.3691 13.7613 16.2326 14.1144C16.0904 14.4795 15.9007 14.7892 15.5919 15.0978C15.2834 15.4066 14.9741 15.5967 14.6091 15.7385C14.2559 15.8758 13.852 15.9694 13.261 15.9964C12.6688 16.0234 12.4802 16.03 10.9724 16.03C9.46475 16.03 9.27565 16.0234 8.68347 15.9964C8.09257 15.9694 7.68904 15.8758 7.33582 15.7385C6.97091 15.5967 6.66118 15.4066 6.35272 15.0978C6.04403 14.7892 5.85435 14.4795 5.71243 14.1143C5.57526 13.7613 5.48169 13.3579 5.45451 12.7669C5.42768 12.1747 5.42097 11.9861 5.42097 10.4784C5.42097 8.97064 5.42791 8.78131 5.4544 8.18913C5.481 7.59835 5.57468 7.19482 5.71232 6.84171C5.85458 6.47669 6.04426 6.16696 6.35307 5.85838C6.66164 5.54969 6.97138 5.36001 7.33651 5.21821C7.6895 5.08092 8.09292 4.98735 8.68394 4.96029Z"
+                                            fill="#FFC32A" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M10.475 5.92726C10.5717 5.92711 10.6757 5.92716 10.788 5.92721L10.973 5.92726C12.4553 5.92726 12.631 5.93258 13.2164 5.95918C13.7576 5.98393 14.0514 6.07438 14.2471 6.15037C14.5062 6.25099 14.6909 6.37127 14.8851 6.56558C15.0794 6.75989 15.1997 6.94494 15.3005 7.20402C15.3765 7.39948 15.4671 7.69325 15.4917 8.23454C15.5183 8.81977 15.5241 8.99557 15.5241 10.4772C15.5241 11.9587 15.5183 12.1345 15.4917 12.7198C15.467 13.2611 15.3765 13.5548 15.3005 13.7503C15.1999 14.0094 15.0794 14.1938 14.8851 14.388C14.6908 14.5823 14.5063 14.7026 14.2471 14.8033C14.0516 14.8796 13.7576 14.9698 13.2164 14.9946C12.6311 15.0212 12.4553 15.0269 10.973 15.0269C9.49065 15.0269 9.31496 15.0212 8.72973 14.9946C8.18845 14.9696 7.89467 14.8791 7.69886 14.8031C7.43979 14.7025 7.25473 14.5822 7.06043 14.3879C6.86612 14.1936 6.74583 14.009 6.64498 13.7498C6.56899 13.5544 6.47843 13.2606 6.4538 12.7193C6.4272 12.1341 6.42188 11.9583 6.42188 10.4758C6.42188 8.99326 6.4272 8.81838 6.4538 8.23315C6.47855 7.69187 6.56899 7.39809 6.64498 7.2024C6.7456 6.94332 6.86612 6.75827 7.06043 6.56396C7.25473 6.36966 7.43979 6.24937 7.69886 6.14852C7.89456 6.07218 8.18845 5.98197 8.72973 5.9571C9.24187 5.93397 9.44034 5.92703 10.475 5.92587V5.92726ZM13.9364 6.84908C13.5686 6.84908 13.2702 7.14713 13.2702 7.51504C13.2702 7.88283 13.5686 8.18123 13.9364 8.18123C14.3042 8.18123 14.6026 7.88283 14.6026 7.51504C14.6026 7.14724 14.3042 6.84885 13.9364 6.84885V6.84908ZM8.12201 10.4784C8.12201 8.90399 9.39847 7.62749 10.9729 7.62743C12.5473 7.62743 13.8235 8.90395 13.8235 10.4784C13.8235 12.0529 12.5475 13.3288 10.973 13.3288C9.39853 13.3288 8.12201 12.0529 8.12201 10.4784Z"
+                                            fill="#FFC32A" />
+                                        <path
+                                            d="M10.973 8.62787C11.995 8.62787 12.8236 9.45633 12.8236 10.4784C12.8236 11.5004 11.995 12.3289 10.973 12.3289C9.95096 12.3289 9.1225 11.5004 9.1225 10.4784C9.1225 9.45633 9.95096 8.62787 10.973 8.62787Z"
+                                            fill="#FFC32A" />
+                                    </svg>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0)">
+                                            <path
+                                                d="M21.567 10.8572C21.567 5.09009 16.8277 0.416046 10.98 0.416046C5.13239 0.416046 0.393066 5.09009 0.393066 10.8572C0.393066 16.0696 4.26393 20.3888 9.32583 21.1719V13.8753H6.63773V10.8572H9.32583V8.55687C9.32583 5.94047 10.9056 4.49461 13.3249 4.49461C14.4828 4.49461 15.6946 4.69854 15.6946 4.69854V7.26804H14.3588C13.0437 7.26804 12.6343 8.07356 12.6343 8.89947V10.8572H15.5705L15.1011 13.8753H12.6343V21.1719C17.6962 20.3888 21.567 16.0696 21.567 10.8572Z"
+                                                fill="#FFC32A" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0">
+                                                <rect width="21.174" height="20.8823" fill="white"
+                                                    transform="translate(0.393066 0.416046)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M22.4357 10.8572C22.4357 16.6237 17.5428 21.2983 11.5072 21.2983C5.47157 21.2983 0.578735 16.6237 0.578735 10.8572C0.578735 5.0907 5.47157 0.416046 11.5072 0.416046C17.5428 0.416046 22.4357 5.0907 22.4357 10.8572ZM7.89697 9.90074C6.80222 10.3574 5.67738 10.8266 4.64882 11.3679L4.64875 11.368C4.11167 11.7437 4.82555 12.0094 5.49523 12.2587C5.6017 12.2983 5.70704 12.3375 5.80607 12.3767C5.88847 12.4009 5.97228 12.4264 6.0572 12.4522C6.802 12.679 7.63251 12.9318 8.35559 12.5515C9.54341 11.8996 10.6644 11.1459 11.7845 10.3928C12.1514 10.146 12.5183 9.89934 12.8874 9.65632C12.9047 9.64575 12.9242 9.63366 12.9456 9.62046C13.26 9.42571 13.9672 8.98775 13.7056 9.59122C13.0871 10.2375 12.4245 10.8096 11.7583 11.3849C11.3094 11.7726 10.8588 12.1617 10.4189 12.5758C10.0358 12.8732 9.63797 13.4713 10.067 13.8878C11.055 14.5486 12.0586 15.1935 13.0615 15.838C13.3879 16.0477 13.7141 16.2573 14.0398 16.4675C14.5918 16.8885 15.4545 16.548 15.5758 15.89C15.6298 15.5873 15.684 15.2847 15.7382 14.982C16.0376 13.3094 16.3371 11.6362 16.6017 9.95815C16.6377 9.69494 16.6784 9.43173 16.7192 9.16839C16.8181 8.53012 16.9171 7.89108 16.948 7.24937C16.8683 6.60901 16.0556 6.74981 15.6033 6.8938C13.2787 7.73892 10.9772 8.64669 8.68488 9.57047C8.4252 9.68039 8.16197 9.7902 7.89697 9.90074Z"
+                                            fill="#FFC32A" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M11.3756 0.416046C17.4112 0.416046 22.3041 5.0907 22.3041 10.8572C22.3041 16.6237 17.4112 21.2983 11.3756 21.2983C5.33998 21.2983 0.447144 16.6237 0.447144 10.8572C0.447144 5.0907 5.33998 0.416046 11.3756 0.416046ZM14.2872 9.53395C14.234 9.12138 14.1013 8.79744 13.8656 8.5105C13.5595 8.14103 13.1684 7.91978 12.5894 7.78854C12.212 7.70106 12.0595 7.7111 11.923 7.83021C11.7959 7.94181 11.7711 8.16553 11.8682 8.3104C11.9365 8.41555 12.0154 8.45322 12.2346 8.49434C12.5265 8.54565 12.7283 8.61225 12.9118 8.71251C13.3013 8.92739 13.4827 9.26366 13.5021 9.80805C13.5112 10.0637 13.5343 10.1422 13.6278 10.2329C13.801 10.3986 14.1092 10.3664 14.2399 10.1681C14.2879 10.0933 14.2952 10.0608 14.3003 9.88723C14.3036 9.77978 14.2988 9.61983 14.2872 9.53395ZM14.2924 7.00273C15.2185 7.71822 15.7359 8.73514 15.8128 9.99912C15.8452 10.497 15.8022 10.6591 15.6184 10.7515C15.4525 10.837 15.2646 10.8089 15.1356 10.68C15.0502 10.5962 15.0174 10.4816 15.0186 10.2787C15.0224 9.71757 14.8871 9.09096 14.6671 8.65616C14.4125 8.1501 14.0189 7.71945 13.5238 7.4046C13.0901 7.12806 12.5161 6.94127 11.9596 6.89475C11.5987 6.86458 11.4698 6.80617 11.4005 6.64084C11.3575 6.54194 11.3689 6.37096 11.4192 6.29439C11.4668 6.22377 11.5736 6.14568 11.649 6.12504C11.729 6.10275 12.1953 6.14172 12.4485 6.1898C13.1399 6.32425 13.7706 6.6007 14.2924 7.00273ZM17.5011 14.8667C17.4753 14.7945 17.4149 14.683 17.3717 14.619C17.1 14.227 15.6398 13.1352 14.9107 12.7781C14.4945 12.5738 14.1861 12.5057 13.9574 12.5697C13.7115 12.6358 13.5821 12.7451 13.1702 13.2342C13.0041 13.4303 12.8337 13.614 12.7884 13.6429C12.6762 13.7172 12.4562 13.777 12.301 13.777C11.9408 13.775 11.2872 13.5521 10.7847 13.259C10.3943 13.032 9.89392 12.6254 9.50997 12.223C9.05701 11.7504 8.74862 11.3335 8.50487 10.8629C8.18998 10.2583 8.11018 9.88882 8.24173 9.61845C8.27409 9.55036 8.31723 9.47814 8.33662 9.45541C8.35604 9.4348 8.5588 9.27587 8.78309 9.10251C9.22311 8.76819 9.29428 8.69183 9.37624 8.46274C9.47976 8.17173 9.45174 7.87454 9.29213 7.57531C9.16918 7.34828 8.84781 6.85297 8.61488 6.53309C8.30644 6.11209 7.5386 5.21227 7.38544 5.09047C7.10936 4.87585 6.75567 4.83868 6.36524 4.98318C5.95332 5.1359 5.18114 5.73027 4.85113 6.1451C4.55348 6.52071 4.43921 6.78692 4.42193 7.13778C4.40685 7.42669 4.43272 7.5464 4.59233 7.91583C5.84115 10.8134 7.70466 13.1269 10.2649 14.9637C11.6021 15.9234 12.989 16.654 14.4276 17.1534C15.2666 17.4444 15.6311 17.4588 16.0603 17.2195C16.2415 17.1163 16.6902 16.6767 16.9403 16.3568C17.3545 15.8243 17.5076 15.5787 17.5507 15.3827C17.5809 15.2485 17.5572 15.0153 17.5011 14.8667ZM16.9496 8.33414C17.2123 8.98798 17.3383 9.57444 17.366 10.2894C17.3703 10.4307 17.3683 10.6894 17.3587 10.8647C17.3388 11.2008 17.3197 11.2675 17.2184 11.3564C17.0557 11.5023 16.7385 11.4676 16.6182 11.2917C16.5553 11.1974 16.5465 11.1283 16.5587 10.7357C16.5936 9.57435 16.3477 8.66504 15.7555 7.75579C15.0478 6.66493 13.9892 5.93007 12.6127 5.57056C12.2616 5.47905 11.9658 5.42328 11.5057 5.3641C11.206 5.32662 11.1404 5.31077 11.0664 5.26728C10.843 5.13054 10.84 4.7843 11.0627 4.64548C11.1777 4.5722 11.2625 4.56893 11.6371 4.61477C12.7358 4.74595 13.7162 5.05785 14.5217 5.52918C15.0991 5.86747 15.4632 6.17137 15.9319 6.70361C16.4277 7.27127 16.6902 7.69097 16.9496 8.33414Z"
+                                            fill="#FFC32A" />
+                                    </svg>
+
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer_bottom-wrapper">
+                    <span class="working_hours">
+                        <img src="images/footer-icon-clock.svg" alt="#" class="working_hours-img">
+                        Пн-Пт с 9 до 21
+                    </span>
+                    <div class="footer_bottom-tel">
+                        <a href="tel:+380442222222" class="footer_feedback">
+                            <img src="images/footer-icon-phone.svg" alt="#" class="footer_feedback-img">
+                            +380442222222
+                        </a>
+                        <a href="tel:+380442222222" class="footer_feedback">
+                            +380442222222
+                        </a>
+                    </div>
+                    <a href="#" class="footer_bottom-email">
+                        <img src="images/footer-icon-mail.svg" alt="#" class="bottom_email-img">
+                        info@test.com.ua
+                    </a>
+                    <a href="#" class="footer_bottom-location">
+                        <img src="images/footer-icon-map.svg" alt="#" class="bottom_location-img">
+                        3421 Miller Ave Santa Maria, Vermont 27240
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        function myMap() {
+            var mapCanvas = document.getElementById("map");
+            var mapOptions = {
+                center: new google.maps.LatLng(51.5, -0.2), zoom: 10
+            };
+            var map = new google.maps.Map(mapCanvas, mapOptions);
+        }
+    </script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFxrTlEnVkMCULRHh3heTR6t3ZX8Xf78Q&callback=myMap"></script>
+    <script src="js/main.min.js"></script>
+</body>
+
+
+</html>

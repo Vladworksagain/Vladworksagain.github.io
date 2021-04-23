@@ -1,4 +1,6 @@
 
+// select2//
+
 $(document).ready(function () {
     $('.first.select_location').select2({
         placeholder: 'Выберите город',
@@ -29,6 +31,7 @@ $(document).ready(function () {
     });
 });
 
+// select2//
 
 // modal-popup //
 
@@ -227,7 +230,6 @@ function updateInputs(data) {
 $inputFrom.on("change", function () {
     var val = $(this).prop("value");
 
-    // validate
     if (val < min) {
         val = min;
     } else if (val > to) {
@@ -245,7 +247,6 @@ $inputFrom.on("change", function () {
 $inputTo.on("change", function () {
     var val = $(this).prop("value");
 
-    // validate
     if (val < from) {
         val = from;
     } else if (val > max) {
@@ -348,7 +349,7 @@ function updateInputs2(data) {
 $inputFrom2.on("input", function () {
     var val = $(this).prop("value");
 
-    // validate
+   
     if (val < min2) {
         val = min2;
     } else if (val > to2) {
@@ -363,7 +364,7 @@ $inputFrom2.on("input", function () {
 $inputTo2.on("input", function () {
     var val = $(this).prop("value");
 
-    // validate
+    
     if (val < from2) {
         val = from2;
     } else if (val > max2) {
@@ -375,32 +376,7 @@ $inputTo2.on("input", function () {
     });
 });
 
-
-// popup_filter //
-
-// let filterButtons = document.querySelector('.rent_filter-icon');
-// let filterCloseButton = document.querySelector('.close_icon-filter');
-
-// function filterShow() {
-//     let showFilter = document.querySelector('.rent_mobile-filter');
-//     if (showFilter.classList.contains('turn')) {
-//         showFilter.classList.remove('turn');
-//     } else {
-//         showFilter.classList.add('turn');
-//     }
-// }
-
-// function filterHide() {
-//     let hideFilter = document.querySelector('.rent_mobile-filter');
-//     if (hideFilter.classList.contains('turn')) {
-//         hideFilter.classList.remove('turn');
-//     } else {
-//         hideFilter.classList.add('turn');
-//     }
-// }
-
-//     filterButtons.onclick = filterShow;
-//     filterCloseButton.onclick = filterHide;
+// data-popup-filter //
 
 let filterButton = document.querySelectorAll('.rent_filter-icon');
 
@@ -428,7 +404,7 @@ function close(event) {
     this.closest('.rent_mobile-filter').classList.remove('rent_filter-open')
 }
 
-// popup_filter //
+// data-popup-filter //
 
 
 // input validation form //
@@ -485,11 +461,9 @@ validateForms('.form', {
     },
 })
 
-
-
 // input validation form //
 
-// car_car-slider //
+// car_card-slider //
 
 $('.slider_car-vertical').slick({
     infinite: true,
@@ -550,7 +524,8 @@ $('.slider_car-horizontal').slick({
     asNavFor: '.slider_car-vertical',
     vertical: true,
     arrows: false,
-    verticalSwiping: true,
+    verticalSwiping: false,
+    horizontalSwiping: true
 });
 
 $('.proposition_slider').slick({
@@ -571,7 +546,7 @@ $('.proposition_slider').slick({
 });
 
 
-// car_car-slider //
+// car_card-slider //
 
 // cooment section //
 
@@ -586,7 +561,7 @@ $('.recall_visitors-slider').slick({
 // cooment section //
 
 
-// plus minus //
+// section plus-minus //
 
 $(document).ready(function () {
     $(".car_short-tittle").click(function () {
@@ -599,7 +574,7 @@ $(".car_short-tittle").click(function () {
 })
 
 
-// plus minus //
+// section plus-minus //
 
 
 

@@ -18,6 +18,9 @@ section
 
 .rent_terms
     margin-top: 37px
+    background: url(../images/main-card-bg.png) no-repeat
+    background-size: cover
+
 
 .rent_terms-tittle
     font-family: $Montserrat
@@ -30,15 +33,10 @@ section
 
 .rent_terms-inner
     display: flex
-    justify-content: space-between
+    justify-content: center
     align-items: center
     margin: -10px
     flex-wrap: wrap
-
-    @media screen and ( max-width: 903px )
-        flex-wrap: wrap
-        justify-content: center
-
 
 .rent_terms-item
     max-width: 373px
@@ -55,11 +53,9 @@ section
     align-items: center
     flex-direction: column
     margin: 10px
-
-    @media screen and ( max-width: 895px )
-        margin-bottom: 10px
-        &:last-child
-            margin-bottom: 0
+    
+    @media screen and ( max-width: 600px )
+        max-width: 100%
 
 .rent_terms-img
 

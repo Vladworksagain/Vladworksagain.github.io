@@ -185,6 +185,8 @@ section
     grid-row-gap: 11px
     grid-column-gap: 18px
     width: 100%
+    position: relative
+    z-index: 1
 
     @media screen and ( max-width: 1292px )
         grid-template-columns: repeat(auto-fit, minmax(148px, 1fr))
@@ -375,7 +377,7 @@ section
         border: 23px solid #FFC32A
         border-radius: 50%
         box-shadow: 0px 2px 20px rgba(255, 195, 42, .6)
-        z-index: 10
+        z-index: 1
         position: absolute
         bottom: -160px
         left: 30px
@@ -388,7 +390,7 @@ section
         border: 44px solid #FFC32A
         box-shadow: 0px 2px 20px rgba(255, 195, 42, .6)
         border-radius: 50%
-        z-index: 2
+        z-index: 1
         left: -250px
         bottom: -400px
 
@@ -1041,6 +1043,11 @@ section
 
     @media screen and ( max-width: 580px )
         width: 100vw
+
+.catalog_about-company
+    background: url(../images/details-bg-mountains.png) no-repeat bottom
+    padding-bottom: 74px
+    background-size: cover
 
 .company_main-tittle
     font-family: $Montserrat
