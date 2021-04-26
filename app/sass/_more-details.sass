@@ -41,7 +41,7 @@ section
         @media screen and ( max-width: 580px )
             min-height: 0
 
-    .car_short-tittle
+    .card_short-tittle
         pointer-events: none
 
         @media screen and ( max-width: 580px )
@@ -98,15 +98,26 @@ section
         @media screen and ( max-width: 1125px )
             display: none
 
-    .car_short-tittle.minus:after
+    .card_short-tittle.minus:after
         background: url(../images/mob-icon-minus.png) no-repeat center
         width: 24px
         height: 24px
         background-size: cover
 
     .card_short-text
+        
+        @media screen and ( max-width: 580px )
+            display: none
+        
         @media screen and ( min-width: 581px )
-            display: block !important
+            display: block
+
+    .rent_terms-card    
+        &.card_show-text > .card_short-text
+
+            @media screen and ( max-width: 580px )
+                display: block
+                padding-top: 14px
 
     .flex_item-box
 
@@ -224,7 +235,7 @@ section
     @media screen and ( max-width: 1125px )
         display: block
 
-    .car_short-tittle.minus:after
+    .card_short-tittle.minus:after
         background: url(../images/mob-icon-minus.png) no-repeat center
         background-size: cover
         width: 24px

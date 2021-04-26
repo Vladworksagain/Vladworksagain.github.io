@@ -1,6 +1,4 @@
-
-// select2//
-
+// index.html > select2 //
 $(document).ready(function () {
     $('.first.select_location').select2({
         placeholder: 'Выберите город',
@@ -30,11 +28,11 @@ $(document).ready(function () {
         theme: "language_selection",
     });
 });
+// index.html > select2 //
 
-// select2//
 
-// modal-popup //
 
+// index.html > modal-popup //
 const buttons = document.querySelectorAll('.modal_btn')
 
 const modals = document.querySelectorAll('.popup')
@@ -61,11 +59,10 @@ function openModal(event) {
 function closeModal(event) {
     this.closest('.popup').classList.remove('open')
 }
+// index.html > modal-popup //
 
-// modal-popup //
 
-//section car_rental //
-
+// index.html > section > car_rental //
 $slick_slider = $('.car_rental-slider');
 settings = {
     slidesToShow: 3,
@@ -96,10 +93,9 @@ $(window).on('resize', function () {
         return $slick_slider.slick(settings);
     }
 });
+// index.html > section > car_rental //
 
-//section car_rental //
-
-// section offers //
+// index.html > section > offers //
 $('.offers_main-slider').slick({
     arrows: false,
     dots: true,
@@ -108,9 +104,10 @@ $('.offers_main-slider').slick({
     infinite: false,
     speed: 600,
 });
-// section offers //
+// index.html > section > offers //
 
-// Section about_company -read_more //
+
+// index.html > Section > about_company-read_more //
 
 let check = document.querySelector('.main_info-about');
 if (check) {
@@ -126,18 +123,18 @@ $(".main_info-about").click(function () {
     $(this).toggleClass("rotate");
 })
 
-// Section about_company -read_more //
+// index.html > Section > about_company-read_more //
 
-// header_burger //
-
+// index.html > header_burger  //
 $(document).ready(function () {
     $('.bottom_header-burger').click(function (event) {
         $('.bottom_header-burger,.bottom_header-list').toggleClass('menu-active');
     });
 });
+// index.html > header_burger  //
 
-// header_burger //
 
+// index.html > datetimepicker //
 jQuery.datetimepicker.setLocale('ru');
 
 jQuery('#datetimepicker-main-first').datetimepicker({
@@ -192,9 +189,10 @@ document.querySelectorAll('.select_car-item').forEach((element) => {
         this.classList.toggle('active_arrow');
     });
 });
+// index.html > datetimepicker //
 
 
-//range value section rent//
+//catalog.html > section > rent > range value//
 
 let $range = $("#price_range");
 let $inputFrom = $("#range_input-from");
@@ -259,11 +257,9 @@ $inputTo.on("change", function () {
 
     $(this).prop("value", val);
 });
+//catalog.html > section > rent > range value//
 
-//range value section rent//
-
-// show more info //
-
+// catalog.html > type > show more info //
 $(document).ready(function () {
     $(".open_more").click(function () {
         $(this).next('div').toggle();
@@ -273,11 +269,9 @@ $(document).ready(function () {
 $(".open_more").click(function () {
     $(this).toggleClass("plus");
 })
+// catalog.html > type > show more info //
 
-// show more info //
-
-// car models //
-
+// catalog.html > car models //
 let condition = document.querySelector('.show_more-car');
 if (condition) {
     condition.addEventListener('click', showModels, false);
@@ -291,11 +285,9 @@ function showModels() {
 $(".show_more-car").click(function () {
     $(this).toggleClass("arrow_rotate");
 })
+// catalog.html > car models //
 
-// car models //
-
-// section about_company //
-
+// catalog.html > section about_company //
 let checkCompany = document.querySelector('.company_read-more');
 if (checkCompany) {
     checkCompany.addEventListener('click', showMoreInfo, false);
@@ -311,11 +303,9 @@ function showMoreInfo() {
 $(".company_read-more").click(function () {
     $(this).toggleClass("company_arrow-rotate");
 })
+// catalog.html > section about_company //
 
-// section about_company //
-
-// mob-filter //
-
+// catalog.html > range-value > mob-filter //
 var $range2 = $("#price_range-mob"),
     $inputFrom2 = $("#range_from-mob"),
     $inputTo2 = $("#range_to-mob"),
@@ -349,7 +339,7 @@ function updateInputs2(data) {
 $inputFrom2.on("input", function () {
     var val = $(this).prop("value");
 
-   
+
     if (val < min2) {
         val = min2;
     } else if (val > to2) {
@@ -364,7 +354,7 @@ $inputFrom2.on("input", function () {
 $inputTo2.on("input", function () {
     var val = $(this).prop("value");
 
-    
+
     if (val < from2) {
         val = from2;
     } else if (val > max2) {
@@ -375,9 +365,10 @@ $inputTo2.on("input", function () {
         to: val
     });
 });
+// catalog.html > range-value > mob-filter //
 
-// data-popup-filter //
 
+// catalog.html > filter-popup-images //
 let filterButton = document.querySelectorAll('.rent_filter-icon');
 
 let filterModal = document.querySelectorAll('.rent_mobile-filter');
@@ -403,18 +394,18 @@ function open(event) {
 function close(event) {
     this.closest('.rent_mobile-filter').classList.remove('rent_filter-open')
 }
+// catalog.html > filter-popup-images //
 
-// data-popup-filter //
 
-
-// input validation form //
-
+// input-mask tel //
 let selector = document.querySelectorAll('input[type="tel"]');
 
 let im = new Inputmask('+38 (999) 999 99 99', { "clearIncomplete": true });
 
 im.mask(selector);
+// input-mask tel //
 
+// input validation form //
 let validateForms = function (selector, rules, successModal) {
     new window.JustValidate(selector, {
         rules: rules,
@@ -448,23 +439,28 @@ let validateForms = function (selector, rules, successModal) {
     });
 }
 
-validateForms('.form', {
-    email: {
-        required: true,
-        email: true
-    },
-    tel: {
-        required: true
-    },
-    name: {
-        required: true,
-    },
-})
-
+let myTest = document.querySelectorAll('.form');
+for (let i = 0; i < myTest.length; i++ ) {
+    if (myTest[i].classList.contains('form')) {
+        validateForms('.form', {
+            email: {
+                required: true,
+                email: true
+            },
+            tel: {
+                required: true
+            },
+            name: {
+                required: true
+            },
+        })
+    } else {
+        console.log('ошибка')
+    }
+}
 // input validation form //
 
-// car_card-slider //
-
+////more-details.html > sliders////
 $('.slider_car-vertical').slick({
     infinite: true,
     arrows: false,
@@ -507,7 +503,7 @@ $('.slider_car-vertical').slick({
             settings: {
                 slidesToShow: 3
             }
-        },      
+        },
         {
             breakpoint: 360,
             settings: {
@@ -544,12 +540,9 @@ $('.proposition_slider').slick({
         }
     ]
 });
+//more-details.html > sliders//
 
-
-// car_card-slider //
-
-// cooment section //
-
+// more-details.html recall-slider//
 $('.recall_visitors-slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -557,69 +550,18 @@ $('.recall_visitors-slider').slick({
     dots: true,
     dotsClass: 'recall_dots-slider'
 });
+// more-details.html recall-slider//
 
-// cooment section //
-
-
-// section plus-minus //
-
-$(document).ready(function () {
-    $(".car_short-tittle").click(function () {
-        $(this).next('p').toggle();
-    });
-});
-
-$(".car_short-tittle").click(function () {
-    $(this).toggleClass("minus");
+// more-details.html cards-more-info //
+let cards = document.querySelectorAll('.card_short-tittle');
+cards.forEach((element)=> {
+  element.addEventListener('click', showCards);
 })
 
-
-// section plus-minus //
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function showCards(e) {
+  let target = e.target;
+  target.parentNode.classList.toggle('card_show-text');
+  target.classList.toggle('minus');
+}
+// more-details.html cards-more-info //
 
